@@ -1,7 +1,7 @@
 @import '../scss/variables.module.scss';
 .list{
   @include flex;
-  gap:2em;
+  gap:40px;
 }
 
 @media (min-width: 768px) {
@@ -87,7 +87,7 @@
 //hoverできる環境
 @media (hover: hover) {
   .list a:hover {
-  color: var(--accent);
+  opacity: 0.7;
   }
 }
 //hoverできない環境
@@ -96,6 +96,6 @@
   -webkit-tap-highlight-color: transparent;
   }
   .list a:active {
-  color: var(--accent);
+  opacity:0.7;
   }
 }

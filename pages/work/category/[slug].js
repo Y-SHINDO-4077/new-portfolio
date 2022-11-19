@@ -9,7 +9,7 @@ import { eyecatchLocal } from 'lib/constants'
 export default function Category({ name, posts }) {
     return (
     <Container>
-      <PostHeader title={name} subtitle="Blog Category" />
+      <PostHeader title={name} subtitle="実績カテゴリ" />
       <Posts posts={posts} />
     </Container>
     )
@@ -18,7 +18,7 @@ export async function getStaticPaths() {
         const allCats = await getAllCategories()
 
         return {
-            paths: allCats.map(({ slug }) => `/blog/category/${slug}`),
+            paths: allCats.map(({ slug }) => `/work/category/${slug}`),
             fallback: false,
         }
 }

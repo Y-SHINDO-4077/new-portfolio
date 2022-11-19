@@ -7,22 +7,29 @@ import Posts from 'components/posts'
 import { getPlaiceholder } from 'plaiceholder'
 // ローカルの代替アイキャッチ画像
 import { eyecatchLocal } from 'lib/constants'
+import PostCategories from 'components/post-categories'
+import styles from '../../styles/scss/posts.module.scss'
 
 
-export default function Blog({ posts }) {
+export default function Work({ posts ,categories}) {
   return (
     <Container>
-      <Meta pageTitle=" ブログ" pageDesc="ブログの記事一覧" />
-      <Hero
-      title="BLOG"
-      subtitle="Recent Posts"  />
-      <Posts posts={posts} />
+      <Meta pageTitle="WORKS" pageDesc="実績" />
+      <div className={styles.post__padding}>
+        <Hero
+        title="WORKS"
+        subtitle=""  />
+        {/* <PostCategories categories={categories} /> */}
+        <Posts posts={posts} />
+      </div>
     </Container>
   )
 }
 
 export async function getStaticProps() {
   const posts = await getAllPosts()
+
+  
 
   for (const post of posts) {
     if (!post.hasOwnProperty('eyecatch')) {
@@ -35,6 +42,7 @@ export async function getStaticProps() {
   return {
     props: {
       posts: posts,
+      
     },
   }
 }

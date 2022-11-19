@@ -1,0 +1,87 @@
+@import '../scss/variables.module.scss';
+.wrap{
+  display: flex;
+
+}
+
+.text {
+  font-size: 5rem;
+  position: absolute;
+  pointer-events: none;
+  -webkit-text-stroke: 0.6px #ffffff;
+  text-transform: uppercase;
+  color: #181818;
+
+  span {
+    color: white;
+  }
+}
+.t_left{
+  text-align: left;
+}
+
+.pagesWrapper {
+  position: relative;
+  height: 100vh;
+}
+.area{
+  display: flex;
+}
+// .pages {
+//   // position: absolute;
+//   // top: 0;
+//   // left: 0;
+//   display: flex;
+//   height: 100%;
+//   justify-content: center;
+//   align-items: center;
+//   width:100vw;
+// }
+.sr_only{
+  display: none;
+}
+.timeline__section{
+  overflow: hidden;
+	position: relative;
+ 
+}
+.side_scroll_list_wrapper{
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+.side_scroll_list{
+  position: absolute;
+  display: flex;
+}
+.side_scroll_item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 200px;
+  // font-size: 50px;
+  font-weight: bold;
+  color: #333;
+  width:50vw;
+}
+.side-scroll-item + .side-scroll-item {
+  margin-left: 60px;
+}
+
+
+.timeline_list{
+  width:500px;
+}
+
+#timeline__text{
+  overflow: hidden;
+  transform: translate(0,-50px);
+}
+.lineParent{
+  overflow: hidden;
+}
+
+.lineChilidren{
+  transform: translate(0,-50px);
+}

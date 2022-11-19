@@ -12,6 +12,11 @@
   }
   .stack p {
   line-height: 1.8;
+  font-size:24px;
+
+    @include mq(ts){
+      font-size:16px;
+    }
   }
   .stack ul {
   padding: revert;

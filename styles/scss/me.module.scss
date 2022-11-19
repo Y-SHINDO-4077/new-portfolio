@@ -1,0 +1,76 @@
+@import '../scss/variables.module.scss';
+.bg{
+  background:#F0EFEB !important;
+}
+.circle_area{
+  /*max-width:500px;
+  margin: 20px auto;*/
+  position: relative;
+    max-width: 900px;
+    width: 92%;
+    margin: 20px auto;
+   height: 725px;
+}
+
+.circle_area .enginnering{
+  position:absolute;
+  width:500px;
+  height:500px;
+  left:0px;
+  top:0;
+}
+.circle_area .design{
+  position:absolute;
+  width:500px;
+  height:500px;
+  right:0px;
+  top:0;
+}
+.circle_area .dnu{
+  position:absolute;
+  width:500px;
+  height:500px;
+  right: 200px;
+  top: 325px;
+}
+  .svg{
+    transform: rotate(-180deg);
+    display: block;
+    fill: transparent;
+    stroke: #333;
+  }
+  svg.in {
+    display:block;
+  }
+  // .in circle {
+  //     fill: transparent;
+  //     fill:none;
+  //     stroke: #333333;
+  //     stroke-width: 1.5;
+  //     /*animation: circle 5s infinite 3s;*/ 
+  //     stroke-dasharray: 1415;
+  //     animation: circle ease 3s;
+  // }
+  .in > circle {
+    fill: transparent;
+    fill:none;
+    stroke: #333333;
+    stroke-width: 1.5;
+    /*animation: circle 5s infinite 3s;*/ 
+    stroke-dasharray: 1415;
+    animation: circle ease 3s;
+  }
+
+
+  @keyframes circle {
+    to {
+    stroke-dashoffset: 0;
+    }
+    from {
+    stroke-dashoffset: 1415;
+    }
+  }
+
+  .readmore_readmore__Ri1pm:first-of-type{
+    display: none;
+  }

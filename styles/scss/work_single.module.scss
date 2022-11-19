@@ -1,0 +1,31 @@
+@import '../scss/variables.module.scss';
+.viewmore{
+  font-size:64px;
+  font-weight:700;
+  margin-top:48px;
+  @include mq(ts){
+    font-size:32px;
+    margin-top:24px;
+  }
+}
+
+.morebtn{
+  text-align: right;
+}
+
+.heading3{
+  font-size:64px;
+  font-weight:700;
+
+  @include mq(ts){
+    font-size:40px;
+  }
+}
+
+.content{
+  font-size:24px;
+  @include mq(ts){
+    font-size:16px;
+  }
+}
+

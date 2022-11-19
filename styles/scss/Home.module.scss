@@ -1,6 +1,4 @@
-.container {
-  padding: 0 2rem;
-}
+@import '../scss/variables.module.scss';
 
 .main {
   min-height: 100vh;
@@ -115,6 +113,8 @@
   }
 }
 
+
+
 @media (prefers-color-scheme: dark) {
   .card,
   .footer {
@@ -127,3 +127,52 @@
     filter: invert(1);
   }
 }
+
+
+.fvArea{
+  position:relative;
+  top:-64px;
+  left:0;
+  padding:0 !important;
+
+  .topTitle{
+    font-size:96px;
+    letter-spacing: 0;
+    position:absolute;
+    top:45%;
+    left:10%;
+    z-index:10;
+    color:var(--white);
+    mix-blend-mode: hard-light;
+
+    @include mq(m){
+      left:5%;
+    }
+
+    .hero_title{
+
+      @include mq(m){
+        font-size:64px;
+      }
+  
+      @include mq(ts){
+        font-size:40px;
+      }
+  
+      @include mq(s){
+        font-size:32px;
+      }
+    }
+
+
+    h1{
+      letter-spacing: 0;
+      
+    }
+  }
+}
+
+.padding{
+  padding:96px 0;
+}
+

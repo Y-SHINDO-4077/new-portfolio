@@ -1,20 +1,98 @@
 
 @import '../scss/variables.module.scss';
+/*** The new CSS reset - version 1.7.3 (last updated 7.8.2022) ***/
+ 
+*:where(:not(html,iframe,canvas,img,svg,video,audio):not(svg*,symbol*)){all:unset;display:revert}*,*::before,*::after{box-sizing:border-box}
+a,button{cursor:revert}
+ol,ul,menu{list-style:none}
+img{max-width:100%}
+table{border-collapse:collapse}
+input,textarea{-webkit-user-select:auto}
+textarea{white-space:revert}
+meter{-webkit-appearance:revert;appearance:revert}::placeholder{color:unset}:where([hidden]){display:none}:where([contenteditable]:not([contenteditable="false"])){-moz-user-modify:read-write;-webkit-user-modify:read-write;overflow-wrap:break-word;-webkit-line-break:after-white-space;-webkit-user-select:auto}:where([draggable="true"]){-webkit-user-drag:element}
 
+@font-face {
+  font-family: 'Futura';
+  src: url(../font/Futura_Bold_font.ttf);
+  font-weight:700;
+}
+
+
+@font-face {
+  font-family: 'Futura';
+  src: url(../font/futura_medium_bt.ttf);
+  font-weight:500;
+}
+html,
 body {
-  color: var(--black);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-  font-size: var(--body);
+  padding: 0;
+  margin: 0;
+  font-family: "Futura","Noto Sans JP", sans-serif;
+}
+
+.futura{
+  font-family: "Futura", sans-serif;
+}
+
+.noto{
+  font-family:  "Noto Sans JP", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+ 
+body {
+  color: var(--main-text);
+  background-color: var(--main-bg);
 }
 
   h1 {
   font-size: var(--heading1);
   }
   h2 {
-  font-size: var(--heading2);
+    font-size: 120px;
+    @include mq(ts){
+      font-size:64px;
+    }
   }
   h3 {
-  font-size: var(--heading3);
+    font-size: 48px;
+    @include mq(ts){
+      font-size:32px;
+    }
+  }
+
+  h4 {
+    font-size: 32px;
+    @extend .noto;
+    @include mq(ts){
+      font-size:24px;
+    }
+  }
+
+  h5 {
+    font-size: 24px;
+    margin-top:32px;
+    @extend .noto;
+    @include mq(ts){
+      font-size:16px;
+      margin-top:24px;
+    }
+  }
+
+  p{
+    font-size:16px;
+    @include mq(ts){
+      font-size:14px;
+    }
   }
 
   /* next/image */
@@ -45,15 +123,16 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+:root {
+  --main-text: #333;
+  --main-bg: #fff;
 }
+
+[data-theme="dark"] {
+  --main-text: #fff;
+  --main-bg: #333;
+}
+
 
 :root{
   --white: #ffffff;
@@ -61,14 +140,15 @@ a {
   --gray-25: #aaaaaa;
   --gray-50: #707070;
   --gray-75: #444444;
-  --black: #222222;
+  --black: #333333;
   --accent: #0d87e0;
 
   --body: clamp(1rem, 0.95rem + 0.2vw, 1.125rem); /* 16-18px */
-  --display: clamp(4.5rem, 1.83rem + 11.34vw, 10rem); /* 72-160 */
+  --display: 96px; /* 72-160 */
+  --display: clamp(2rem, 0.857rem + 5.71vw, 6rem);
   --heading1: clamp(2rem, 1.3rem + 3vw, 4rem); /* 32-64px */
-  --heading2: calc(var(--body) * 1.5); /* 24-27px */
-  --heading3: calc(var(--body) * 1.2); /* 19.2-21.6px */
+  --heading2: 120px;
+  --heading3: 48px;
   --small-heading2: clamp(0.875rem, 4vw - 1rem, 1.6875rem); /* 14-27px */
   --small-heading3: calc(var(--small-heading2) * 0.86); /* 12-23px */
 
@@ -79,5 +159,45 @@ a {
   --space-xl: calc(var(--space-xs) * 4); /* 80-120px */
   --space-jump: clamp(1.25rem, 0.35rem + 3.8vw, 3.75rem); /* 20-60px */
 }
+
+
+//mousestoker
+#stalker {
+  pointer-events: none;
+  position: fixed;
+  top: -8px;     
+  left: -8px;  
+  width: 20px;   
+  height: 20px;
+  background: rgba(0,0,0,0.9);
+  border-radius: 50%;
+  transform: translate(0,0);
+  transition: transform 0.2s; 
+  transition-timing-function: ease-out;
+  z-index: 999;
+
+  @include mq(m){
+    display: none;
+  }
+}
+#stalker.hov_{
+    top: -32px;     
+    left: -32px;    
+    width: 64px;
+    height: 64px;
+    transition: .5s;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+section{
+  padding:96px 0;
+}
+
+.t-center{
+  text-align: center;
+}
+
+
+
 
 

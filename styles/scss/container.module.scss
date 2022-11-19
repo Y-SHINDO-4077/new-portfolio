@@ -1,11 +1,13 @@
 @import '../scss/variables.module.scss';
 .default{
   width:92%;
-  max-width:1152px;
+  max-width:1200px;
   margin:0 auto;
 }
 
 .large {
   @extend .default;
-  max-width: 1280px;
+  max-width: inherit !important;
+  width:100% !important;
+  height:100vh;
 }

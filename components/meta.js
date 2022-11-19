@@ -21,6 +21,8 @@ export default function Meta({ pageTitle, pageDesc }) {
       <meta property="og:locale" content={siteLocale} />
       <link rel="icon" href={siteIcon} />
       <link rel="apple-touch-icon" href={siteIcon} />
+   
+      
     </Head>
   )
 }

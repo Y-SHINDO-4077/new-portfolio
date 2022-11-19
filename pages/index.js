@@ -6,22 +6,52 @@ import Posts from 'components/posts'
 import Pagination from 'components/pagination'
 import { getPlaiceholder } from 'plaiceholder'
 import { eyecatchLocal } from 'lib/constants'
+
 import styles from '../styles/scss/Home.module.scss'
 import Hero from 'components/hero'
+import MVSwiper from 'components/swiper'
+import MeSetion from 'components/me_section'
+import DNUSetion from 'components/dnu_section'
+import READMORE from 'components/readmore'
+import NextBTN from 'components/nextbtn'
 
 
 export default function Home({ posts }) {
+
+ 
   return (
-    <Container>
-      <Meta />
-      <Hero
-      title="CUBE"
-      subtitle="アウトプットしていくサイト"
-      imageOn
-      />
-      <Posts posts={posts} />
-      <Pagination nextUrl="/blog" nextText="More Posts" />
+    <>
+    <Meta />
+    <Container large>
+      <section className={styles.fvArea}>
+        <div className={styles.topTitle}>
+          <Hero
+          title="Engineering×Design×Town"
+          subtitle="ーまちにひもづくものをデザインして、魅力を伝えるー"
+          />
+        </div>
+        <div>
+        　<MVSwiper />
+        </div>
+       
+      </section>
     </Container>
+
+    <MeSetion linkOn/>
+
+    <section className={styles.padding}>
+      <Container>
+          <Hero
+            title="WORKS"
+            subtitle=""
+          />
+          <Posts posts={posts} />
+          <READMORE url="/work" />
+      </Container>
+    </section>
+    <DNUSetion linkOn/>
+    <NextBTN url="/me" sec_title="ME" />
+  </>
   )
 }
 

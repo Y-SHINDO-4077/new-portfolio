@@ -1,0 +1,146 @@
+@import '../scss/variables.module.scss';
+.swipeArea{
+  width:100%;
+  height:100%;
+  
+
+  .swiper01,
+  .swiper02,
+  .swiper03{
+    background-image:url(../../images/fv@2x.jpg); background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center right;
+    width:100vw;
+    height: calc(100vh + 64px);
+    aspect-ratio: 16/9;   
+    content:"";
+  }
+
+  .swiper02{
+    background-image:url(../../images/fv2@2x.jpg);
+    background-position: center right;
+  }
+
+  .swiper03{
+    background-image:url(../../images/fv03@2x.jpg); 
+    background-position: center right;
+  }
+}
+
+.scroll{
+  position: relative;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    right: -95%;
+    top: -150px;
+    -webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+
+    @include mq(ts){
+      display:none;
+    }
+
+    &:before{
+      position: absolute;
+      left: 50%;
+      z-index: 90;
+      margin: 0 auto;
+      width: 3px;
+      content: "";
+      font-size: 1.3rem;
+      bottom: -4.61538em;
+      bottom: -100%;
+      height: 4.53846em;
+      background: #e6edf1;
+    }
+
+    .kv__scroll__label{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      color: #fff;
+      letter-spacing: .03em;
+      font-weight: 500;
+      line-height: 1;
+    }
+
+    .kv__scroll__text{
+      padding-left: 2px;
+     font-size: 1rem;
+    }
+
+    .kv__scroll__point{
+      position: absolute;
+      left: 50%;
+      z-index: 100;
+      margin-left: -3.5px;
+      width: 7px;
+      height: 7px;
+      bottom: -5%;
+      animation: scroll-point 2.6s ease-out infinite;
+      animation-fill-mode: both;
+
+      &:before{
+        border-radius: 50%;
+        z-index: 0;
+        background: rgba(255, 255, 255, 0.2);
+        animation: scroll-point-zoom 2.6s ease-out infinite;
+        animation-fill-mode: both;
+      }
+
+      &:after{
+        background: white;
+      }
+    }
+}
+
+@keyframes scroll-point {
+  0% {
+    bottom: -5%;
+    opacity: 0;
+  }
+  20% {
+    opacity: 1; 
+  }
+  48% {
+    bottom: -200%;
+    opacity: 1; 
+  }
+  70% {
+    opacity: 0; 
+  }
+  100% {
+    bottom: -200%;
+    opacity: 0; 
+  } 
+}
+
+@keyframes scroll-point-zoom {
+0% {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1); 
+}
+20% {
+  opacity: 1; 
+}
+40% {
+  opacity: 0;
+  -webkit-transform: scale(4);
+  transform: scale(4);
+}
+70% {
+  opacity: 0; 
+}
+100% {
+  opacity: 0;
+  -webkit-transform: scale(4);
+  transform: scale(4); 
+} 
+}

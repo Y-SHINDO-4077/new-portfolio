@@ -30,20 +30,21 @@ export default function Nav(){
       </button>
       <ul className={styles.list}>
         <li>
-          <Link href="/">
-            <a onClick={closeNav}>Home</a>
+          <Link href="/me/">
+            <a onClick={closeNav}>ME</a>
           </Link>
         </li>
         <li>
-          <Link href="/about/">
-            <a onClick={closeNav}>About</a>
+          <Link href="/work/">
+            <a onClick={closeNav}>WORKS</a>
           </Link>
         </li>
         <li>
-          <Link href="/blog/">
-            <a onClick={closeNav}>Blog</a>
+          <Link href="/dnu/">
+            <a onClick={closeNav}>DNU</a>
           </Link>
         </li>
+        
       </ul>
     </nav>
   )

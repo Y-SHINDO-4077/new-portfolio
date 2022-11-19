@@ -1,8 +1,13 @@
 @import '../scss/variables.module.scss';
 
 .wrapper{
-  padding: var(--space-xl) 0;
-  background-color: var(--gray-10);
+  padding:40px 0 16px;
+  background-color: #333;
+}
+[data-theme="dark"]{
+  .wrapper{
+    background-color:#ccc;
+  }
 }
 
 .flexContainer{
@@ -13,5 +18,43 @@
   @include mq(ts){
     text-align: center;
     display: block;
+  }
+  a{
+    color:#fff;
+  }
+}
+
+.list{
+  @include flex();
+  column-gap:32px;
+  li{
+    a{
+      color:#fff;
+    }
+  }
+}
+
+
+
+.footer_list{
+  @include mq(ts){
+    margin-top:24px;
+  }
+}
+.social{
+  @extend .mt16;
+  color:#fff;
+  margin-left:auto;
+
+  ul{
+    justify-content: end;
+  }
+}
+
+.t_center{
+  text-align: center;
+  color:#fff;
+  small{
+    font-size:14px;
   }
 }
