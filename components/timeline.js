@@ -121,13 +121,13 @@ export default function Timeline(title) {
   //setAnimation();
   
   
-  const todos = [
-    [1, 1994,"Born" ,"誕生"],
-    [2, 2018,"Graduated from Doshisha University,Cultural history." , "同志社大学文学部文化史学科日本史専攻卒業"],
-    [3,2018,"Work as a Developer at a systems Company. ","業務システム会社でプログラマーとして働く"],
-    [4,2020,"Work as a Front-end enginner at a website production. ","Web制作会社でフロントエンジニアとして働く"],
-    [5,2022,"Entered Kyoto Univ. of the Arts, Graphic design.","京都芸術大学通信教育部デザイン学科グラフィックデザインコースに入学"]
-  ];
+  // const todos = [
+  //   [1, 1994,"Born" ,"誕生"],
+  //   [2, 2018,"Graduated from Doshisha University,Cultural history." , "同志社大学文学部文化史学科日本史専攻卒業"],
+  //   [3,2018,"Work as a Developer at a systems Company. ","業務システム会社でプログラマーとして働く"],
+  //   [4,2020,"Work as a Front-end enginner at a website production. ","Web制作会社でフロントエンジニアとして働く"],
+  //   [5,2022,"Entered Kyoto Univ. of the Arts, Graphic design.","京都芸術大学通信教育部デザイン学科グラフィックデザインコースに入学"]
+  // ];
   
 
   return (
@@ -141,18 +141,38 @@ export default function Timeline(title) {
         <div className={styles.side_scroll_list_wrapper} id="area">
           
           <div className={styles.side_scroll_list} id="wrap">
+            <div className={styles.side_scroll_item}>
+              <span className={styles.sr_only}>1</span>
+              <h4>1994</h4>
+              <h3>Born</h3>
+              <p>誕生</p>
+            </div>  
+            <div className={styles.side_scroll_item}>
+              <span className={styles.sr_only}>1</span>
+              <h4>2018</h4>
+              <h3>Graduated from Doshisha University,Cultural history.</h3>
+              <p>同志社大学文学部文化史学科日本史専攻卒業</p>
+            </div>
+            <div className={styles.side_scroll_item}>
+              <span className={styles.sr_only}>3</span>
+              <h4>2018</h4>
+              <h3>Work as a Developer at a systems Company. </h3>
+              <p>業務システム会社でプログラマーとして働く</p>
+            </div> 
+            <div className={styles.side_scroll_item}>
+              <span className={styles.sr_only}>4</span>
+              <h4>2020</h4>
+              <h3>Work as a Front-end enginner at a website production. </h3>
+              <p>Web制作会社でフロントエンジニアとして働く</p>
+            </div>
+            <div className={styles.side_scroll_item}>
+              <span className={styles.sr_only}>5</span>
+              <h4>2022</h4>
+              <h3>Entered Kyoto Univ. of the Arts, Graphic design. </h3>
+              <p>京都芸術大学通信教育部デザイン学科グラフィックデザインコースに入学</p>
+            </div> 
+                   
            
-                {todos.map((item, index) => {
-                    return (
-                      <div className={styles.side_scroll_item}>
-                        <span className={styles.sr_only}>{index}</span>
-                        <h4>{item[1]}</h4>
-                        <h3>{item[2]}</h3>
-                        <p>{item[3]}</p>
-                      </div>  
-                    );
-                  }
-                )}
 
 {/* <div class="biography__wrapper">
             <div class="biography__container js-list-container">
