@@ -15,9 +15,9 @@ const nextConfig = {
       },
     ],
   },
-  experimental: {
-    optimizeFonts: true,
-  },
+  // experimental: {
+  //   optimizeFonts: true,
+  // },
 }
 
 module.exports = nextConfig
