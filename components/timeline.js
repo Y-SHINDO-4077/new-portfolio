@@ -12,7 +12,7 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { gsap, Power3 } from "gsap";
 //import { useEffect } from "react";
 gsap.registerPlugin(ScrollTrigger);
-import {SplitText} from "gsap/utils/SplitText3";
+// import {SplitText} from "gsap/utils/SplitText3";
 
 import Image from 'next/image'
 import dicon from 'images/dyuicon.svg'
