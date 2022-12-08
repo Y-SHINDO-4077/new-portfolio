@@ -11,4 +11,7 @@
 .ja__content{
   margin-left:auto;
   width:60vw;
+  @include mq(ts){
+    width:100%;
+  }
 }

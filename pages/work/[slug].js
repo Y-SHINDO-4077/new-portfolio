@@ -12,6 +12,7 @@ import { getPlaiceholder } from 'plaiceholder'
 import { prevNextPost } from 'lib/prev-next-post'
 import Pagination from 'components/pagination'
 import PostCategories from 'components/post-categories'
+
 import styles from '../../styles/scss/work_single.module.scss'
 
 export async function getStaticPaths() {
@@ -47,7 +48,7 @@ export default function Schedule({
 }) {
 return (
     <>
-        <figure>
+        <figure className={styles.imagecontainer}>
         <Image
         key={eyecatch.url}
         src={eyecatch.url}
@@ -65,25 +66,30 @@ return (
         <Container>
             <article>
             <PostHeader title={title} en_title={en_title} productYear={productYear} role={role}/>
+            {url &&
+                    <div className={styles.content__url}>
+                        {url}
+                    </div>
+            }
                
                     <PostBody>
                         <h3 className={styles.heading3}>
                            <ConvertBody contentHTML={items01} />
                         </h3>
                        
-                           <ConvertBody contentHTML={content01} />
+                        <ConvertBody contentHTML={content01} />
                         
                         <h3 className={styles.heading3}>
                           <ConvertBody contentHTML={items02} />
                         </h3>
                         
-                          <ConvertBody contentHTML={content02} />
+                        <ConvertBody contentHTML={content02} />
                         
                         <h3 className={styles.heading3}>
                           <ConvertBody contentHTML={items03} />
                         </h3>
                         
-                          <ConvertBody contentHTML={content03} />
+                        <ConvertBody contentHTML={content03} />
                         
                         {items04 && 
                         <h3 className={styles.heading3}>
@@ -93,13 +99,7 @@ return (
                         {content04 &&
                             <ConvertBody contentHTML={content04} />
                         }
-                        {url &&
-                            <div className={styles.morebtn}>
-                                <a href="{url}" className={styles.viewmore}>
-                                VIEW MORE
-                                </a>
-                            </div>
-                        }
+                        
 
                         <figure>
                             <Image

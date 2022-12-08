@@ -5,7 +5,7 @@ import Image from 'next/image'
 export default function Posts({ posts }) {
     return (
     <div className={styles.gridContainer}>
-        {posts.map(({ title, slug , eyecatch ,en_title }) => (
+        {posts.map(({ title, slug , eyecatch ,en_title ,role}) => (
             <article className={styles.post} key={slug}>
                 <Link href={`/work/${slug}`}>
                     <a>
@@ -28,6 +28,7 @@ export default function Posts({ posts }) {
                             <div className={styles.right}>
                                 <h2 className={styles.heading2}>{en_title}</h2>
                                 <h3 className={styles.heading3}>{title}</h3>
+                                <h4 className={styles.heading4}>{role}</h4>
                             </div>
                         </div>
                     

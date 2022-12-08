@@ -22,8 +22,8 @@ export default function Footer(){
               </Link>
             </li>
             <li>
-              <Link href="/dnu/">
-                <a>DNU</a>
+              <Link href="/other/">
+                <a>OTHER</a>
               </Link>
             </li>
           </ul>

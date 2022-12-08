@@ -72,16 +72,17 @@
 
     .kv__scroll__text{
       padding-left: 2px;
-     font-size: 1rem;
+      font-size: 1rem;
+      margin-bottom: 24px;
     }
 
     .kv__scroll__point{
       position: absolute;
       left: 50%;
       z-index: 100;
-      margin-left: -3.5px;
-      width: 7px;
-      height: 7px;
+      margin-left: -4px;
+      width: 12px;
+      height: 12px;
       bottom: -5%;
       animation: scroll-point 2.6s ease-out infinite;
       animation-fill-mode: both;

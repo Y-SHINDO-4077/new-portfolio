@@ -3,6 +3,13 @@
   font-weight: 500;
   color:var(--black);
 }
+
+[data-theme="dark"]{
+  .basic{
+    color:#fff;
+  }
+}
+
   .box {
   @extend .basic;
   display: inline-block;

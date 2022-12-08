@@ -1,6 +1,10 @@
 @import '../scss/variables.module.scss';
+.overflow{
+  overflow: hidden;
+}
 .bg{
   background:#F0EFEB !important;
+  padding-top:0;
 }
 .circle_area{
   /*max-width:500px;
@@ -74,3 +78,29 @@
   .readmore_readmore__Ri1pm:first-of-type{
     display: none;
   }
+
+  .figure{
+    text-align: center;
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+
+    span{
+      img{
+        max-width:800px;
+        width:100%;
+      }
+    }
+  }
+
+  .overflow{
+    position:relative;
+  }
+
+  [data-theme="dark"]{
+    .bg {
+      background:#cccccc !important;
+    }
+     
+   }
+  

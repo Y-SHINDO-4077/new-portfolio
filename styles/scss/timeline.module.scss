@@ -20,58 +20,112 @@
   text-align: left;
 }
 
-.pagesWrapper {
-  position: relative;
-  height: 100vh;
-}
 .area{
   display: flex;
 }
-// .pages {
-//   // position: absolute;
-//   // top: 0;
-//   // left: 0;
-//   display: flex;
-//   height: 100%;
-//   justify-content: center;
-//   align-items: center;
-//   width:100vw;
-// }
+
 .sr_only{
   display: none;
 }
-.timeline__section{
-  overflow: hidden;
-	position: relative;
- 
-}
-.side_scroll_list_wrapper{
-  position: relative;
-  width: 100%;
-  height: 200px;
-}
-.side_scroll_list{
-  position: absolute;
+
+
+.side_scroll {
   display: flex;
-}
-.side_scroll_item{
-  display: flex;
+  justify-content: flex-start;
   align-items: center;
-  justify-content: center;
-  width: 300px;
-  height: 200px;
-  // font-size: 50px;
-  font-weight: bold;
-  color: #333;
-  width:50vw;
 }
-.side-scroll-item + .side-scroll-item {
-  margin-left: 60px;
+
+
+
+
+
+.side_scroll_list {
+  border-left: 1px solid #333;
+  position: relative;
+  top: 0;
+  left: 64px;
+
+  @include mq(m){
+    left: 24px;
+  }
+
+}
+
+.side_scroll_item {
+  
+  position: relative;
+  font-size: 32px;
+  font-weight: 700;
+  padding: 24px 0 24px 48px;
+
+  @include mq(m){
+    display: block;
+  }
+
+  @include mq(s){
+    width: calc(100% - 32px);
+    padding: 24px 0 24px 24px;
+  }
+
+  &:last-of-type{
+    align-items: flex-start;
+  }
+
+  div{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    @include mq(ts){
+      display: block;
+    }
+  }
+  &:before{
+    position: absolute;
+    top: 32px;
+    left: -10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50vh;
+    content: "";
+    background: #333;
+  }
+
+  h3{
+    font-size: 32px;
+    margin-left:16px;
+
+    @include mq(m){
+      margin-left:0;
+    }
+
+    @include mq(s){
+      font-size: 24px;
+    }
+  }
+
+  h4{
+    font-size: 24px;
+    @include mq(s){
+      font-size: 16px;
+    }
+  }
+
+  p{
+    width:95%;
+  }
+}
+
+
+
+.flex{
+  display: flex;
+  
 }
 
 
 .timeline_list{
-  width:500px;
+  
 }
 
 #timeline__text{

@@ -29,3 +29,13 @@
   }
 }
 
+.content__url{
+  @extend .content;
+  margin-top:32px;
+  margin-bottom:48px;
+  text-align: right;
+}
+
+.imagecontainer{
+  padding-top:64px;
+}

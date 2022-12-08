@@ -1,5 +1,5 @@
 import styles from 'styles/scss/post-header.module.scss'
-import ConvertDate from 'components/convert-date'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClock } from '@fortawesome/free-regular-svg-icons'
 

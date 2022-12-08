@@ -36,3 +36,12 @@
   }
 }
 
+[data-theme="dark"]{
+  .readmore{
+    a{
+      background-image: linear-gradient(90deg,#fff 50%,transparent 0);
+    }
+  }
+}
+
+

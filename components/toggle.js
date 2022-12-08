@@ -6,7 +6,7 @@ import light from 'images/light_icon.svg'
 import dark from 'images/dark_icon.svg'
 
 export default function Toggle(){
-  const [darkTheme, setDarkTheme] = useState(undefined);
+  const [darkTheme, setDarkTheme] = useState('');
 
   const handleToggle = (e) => {
     setDarkTheme(e.target.checked);
@@ -45,7 +45,7 @@ export default function Toggle(){
                   <input type="checkbox" id="switch"
                   checked={darkTheme}
                   onChange={handleToggle} className={styles.header_toggleInput} />
-                  <label for="switch" className={styles.header_toggleLabel}>
+                  <label htmlFor="switch" className={styles.header_toggleLabel}>
                   </label>
             </div>
             <figure >

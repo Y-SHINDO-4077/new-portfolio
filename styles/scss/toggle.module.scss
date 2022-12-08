@@ -57,3 +57,12 @@
      
     }
 }
+
+[data-theme="dark"]{
+  .header_toggleLabel{
+    border-color: #fff;
+    &:after{
+      background: #fff;
+    }
+  }
+}

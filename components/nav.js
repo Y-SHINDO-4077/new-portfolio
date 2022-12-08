@@ -40,8 +40,8 @@ export default function Nav(){
           </Link>
         </li>
         <li>
-          <Link href="/dnu/">
-            <a onClick={closeNav}>DNU</a>
+          <Link href="/other/">
+            <a onClick={closeNav}>OTHER</a>
           </Link>
         </li>
         
