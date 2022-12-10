@@ -4,8 +4,8 @@ import Container from 'components/container'
 import React from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
+import Link from 'next/link'
 
-import Typewriter from 'react-simple-typewriter'
 
 import { ReactElement, useEffect ,useRef,useLayoutEffect} from 'react'
 
