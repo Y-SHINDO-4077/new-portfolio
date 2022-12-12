@@ -49,28 +49,13 @@
 }
 
 .hero_title{
-  font-size:96px;
+  font-size:116px;
 
   @include mq(m){
     font-size:72px;
   }
 
-  // @include mq(s){
-  //   font-size:64px;
-  // }
-
-  // span{
-  //   opacity: 0;
-  //   -webkit-transform: translateY(-100px);
-  //   transform: translateY(-100px);
-
-    
-  //   opacity: 1;
-  //   transform: translateY(0px);
-  //   transition-property: transform,opacity,-webkit-transform;
-  //   transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
-  //   transition-delay: 1050ms;
-  // }
+ 
 }
 
 .description {
@@ -103,12 +88,13 @@
     font-size:96px;
     letter-spacing: 0;
     position:absolute;
-    top:45%;
-    // top: 16%;
+   
+     top: 40%;
     left:10%;
     z-index:10;
     color:var(--white);
     mix-blend-mode: hard-light;
+    
 
     
     @media screen and (max-width: 1180px) {
@@ -127,12 +113,24 @@
     }
   
     @include mq(s){
-      top: 20%;
-      
+      top: 45%;
       text-align: center;
     }
 
+    
+
+    .subtitles{
+      font-family: 'Futura',sans-serif;
+      font-size:44px;
+      letter-spacing: 0.004em;
+      @include mq(ts){
+        font-size:24px;
+        margin-top: 24px;
+      }
+    }
+
     .hero_title{
+      letter-spacing: 0.05em;
 
       @include mq(ts){
         font-size:64px;
@@ -148,20 +146,23 @@
     }
 
 
-    h1{
-      letter-spacing: 0;
-      
-    }
+
 
   }
   .canvasPoition{
     position: absolute;
     top: 17%;
-    left: 0%;
+    right: 50%;
+    width:100%;
+
+    @include mq(ts){
+      right:19%;
+    }
 
     canvas{
+     
       &:not(:first-of-type){
-        display: none;;
+        display: none;
       }
     }
   }

@@ -47,9 +47,9 @@ export default function Home({ posts }) {
     <Container large>
       <section className={styles.fvArea}>
         <div className={styles.topTitle}>
-          <h1 className={styles.hero_title} ref={typewrite}><span>E</span><span>n</span><span>g</span><span>i</span><span>n</span><span>e</span><span>e</span><span>i</span><span>n</span><span>g</span><wbr/><br className={styles.s_none}/><span>×</span><wbr/><br className={styles.s_none}/><span>D</span><span>e</span><span>s</span><span>i</span><span>g</span><span>n</span><br className={styles.s_none}/><span>×</span><wbr/><br className={styles.s_none}/><span>T</span><span>o</span><span>w</span><span>n</span></h1>
+          <h1 className={styles.hero_title} ref={typewrite}><span>Y</span><span>U</span><span>T</span><span>A</span><span>R</span><span>O</span><span className={styles.s_vlock}>&nbsp;</span><br className={styles.s_none}/><span>S</span><span>H</span><span>I</span><span>N</span><span>D</span><span>O</span></h1>
          
-          <h4 className={styles.subtitles} ><span>ー</span><span>ま</span><span>ち</span><span>に</span><span>ひ</span><span>も</span><span>づ</span><span>く</span><span>も</span><span>の</span><span>を</span><br className={styles.s_none}/><span>デ</span><span>ザ</span><span>イ</span><span>ン</span><span>し</span><span>て</span><span>、</span><br className={styles.m_none}/><span>魅</span><span>力</span><span>を</span><span>伝</span><span>え</span><span>る</span><span>ー</span></h4>
+          <h4 className={styles.subtitles} ><span>I</span><span>'</span><span>m</span><span>&nbsp;</span><span>a</span><span>&nbsp;</span><span>w</span><span>e</span><span>b</span><span>&nbsp;</span><span>E</span><span>n</span><span>g</span><span>i</span><span>n</span><span>n</span><span>e</span><span>r</span><span>,</span><br className={styles.s_none}/><span>&nbsp;</span><span>a</span><span>n</span><span>d</span><span>&nbsp;</span><span>s</span><span>o</span><span>&nbsp;</span><span>o</span><span>n</span><span>&nbsp;</span><span>...</span></h4>
         </div>
         <div>
         　<MVSwiper />
