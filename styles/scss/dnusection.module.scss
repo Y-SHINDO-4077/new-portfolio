@@ -8,11 +8,15 @@
   align-items: center;
   position:relative;
   z-index: 1;
-  margin-top:64px;
+  // margin-top:64px;
+  padding-top: 150px;
+  padding-bottom: 150px;
 
   @include mq(ts){
     display: block;
     position:inherit;
+    padding-top: 48px;
+    padding-bottom: 48px;
   }
 
   .flex__left{
@@ -21,6 +25,7 @@
     @include mq(ts){
       max-width:inherit;
       width:100%;
+      margin-bottom:24px;
     }
   }
   .dnu_image{

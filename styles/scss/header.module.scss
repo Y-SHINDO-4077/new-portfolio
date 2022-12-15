@@ -5,6 +5,13 @@
     position: fixed;
     width: 100%;
 }
+.header__wraps{
+    height: 64px;
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+    background:rgba(255,255,255,0.25);
+}
 .header__flex{
  display: flex;
  justify-content:space-between;

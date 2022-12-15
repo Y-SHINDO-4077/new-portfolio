@@ -21,23 +21,30 @@ import topwork from 'images/topwork.webp'
 
 
 export default function Home({ posts }) {
-  const typewrite = useRef(null);
-  useEffect(() => {   
-      
+  const typewrite = useRef();
+  const typewrite02 = useRef();
+  const jsDot = typewrite.current;
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      gsap.set([typewrite.current,typewrite02.current], {
+        opacity: 0,
+        y:20
+      });
+      gsap.to([typewrite.current,typewrite02.current], {  
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        delay: 0.8,
+        stagger: {
+        amount: 0.5,
+        from: "start", 
+        ease: 'power4.inOut'
+       }
+      });
+    }, typewrite);
 
-      let ctx = gsap.context(() => {
-        // normal selector text, automatically scoped to appRef 
-        gsap.from('typewrite.current span ', {
-            opacity: 0,
-            duration: 0.4,
-            stagger: 0.2,
-            ease: 'power1.inOut',
-            paused: true
-          })
-      }, typewrite);
-  
-      return () => ctx.revert();
-   });
+    return () => ctx.revert();
+  }, []);
 
   
 
@@ -47,9 +54,9 @@ export default function Home({ posts }) {
     <Container large>
       <section className={styles.fvArea}>
         <div className={styles.topTitle}>
-          <h1 className={styles.hero_title} ref={typewrite}><span>Y</span><span>U</span><span>T</span><span>A</span><span>R</span><span>O</span><span className={styles.s_vlock}>&nbsp;</span><br className={styles.s_none}/><span>S</span><span>H</span><span>I</span><span>N</span><span>D</span><span>O</span></h1>
+          <h1 className={styles.hero_title} ref={typewrite}><span>Y</span><span>U</span><span>T</span><span>A</span><span>R</span><span>O</span><span className={styles.s_block}>&nbsp;</span><br className={styles.s_none}/><span>S</span><span>H</span><span>I</span><span>N</span><span>D</span><span>O</span></h1>
          
-          <h4 className={styles.subtitles} ><span>I</span><span>'</span><span>m</span><span>&nbsp;</span><span>a</span><span>&nbsp;</span><span>w</span><span>e</span><span>b</span><span>&nbsp;</span><span>E</span><span>n</span><span>g</span><span>i</span><span>n</span><span>n</span><span>e</span><span>r</span><span>,</span><br className={styles.s_none}/><span>&nbsp;</span><span>a</span><span>n</span><span>d</span><span>&nbsp;</span><span>s</span><span>o</span><span>&nbsp;</span><span>o</span><span>n</span><span>&nbsp;</span><span>...</span></h4>
+          <h4 className={styles.subtitles} ref={typewrite02}><span>I</span><span>'</span><span>m</span><span>&nbsp;</span><span>a</span><span>&nbsp;</span><span>w</span><span>e</span><span>b</span><span>&nbsp;</span><span>E</span><span>n</span><span>g</span><span>i</span><span>n</span><span>n</span><span>e</span><span>r</span><span>,</span><br className={styles.s_none}/><span>&nbsp;</span><span>a</span><span>n</span><span>d</span><span>&nbsp;</span><span>s</span><span>o</span><span>&nbsp;</span><span>o</span><span>n</span><span>&nbsp;</span><span>...</span></h4>
         </div>
         <div>
         　<MVSwiper />

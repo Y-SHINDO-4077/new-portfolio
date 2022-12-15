@@ -11,6 +11,8 @@
 .ja__content{
   margin-left:auto;
   width:60vw;
+  font-feature-settings: 'palt';
+
   @include mq(ts){
     width:100%;
   }

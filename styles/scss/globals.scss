@@ -168,35 +168,73 @@ a {
 
 
 //mousestoker
+// #stalker {
+//   pointer-events: none;
+//   position: fixed;
+//   top: -8px;     
+//   left: -8px;  
+//   width: 20px;   
+//   height: 20px;
+//   background: rgba(0,0,0,0.9);
+//   border-radius: 50%;
+//   transform: translate(0,0);
+//   transition: transform 0.2s; 
+//   transition-timing-function: ease-out;
+//   z-index: 999;
+
+//   @include mq(m){
+//     display: none;
+//   }
+// }
+// #stalker.hov_{
+//     top: -32px;     
+//     left: -32px;    
+//     width: 64px;
+//     height: 64px;
+//     transition: .5s;
+//     background: rgba(0, 0, 0, 0.4);
+// }
+
+html,
+body,
+a:hover {
+  cursor: none; // もともとあるカーソルは見えなくなるようにする
+
+  @include mq(m){
+    cursor: pointer;
+  }
+}
+
 #stalker {
-  pointer-events: none;
-  position: fixed;
-  top: -8px;     
-  left: -8px;  
-  width: 20px;   
-  height: 20px;
-  background: rgba(0,0,0,0.9);
   border-radius: 50%;
-  transform: translate(0,0);
-  transition: transform 0.2s; 
-  transition-timing-function: ease-out;
-  z-index: 999;
+  position: absolute;
+  top: 0;
+  left: 0; 
+  pointer-events: none;
+  transform: translate(-50%,-50%);
 
   @include mq(m){
     display: none;
   }
 }
-#stalker.hov_{
-    top: -32px;     
-    left: -32px;    
-    width: 64px;
-    height: 64px;
-    transition: .5s;
-    background: rgba(0, 0, 0, 0.4);
+
+#stalker {
+  width: 20px;   
+  height: 20px;
+  background-color: #333;
+  z-index: 1001; // どの要素よりも一番上になるようにする。.followerより大きい値
 }
 
+// #follower {
+//   width: 40px;
+//   height: 40px;
+//   background-color: rgba(#333, .5);
+//   z-index: 1000; // どの要素よりも一番上になるようにする
+//   transition: transform linear .2s;
+// }
+
 [data-theme="dark"]{
-    #stalker {
+    #stalker,#follower {
       background: rgba(255,255,255,0.9);
     }
     #stalker.hov_{
@@ -210,9 +248,9 @@ section{
   &:last-of-type{
     padding-bottom:120px;
 
-    @include mq(ts){
-      padding-bottom:48px;
-    }
+    // @include mq(ts){
+    //   padding-bottom:48px;
+    // }
   }
 
   @include mq(ts){

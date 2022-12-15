@@ -60,16 +60,7 @@ export default function MeSetion({linkOn = false}) {
               文章を書いたり、<br/>
               まちあるきの企画などもやります。
               </h4>
-              <h5 className={styles.textleftFade}>
-              Hello,World.<br/>
-                Yutaro Shindo.<br/>
-                I’m a Web Engineer.<br/>
-                Studying Graphic Design.<br/>
-                Writing,and <br/>
-                Planing a town walk ,<br/>
-                and so on… 
              
-              </h5>
             </div>
             <div className={styles.s_block}>
             <Image

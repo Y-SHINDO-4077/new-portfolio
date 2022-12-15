@@ -11,8 +11,8 @@ export function middleware(req) {
   const url = req.nextUrl
 
   if (basicAuth) {
-    const authValue = basicAuth.split(' ')[1]
-    const [user, pwd] = atob(authValue).split(':')
+    const auth = basicAuth.split(' ')[1]
+    const [user, pwd] = Buffer.from(auth, 'base64').toString().split(':')
 
     if (user === 'do-portfolio' && pwd === 'aser128kA9Zhn') {
       return NextResponse.next()

@@ -74,14 +74,15 @@
 
     .left{
     
+      @include mq(m){
+         margin-top: 64px;
+        
+      }
     }
     .right{
       padding:64px 0;
       border-bottom:1px solid #000;
 
-      @include mq(m){
-        margin-top: 64px;
-      }
     }
    
   }

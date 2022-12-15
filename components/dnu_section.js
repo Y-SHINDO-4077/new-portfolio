@@ -55,10 +55,6 @@ export default function DNUSetion({linkOn = false }) {
               大ナゴヤ大学に関わり続けています。<br/>
               私の活動を紹介します。
               </h4>
-              <h5 className={styles.textleftFade}>
-I have been involved with the Dai-Nagoya University since 2017 when I was enrolled at the university.
-I would like to introduce my activities.
-              </h5>
             </div>
             <div className={styles.dnu_image}>
               <figure className={styles.dnu_image_size}>
