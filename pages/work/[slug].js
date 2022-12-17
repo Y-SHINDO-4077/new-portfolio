@@ -1,4 +1,6 @@
 import { getPostBySlug, getAllSlugs } from 'lib/api'
+import { extractText } from 'lib/extract-text'
+import Meta from 'components/meta'
 import Link from 'next/link'
 import Container from 'components/container'
 import PostHeader from 'components/post-header'
@@ -45,6 +47,7 @@ export default function Schedule({
     url,
     prevPost,
     nextPost,
+    description,
 }) {
 return (
     <>
@@ -64,6 +67,13 @@ return (
         />
         </figure>
         <Container>
+        <Meta
+            pageTitle={title}
+            pageDesc={description}
+            pageImg={eyecatch.url}
+            pageImgW={eyecatch.width}
+            pageImgH={eyecatch.height}
+        />
             <article>
             <PostHeader title={title} en_title={en_title} productYear={productYear} role={role}/>
             {url &&
@@ -119,12 +129,17 @@ return (
                  
                         {/* <PostCategories categories={categories} /> */}
                  
-                <Pagination
+                {/* <Pagination
                 prevText={prevPost.title}
                 prevUrl={`/work/${prevPost.slug}`}
                 nextText={nextPost.title}
                 nextUrl={`/work/${nextPost.slug}`}
-                />
+                /> */}
+                 <div className={styles.readmore}>
+                    <a href='../work'>
+                        <span>BACK</span>
+                    </a>
+                </div>
             </article>
         </Container>
     </>
@@ -141,6 +156,7 @@ export async function getStaticProps(context) {
 
     const allSlugs = await getAllSlugs()
     const [prevPost, nextPost] = prevNextPost(allSlugs, slug)
+    const description = extractText(post.content01)
     return {
         props: {
         title: post.title,
@@ -161,7 +177,7 @@ export async function getStaticProps(context) {
         items04:post.items04 ? post.items04 :""  ,
         content04:post.content04 ? post.content04 : "",
         url:post.url ?  post.url : "",
-        //description: description,
+        description: description,
         prevPost: prevPost,
         nextPost: nextPost,
         },

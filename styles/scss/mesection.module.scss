@@ -17,7 +17,7 @@
 .flex__area{
   @include flex();
   justify-content:space-between;
-  align-items: flex-start;
+  align-items: center;
 
   @include mq(ts){
     display: block;

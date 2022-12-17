@@ -18,7 +18,7 @@ import Image from 'next/image'
 export default function OTHER({posts}) {
   return (
       <>
-        <Meta pageTitle="DNU" pageDesc="About development activities"/>
+        <Meta pageTitle="OTHER" pageDesc="大ナゴヤ大学での活動について紹介します。"/>
         <DNUSetion/>
         <Container>
           <PolicySetion title="What’s DNU?"  ja__content="2009年に開校した、

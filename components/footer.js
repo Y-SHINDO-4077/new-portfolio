@@ -28,9 +28,9 @@ export default function Footer(){
             </li>
           </ul>
         </div>
-        <div className={styles.social}>
+        {/* <div className={styles.social}>
           <Social />
-        </div>
+        </div> */}
         <p className={styles.t_center}><small className={styles.copyright}>©️ YUTARO SHINDO</small></p>
       </Container>
     </footer>

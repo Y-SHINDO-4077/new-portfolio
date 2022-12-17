@@ -154,16 +154,16 @@
   }
   .canvasPoition{
     position: absolute;
-    top: 17%;
-    right: 50%;
+    top: 10%;
+    right: 20%;
     width:100%;
 
-    @include mq(ts){
+    @include mq(s){
       top: 15%;
       width: 100%;
       height: 100%;
       margin: 0 auto;
-      right: 80px;
+      right: 0;
     }
 
     canvas{

@@ -12,11 +12,11 @@ export default function CANVAS({}) {
     var canvas = document.createElement('canvas'),
     ctx = canvas.getContext('2d');
 
-    var width = canvas.width = window.innerWidth,
+    var width = canvas.width = window.innerWidth ,
         height = canvas.height = window.innerHeight;
 
     window.addEventListener('resize',function(){
-      width = canvas.width = window.innerWidth;
+      width = canvas.width = window.innerWidth - 10;
       height = canvas.height = window.innerHeight;
     });
     let fv = document.getElementById('fv'); 
@@ -98,8 +98,8 @@ function render(){
   ctx.setTransform(1, 0, 0, 1, 0, 0);
   ctx.clearRect(0, 0, width, height);
   //ctx.clip();
-  drawBezierCircle(width * 3/4,height/2,300);
-  
+  //drawBezierCircle(width * 3/4,height/2,300);
+  drawBezierCircle(width/2 ,height/2,300);
  
 }
 

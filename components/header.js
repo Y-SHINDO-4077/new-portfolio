@@ -27,7 +27,7 @@ export default function Header(){
             <div className={styles.header__nav }>
               <Nav />
             </div>
-            <Social />
+            {/* <Social /> */}
             <Toggle />
           </div>
         </div>
