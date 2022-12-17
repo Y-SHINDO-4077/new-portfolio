@@ -24,7 +24,7 @@ export default function OTHER({posts}) {
           <PolicySetion title="What’s DNU?"  ja__content="2009年に開校した、
   「ナゴヤ(東海三県)のまちがまるごとキャンパス」を謳い、学びの場を提供するNPO。毎月第二土曜日に「大ナゴヤの日」を開催したり、「歩くまちには何がある？」というコンセプトを掲げた「まちシル」など、さまざまな活動を行っている。"/>
           <div className={readstyles.readmore}>
-            <a href='https://dai-nagoya.univnet.jp/' taeget="_blank">
+            <a href='https://dai-nagoya.univnet.jp/' target="_blank" rel="noreferrer noopener" >
               <span>HPはこちら</span>
             </a>
           </div>
