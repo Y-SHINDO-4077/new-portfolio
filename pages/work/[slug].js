@@ -8,7 +8,7 @@ import PostBody from 'components/post-body'
 
 import ConvertBody from 'components/convert-body'
 
-
+import { eyecatchLocal } from 'lib/constants'
 import Image from 'next/image'
 import { getPlaiceholder } from 'plaiceholder'
 import { prevNextPost } from 'lib/prev-next-post'
@@ -150,7 +150,7 @@ export async function getStaticProps(context) {
     const slug = context.params.slug
     const post = await getPostBySlug(slug)
     //const description = extractText(post.content)
-    const eyecatch = post.eyecatch
+    const eyecatch = post.eyecatch ?? eyecatchLocal
     const { base64 } = await getPlaiceholder(eyecatch.url)
     eyecatch.blurDataURL = base64
 
