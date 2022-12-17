@@ -63,7 +63,7 @@ export default function DNUTimeline(title) {
                   <h4>2020</h4>
                   <h3>noteチーム立ち上げ</h3>
                 </div>
-                <p>ボランティアスタッフさんのことをもっと発信したいとの声があり、<br/>スタッフさんのインタビューを載せた<a href="https://note.com/dainagoya/m/m6840810430ba" target="_blank" className={styles.hover}>note</a>を作る活動を立ち上げました。<br/>校正係として現在も活動中です。</p>
+                <p>ボランティアスタッフさんのことをもっと発信したいとの声があり、<br/>スタッフさんのインタビューを載せた<a href="https://note.com/dainagoya/m/m6840810430ba" target="_blank" rel="noreferrer noopener" className={styles.hover}>note</a>を作る活動を立ち上げました。<br/>校正係として現在も活動中です。</p>
             </li>
             <li className={styles.side_scroll_item}>
               <div>
