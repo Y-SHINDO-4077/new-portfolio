@@ -1,5 +1,5 @@
-
-
+import { Buffer } from 'buffer';
+//window.Buffer = Buffer;
 import { NextRequest, NextResponse } from 'next/server'
 
 export const config = {

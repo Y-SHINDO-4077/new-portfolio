@@ -5,7 +5,7 @@ import Hero from 'components/hero'
 import { getAllPosts } from 'lib/api'
 import Posts from 'components/posts'
 import { getPlaiceholder } from 'plaiceholder'
- import { eyecatchLocal } from 'lib/constants'
+import { eyecatchLocal } from 'lib/constants'
 import PostCategories from 'components/post-categories'
 import styles from '../../styles/scss/posts.module.scss'
 
