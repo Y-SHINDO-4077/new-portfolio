@@ -165,7 +165,7 @@ export default function CHART({}) {
       <h4 className={styles.fadeinUp}>Program Languages </h4>
       <canvas id="myChart" ref={canvasEl} height="300" />
       <h4 className={styles.fadeinUp}>Design Software</h4>
-      <canvas id="myChart2" ref={canvasEl2} height="100" />
+      <canvas id="myChart2" ref={canvasEl2} height="200" />
     </>
   )
 }

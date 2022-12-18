@@ -1,10 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   //reactStrictMode: true,
-  //swcMinify: true,
-  // images: {
-  //   domains: ['images.microcms-assets.io'],
-  // },
+  swcMinify: true,
+  images: {
+    domains: ['images.microcms-assets.io'],
+  },
   images: {
     remotePatterns: [
       {
@@ -19,13 +19,13 @@ const nextConfig = {
   //   optimizeFonts: true,
   // },
   //presets: ["next/babel"],
-  swcMinify: false ,
+  // swcMinify: false ,
   reactStrictMode: false,
-  env: {
-    ENABLE_BASIC_AUTH: process.env.ENABLE_BASIC_AUTH,
-    BASIC_AUTH_USER: process.env.BASIC_AUTH_USER,
-    BASIC_AUTH_PASSWORD: process.env.BASIC_AUTH_PASSWORD,
-  },
+  // env: {
+  //   ENABLE_BASIC_AUTH: process.env.ENABLE_BASIC_AUTH,
+  //   BASIC_AUTH_USER: process.env.BASIC_AUTH_USER,
+  //   BASIC_AUTH_PASSWORD: process.env.BASIC_AUTH_PASSWORD,
+  // },
 
 }
 

@@ -4,7 +4,7 @@
   @include flex();
   justify-content: flex-end;
   width:fit-content;
-  margin-top:32px;
+  //margin-top:32px;
 
   @include mq(ts){
     margin-top:24px;

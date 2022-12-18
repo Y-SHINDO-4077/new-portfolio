@@ -246,11 +246,11 @@ section{
   padding:96px 0;
 
   &:last-of-type{
-    padding-bottom:120px;
+    // padding-bottom:120px;
 
-    // @include mq(ts){
-    //   padding-bottom:48px;
-    // }
+    @include mq(ts){
+      padding-bottom:48px;
+    }
   }
 
   @include mq(ts){
