@@ -70,7 +70,7 @@ export default function ME() {
         </section>
         <section>
           <Container>
-            <h2 className={styles.t__left}>Qualification</h2>
+            <h2 className={styles.heading_q}>Qualification</h2>
             <ContentBody Year ="" heading4="マイクロソフトオフィススペシャリスト" heading5="" />
             <ContentBody Year ="" heading4="ITパスポート" heading5="" />
             <ContentBody Year ="" heading4="色彩検定3級・2級" heading5="" />
