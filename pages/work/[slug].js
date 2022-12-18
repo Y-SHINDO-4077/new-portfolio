@@ -75,7 +75,7 @@ return (
             pageImgH={eyecatch.height}
         />
             <article>
-            <PostHeader title={title} en_title={en_title} productYear={productYear} role={role}/>
+            <PostHeader title={title} en_title={en_title}/>
             {url &&
                     <div className={styles.content__url}>
                         {url}

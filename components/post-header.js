@@ -6,7 +6,7 @@ import { faClock } from '@fortawesome/free-regular-svg-icons'
 export default function PostHeader({ title, en_title,productYear,role }) {
   return (
   <div className={styles.stack}>
-    <div className={styles.workTitle}>WORKS</div>
+    {/* <div className={styles.workTitle}>WORKS</div> */}
     <h1 className={styles.title}>{en_title}</h1>
     <h2 className={styles.subtitle}>{title}</h2>
     <div className={styles.detail_data}>

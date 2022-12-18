@@ -28,7 +28,7 @@ export default function ME() {
         <section className={styles.bg}>
     
       
-          <div className={styles.figure}>
+          {/* <div className={styles.figure}>
             <figure>
                 <Image
               src={three}
@@ -38,28 +38,30 @@ export default function ME() {
               priority
               />
             </figure>
-          </div>
-
-          </section> 
-        <PolicySetion title="POLICY" en__content="" ja__content="全体を把握して、分からない仕様・箇所などはすぐに確認する。
-曖昧にしない。
-よりよいクリエイティブを作るためには当たり前ですが、
-いつも徹底しています。"/>
- </div>
-    <section>
-      <Container>
-          <Timeline/> 
-      </Container>
-    </section>
-    <div className={styles.overflow}>     
-        <section>
+          </div> */}
+          <PolicySetion title="POLICY" en__content="" ja__content="全体を把握して、分からない仕様・箇所などはすぐに確認する。
+          曖昧にしない。
+          よりよいクリエイティブを作るためには当たり前ですが、
+          いつも徹底しています。"/>
           <PolicySetion title="FUTURE" en__content="" ja__content="フロントエンドを極めたい。
           動くサイトや、ユーザー視点の使いやすいWebサイトを作っていきたい。
           そのためにデザインの素養を磨き中です。
 
           DNUというプラットフォームを使って、
           さまざまな人がまちをもっと楽しめるように仕掛けていきたい。"/>
-        </section>
+
+          </section> 
+       
+
+       
+    </div>
+    <section>
+      <Container>
+          <Timeline/> 
+      </Container>
+    </section>
+    <div className={styles.overflow}>     
+        
         <section>
         <Container>
           <h2 className={styles.t__left}>Skills</h2>
@@ -69,7 +71,6 @@ export default function ME() {
         <section>
           <Container>
             <h2 className={styles.t__left}>Qualification</h2>
-            <ContentBody Year ="" heading4="普通自動車免許" heading5="" />
             <ContentBody Year ="" heading4="マイクロソフトオフィススペシャリスト" heading5="" />
             <ContentBody Year ="" heading4="ITパスポート" heading5="" />
             <ContentBody Year ="" heading4="色彩検定3級・2級" heading5="" />
