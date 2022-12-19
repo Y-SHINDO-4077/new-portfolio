@@ -53,13 +53,11 @@ export default function MeSetion({linkOn = false}) {
         </div>
         <div className={styles.flex__area}>
             <div>
-              <h4 className={styles.textleftFade}>
-              進藤雄太朗です。<br/>
-              Webエンジニアをしています。<br/>
-              グラフィックデザイン勉強中。<br/>
-              文章を書いたり、<br/>
-              まちあるきの企画などもやります。
-              </h4>
+              <p className={styles.textleftFade}>
+              進藤雄太朗です。Webエンジニアをしています。<br/>
+              名古屋のベンチャー広告代理店にて、<br/>大手企業のHPを多数実装してきました。<br/>
+              また、京都芸術大学通信教育部にて<br/>グラフィックデザインも勉強中。
+              </p>
              
             </div>
             <div className={styles.s_block}>

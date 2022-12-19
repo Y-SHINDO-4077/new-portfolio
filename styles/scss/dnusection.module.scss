@@ -19,6 +19,16 @@
     padding-bottom: 48px;
   }
 
+  h4{
+    font-size:24px;
+    font-weight:500;
+    line-height:2;
+
+    @include mq(ts){
+      font-size:18px;
+    }
+  }
+
   .flex__left{
     max-width:650px;
     width:46vw;

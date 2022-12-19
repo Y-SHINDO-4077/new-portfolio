@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import Chart from "chart.js/auto";
+//import Chart from "chart.js/auto";
 import styles from '../styles/scss/contentbody.module.scss'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
