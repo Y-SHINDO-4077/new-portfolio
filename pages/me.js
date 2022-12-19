@@ -8,12 +8,14 @@ import Timeline from 'components/timeline'
 import CHART from 'components/chart'
 import DNUSetion from 'components/dnu_section'
 import NextBTN from 'components/nextbtn'
+import READMORE from 'components/readmore'
 import styles from '../styles/scss/me.module.scss'
 
 import { ReactElement, useEffect } from 'react'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { gsap, Power3 } from "gsap";
 import Image from 'next/image'
+import topwork from 'images/topwork.webp'
 
 import three from 'images/me_figure1.svg'
 
@@ -78,8 +80,23 @@ export default function ME() {
             <ContentBody Year ="" heading4="校正検定初級（日本エディタースクール）" heading5="" />
           </Container>
         </section>
+        <section>
+          <Container>
+            <Hero
+              title="WORKS"
+              subtitle=""
+            />
+            <Image
+                src={topwork}
+                alt=""
+                layout="responsive"
+                priority
+                />
+            <READMORE url="/work" />
+          </Container>
+        </section>
         
-        <DNUSetion linkOn/>
+        {/* <DNUSetion linkOn/> */}
     </div>
       </>
   )
