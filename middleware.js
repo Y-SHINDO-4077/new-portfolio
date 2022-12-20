@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse} from 'next/server'
 
 export const config = {
-  matcher: ['/','/work','/work/*','/me','/other'],
+  matcher: ['/','/work','/me','/other','/work/:path*'],
 }
 
 export function middleware(req) {
