@@ -92,7 +92,7 @@
   }
 
   h3{
-    font-size: 32px;
+    font-size: 24px;
     margin-left:16px;
 
     @include mq(m){
@@ -100,7 +100,7 @@
     }
 
     @include mq(s){
-      font-size: 24px;
+      font-size: 18px;
     }
   }
 

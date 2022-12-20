@@ -19,33 +19,7 @@ import dicon from 'images/dyuicon.svg'
 
 export default function Timeline(title) {
   
-  // useEffect(() => {  
-     
-  //     const listWrapperEl = document.getElementById('scrollwrap');
-  //     const listEl = document.getElementById('scroll_list');
-  //     console.log(listEl.clientWidth);
-  //     console.log(listWrapperEl.clientWidth);
-  //     console.log(listEl.clientWidth - listWrapperEl.clientWidth);
 
-
-  //     gsap.to(listEl, {
-  //       x: () => -(listEl.clientWidth - listWrapperEl.clientWidth),
-  //       ease: 'none',
-  //       scrollTrigger: {
-  //         trigger:'#scrollwrap' ,
-  //         start: 'top 10%', 
-  //         //end: () => `+=${listEl.clientWidth - listWrapperEl.clientWidth}`,
-  //         end: () => `+=${listEl.clientWidth - listWrapperEl.clientWidth}`,
-  //         scrub: true,
-  //         pin: true,
-  //         anticipatePin: 1,
-  //         invalidateOnRefresh: true,
-  //         pinSpacing: false,
-  //         // markers:true,
-  //       },
-  //     });
-      
-  // })
       
 
   return (

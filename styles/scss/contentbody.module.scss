@@ -45,6 +45,10 @@
 .heading4{
   font-weight:400;
   font-size:24px;
+
+  @include mq(ts){
+    font-size:16px;
+  }
 }
 
 .fadeinUp{
