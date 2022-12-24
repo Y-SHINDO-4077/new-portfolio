@@ -78,7 +78,10 @@ return (
             <PostHeader title={title} en_title={en_title}/>
             {url &&
                     <div className={styles.content__url}>
-                        {url}
+                            <p className={styles.url_caution}>↓以下のURLを検索して詳細をご覧ください</p>
+                            <div>
+                                {url}
+                            </div>
                     </div>
             }
                

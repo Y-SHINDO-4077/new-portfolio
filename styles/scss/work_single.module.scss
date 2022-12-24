@@ -34,6 +34,14 @@
   margin-top:32px;
   margin-bottom:48px;
   text-align: right;
+
+  div{
+    font-size:32px;
+
+    @include mq(ts){
+      font-size:24px;
+    }
+  }
 }
 
 .imagecontainer{
@@ -76,6 +84,16 @@
       }
 
     }
+  }
+}
+
+.url_caution{
+  font-size:16px;
+  text-align: right;
+  margin-bottom:16px;
+  @include mq(ts){
+    font-size:14px;
+    margin-bottom:8px;
   }
 }
 
