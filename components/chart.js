@@ -48,7 +48,7 @@ export default function CHART({}) {
     }
 
 
-    const weight = ['3','3', '2.5', '2.5','2.5', '2.5', '2.5','2','0.5','0.5','0.3','0.3','0.3'];
+    const weight = ['3','3', '2.5', '2.5','2.5', '2.5', '2.5','2','0.3','0.3','0.3','0.3','0.3'];
 
     const labels = [
       "HTML",
@@ -118,7 +118,7 @@ export default function CHART({}) {
     gradient2.addColorStop(0.65, colors.black.quarter);
     gradient2.addColorStop(1, colors.black.zero);
 
-    const weight2 = ['3','3', '3', '0.5','0.5', '0.5'];
+    const weight2 = ['3','3', '3', '0.3','0.3', '0.3'];
 
     const labels2 = [
       "XD",
