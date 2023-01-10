@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import styles from 'styles/scss/nav.module.scss'
+import styles from '../styles/scss/nav.module.scss'
 import { useState } from 'react'
 
 export default function Nav(){
@@ -26,7 +26,7 @@ export default function Nav(){
       )}
       <button className={styles.btn} onClick={toggleNav}>
         <span className={styles.bar}></span>
-        <span className="sr-only">MENU</span>
+        <span className={styles.sr_only}>MENU</span>
       </button>
       <ul className={styles.list}>
         <li>
