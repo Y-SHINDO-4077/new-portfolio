@@ -65,7 +65,7 @@ export default function MeSetion({linkOn = false}) {
               src={dicon}
               alt=""
               layout="fixed"
-              sizes="400px"
+              //sizes="400px"
               priority
               />
             </div>
