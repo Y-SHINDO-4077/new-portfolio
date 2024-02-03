@@ -27,9 +27,8 @@ export default function Work({ posts ,categories}) {
 }
 
 export async function getStaticProps() {
-  const posts = await getAllPosts()
-
-  
+  const posts = await getAllPosts();
+  console.log(posts);
 
   for (const post of posts) {
     if (!post.hasOwnProperty('eyecatch')) {
