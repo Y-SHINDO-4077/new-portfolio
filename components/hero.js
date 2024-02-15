@@ -36,7 +36,7 @@ export default function Hero({ title, subtitle, imageOn = false }) {
 	});
 
 	return (
-		<div className="t-center flex flex-col">
+		<div className="flex flex-col text-center">
 			<h1 className={styles.title}>{title}</h1>
 			{subtitle && <h4 className={styles.subtitle}> {subtitle}</h4>}
 		</div>
