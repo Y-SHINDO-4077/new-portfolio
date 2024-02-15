@@ -38,7 +38,7 @@ export default function Toggle() {
 				<input
 					type="checkbox"
 					id="switch"
-					switch
+					switch="true"
 					checked={darkTheme}
 					onChange={handleToggle}
 					className={styles.header_toggleInput}
