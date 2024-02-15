@@ -26,13 +26,12 @@ export default function Toggle() {
 	useEffect(() => {
 		const root = window.document.documentElement;
 		const initialColorValue = root.style.getPropertyValue("--initial-color-mode");
-		// Set initial darkmode to light
 		setDarkTheme(initialColorValue === "dark");
 	}, []);
 	return (
-		<div className={styles.toggle__flex}>
+        <div className={styles.toggle__flex}>
 			<figure>
-				<Image className="" src={light} alt="" layout="fixed" width={25} height={25} priority />
+				<Image className="" src={light} alt="" width={25} height={25} />
 			</figure>
 			<div className={styles.toggle_Input}>
 				<input
@@ -46,8 +45,8 @@ export default function Toggle() {
 				<label htmlFor="switch" className={styles.header_toggleLabel}></label>
 			</div>
 			<figure>
-				<Image className="" src={dark} alt="" layout="fixed" width={23} height={23} priority />
+				<Image className="" src={dark} alt="" width={23} height={23} />
 			</figure>
 		</div>
-	);
+    );
 }

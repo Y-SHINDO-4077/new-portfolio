@@ -3,7 +3,7 @@ import styles from '../styles/scss/dnusection.module.scss'
 import Hero from './hero'
 import Container from './container'
 import READMORE from './readmore'
-import Image from 'next/image'
+import Image from "next/image"
 import dmask from 'images/dnu_photo.webp'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
@@ -38,42 +38,42 @@ export default function DNUSetion({linkOn = false }) {
     });
     }
   })
-  return (
-    <>
-    <section className={styles.dnu__section}>
-      <Container>
-        <div className={styles.t_center}>
-          <Hero
-                title="OTHER"
-                subtitle=""
-          />
-        </div>
-        <div className={styles.dnu__flex__area}>
-            <div className={styles.flex__left}>
-              <h4 className={styles.textleftFade}>
-              2017年の大学在籍時より、<br/>
-              大ナゴヤ大学に関わり続けています。<br/>
-              私の活動を紹介します。
-              </h4>
-            </div>
-            <div className={styles.dnu_image}>
-              <figure className={styles.dnu_image_size}>
-              <Image
-                src={dmask}
-                alt=""
-                layout="responsive"
-                sizes="(min-width: 1200px) 643px, 50vw"
-                priority
-                />
-              </figure>
-            </div>
-        </div>
-        {
-          linkOn &&
-          <READMORE url="/other"/>
-        }
-      </Container>
-    </section>
-    </>
-  )
+  return <>
+  <section className={styles.dnu__section}>
+    <Container>
+      <div className={styles.t_center}>
+        <Hero
+              title="OTHER"
+              subtitle=""
+        />
+      </div>
+      <div className={styles.dnu__flex__area}>
+          <div className={styles.flex__left}>
+            <h4 className={styles.textleftFade}>
+            2017年の大学在籍時より、<br/>
+            大ナゴヤ大学に関わり続けています。<br/>
+            私の活動を紹介します。
+            </h4>
+          </div>
+          <div className={styles.dnu_image}>
+            <figure className={styles.dnu_image_size}>
+            <Image
+              src={dmask}
+              alt=""
+              priority
+              sizes="(min-width: 1200px) 643px, 50vw"
+              style={{
+                width: "100%",
+                height: "auto"
+              }} />
+            </figure>
+          </div>
+      </div>
+      {
+        linkOn &&
+        <READMORE url="/other"/>
+      }
+    </Container>
+  </section>
+  </>;
 }

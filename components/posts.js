@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Posts({ posts }) {
 	return (
-		<div className={styles.gridContainer}>
+        <div className={styles.gridContainer}>
 			{posts.map(({ title, slug, eyecatch, en_title, role }) => (
 				<article className={styles.post} key={slug}>
 					<Link href={`/work/${slug}`}>
@@ -12,16 +12,17 @@ export default function Posts({ posts }) {
 							<div className={styles.left}>
 								<figure>
 									<Image
-										src={eyecatch.url}
-										alt=""
-										layout="responsive"
-										objectFit="cover"
-										sizes="(min-width: 1152px) 576px, 50vw"
-										placeholder="blur"
-										width="1152"
-										height="768"
-										blurDataURL={eyecatch.blurDataURL}
-									/>
+                                        src={eyecatch.url}
+                                        alt=""
+                                        placeholder="blur"
+                                        width="1152"
+                                        height="768"
+                                        blurDataURL={eyecatch.blurDataURL}
+                                        sizes="(min-width: 1152px) 576px, 50vw"
+                                        style={{
+                                            width: "100%",
+                                            height: "auto"
+                                        }} />
 								</figure>
 							</div>
 							<div className={styles.right}>
@@ -34,5 +35,5 @@ export default function Posts({ posts }) {
 				</article>
 			))}
 		</div>
-	);
+    );
 }
