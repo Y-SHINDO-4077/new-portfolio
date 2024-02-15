@@ -19,22 +19,18 @@ export default function Timeline(title) {
 							<li className={styles.side_scroll_item}>
 								<h4>1994</h4>
 								<h3>誕生</h3>
-								{/* <p>Born</p> */}
 							</li>
 							<li className={styles.side_scroll_item}>
 								<h4>2018</h4>
 								<h3>同志社大学文学部文化史学科日本史専攻卒業</h3>
-								{/* <p>Graduated from Doshisha University,Cultural history.</p> */}
 							</li>
 							<li className={styles.side_scroll_item}>
 								<h4>2018</h4>
 								<h3>業務システム会社でプログラマーとして働く</h3>
-								{/* <p>Work as a Developer at a systems Company.</p> */}
 							</li>
 							<li className={styles.side_scroll_item}>
 								<h4>2020</h4>
-								<h3>Web制作会社でフロントエンジニアとして働く</h3>
-								{/* <p>Work as a Front-end enginner at a website production. </p> */}
+								<h3>ベンチャーWeb広告代理店でフロントエンジニアとして働く</h3>
 							</li>
 							<li className={styles.side_scroll_item}>
 								<h4>2022</h4>
@@ -43,7 +39,10 @@ export default function Timeline(title) {
 									<br />
 									グラフィックデザインコースに入学
 								</h3>
-								{/* <p>Entered Kyoto Univ. of the Arts, Graphic design. </p> */}
+							</li>
+							<li className={styles.side_scroll_item}>
+								<h4>2023</h4>
+								<h3>大手Web制作会社でフロントエンジニアとして働く</h3>
 							</li>
 						</ul>
 					</div>

@@ -1,7 +1,5 @@
 import styles from "styles/scss/post-categories.module.scss";
 import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFolderOpen } from "@fortawesome/free-regular-svg-icons";
 
 export default function PostCategories({ categories }) {
 	return (

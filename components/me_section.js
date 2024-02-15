@@ -39,46 +39,45 @@ export default function MeSetion({ linkOn = false }) {
 		}
 	});
 
-	return <>
-        <section className={styles.me__section}>
-            <Container>
-                <div className={styles.t_center}>
-                    <Hero title="ME" subtitle="" />
-                </div>
-                <div className={styles.flex__area}>
-                    <div>
-                        <p className={styles.textleftFade}>
-                            進藤雄太朗です。
-                            <br />
-                            Webエンジニアをしています。
-                            <br />
-                            名古屋のベンチャー広告代理店にて、
-                            <br />
-                            大手企業のHPを多数実装してきました。
-                            <br />
-                            また、京都芸術大学通信教育部にて
-                            <br />
-                            グラフィックデザインも勉強中。
-                        </p>
-                    </div>
-                    <div className={styles.s_block}>
-                        <Image src={dicon} alt="" priority />
-                    </div>
-                    <div className={styles.s_none}>
-                        <Image
-                            src={dicon}
-                            alt=""
-                            priority
-                            sizes="400px"
-                            style={{
-                                width: "100%",
-                                height: "auto"
-                            }} />
-                    </div>
-                </div>
+	return (
+		<>
+			<section className={styles.me__section}>
+				<Container>
+					<Hero title="ME" subtitle="" />
+					<div className={styles.flex__area}>
+						<p className={styles.textleftFade}>
+							進藤雄太朗です。
+							<br />
+							Webエンジニアをしています。
+							<br />
+							名古屋のベンチャー広告代理店にて、
+							<br />
+							大手企業のHPを多数実装してきました。
+							<br />
+							また、京都芸術大学通信教育部にて
+							<br />
+							グラフィックデザインも勉強中。
+						</p>
+						<div className={styles.s_block}>
+							<Image src={dicon} alt="" priority />
+						</div>
+						<div className={styles.s_none}>
+							<Image
+								src={dicon}
+								alt=""
+								priority
+								sizes="400px"
+								style={{
+									width: "100%",
+									height: "auto",
+								}}
+							/>
+						</div>
+					</div>
 
-                {linkOn && <READMORE url="/me" />}
-            </Container>
-        </section>
-    </>;
+					{linkOn && <READMORE url="/me" />}
+				</Container>
+			</section>
+		</>
+	);
 }
