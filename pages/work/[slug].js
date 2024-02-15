@@ -48,100 +48,106 @@ export default function Schedule({
 	nextPost,
 	description,
 }) {
-	return <>
-        <figure className={styles.imagecontainer}>
-            <Image
-                key={eyecatch.url}
-                src={eyecatch.url}
-                alt=""
-                width={eyecatch.width}
-                height={eyecatch.height}
-                priority
-                placeholder="blur"
-                blurDataURL={eyecatch.blurDataURL}
-                sizes="100vw"
-                style={{
-                    width: "100%",
-                    height: "auto",
-                    objectFit: "cover"
-                }} />
-        </figure>
-        <Container>
-            <Meta
-                pageTitle={title}
-                pageDesc={description}
-                pageImg={eyecatch.url}
-                pageImgW={eyecatch.width}
-                pageImgH={eyecatch.height}
-            />
-            <article>
-                <PostHeader title={title} en_title={en_title} />
-                {url && (
-                    <div className={styles.content__url}>
-                        <p className={styles.url_caution}>↓以下のURLを検索して詳細をご覧ください</p>
-                        <div>{url}</div>
-                    </div>
-                )}
+	return (
+		<>
+			<figure className={styles.imagecontainer}>
+				<Image
+					key={eyecatch.url}
+					src={eyecatch.url}
+					alt=""
+					width={eyecatch.width}
+					height={eyecatch.height}
+					priority
+					placeholder="blur"
+					blurDataURL={eyecatch.blurDataURL}
+					sizes="100vw"
+					style={{
+						width: "100%",
+						height: "auto",
+						objectFit: "cover",
+					}}
+				/>
+			</figure>
+			<Container>
+				<Meta
+					pageTitle={title}
+					pageDesc={description}
+					pageImg={eyecatch.url}
+					pageImgW={eyecatch.width}
+					pageImgH={eyecatch.height}
+				/>
+				<article>
+					<PostHeader title={title} en_title={en_title} />
+					{url && (
+						<div className={styles.content__url}>
+							<p className={styles.url_caution}>↓以下のURLを検索して詳細をご覧ください</p>
+							<div>{url}</div>
+						</div>
+					)}
 
-                <PostBody>
-                    <h3 className={styles.heading3}>
-                        <ConvertBody contentHTML={items01} />
-                    </h3>
+					<PostBody>
+						<h3 className={styles.heading3}>
+							<ConvertBody contentHTML={items01} />
+						</h3>
 
-                    <ConvertBody contentHTML={content01} />
+						<ConvertBody contentHTML={content01} />
 
-                    <h3 className={styles.heading3}>
-                        <ConvertBody contentHTML={items02} />
-                    </h3>
+						<h3 className={styles.heading3}>
+							<ConvertBody contentHTML={items02} />
+						</h3>
 
-                    <ConvertBody contentHTML={content02} />
+						<ConvertBody contentHTML={content02} />
 
-                    <h3 className={styles.heading3}>
-                        <ConvertBody contentHTML={items03} />
-                    </h3>
+						{item03 && (
+							<h3 className={styles.heading3}>
+								<ConvertBody contentHTML={items03} />
+							</h3>
+						)}
 
-                    <ConvertBody contentHTML={content03} />
+						{content03 && <ConvertBody contentHTML={content03} />}
 
-                    {items04 && (
-                        <h3 className={styles.heading3}>
-                            <ConvertBody contentHTML={items04} />
-                        </h3>
-                    )}
-                    {content04 && <ConvertBody contentHTML={content04} />}
+						{items04 && (
+							<h3 className={styles.heading3}>
+								<ConvertBody contentHTML={items04} />
+							</h3>
+						)}
+						{content04 && <ConvertBody contentHTML={content04} />}
 
-                    <figure>
-                        <Image
-                            key={eyecatch02.url}
-                            src={eyecatch02.url}
-                            alt=""
-                            width={eyecatch02.width}
-                            height={eyecatch02.height}
-                            priority
-                            sizes="100%"
-                            style={{
-                                width: "100%",
-                                height: "auto",
-                                objectFit: "cover"
-                            }} />
-                    </figure>
-                </PostBody>
+						<figure>
+							<Image
+								key={eyecatch02.url}
+								src={eyecatch02.url}
+								alt=""
+								width={eyecatch02.width}
+								height={eyecatch02.height}
+								priority
+								sizes="100%"
+								style={{
+									width: "100%",
+									height: "auto",
+									objectFit: "cover",
+								}}
+							/>
+						</figure>
+					</PostBody>
 
-                {/* <PostCategories categories={categories} /> */}
+					{/* <PostCategories categories={categories} /> */}
 
-                {/* <Pagination
+					{/* <Pagination
             prevText={prevPost.title}
             prevUrl={`/work/${prevPost.slug}`}
             nextText={nextPost.title}
             nextUrl={`/work/${nextPost.slug}`}
             /> */}
-                <div className={styles.readmore}>
-                    <Link href="../work">
-                        <span>BACK</span>
-                    </Link>
-                </div>
-            </article>
-        </Container>
-    </>;
+					<div className={styles.readmore}>
+						<Link href="../work">
+							<span>BACK</span>
+						</Link>
+					</div>
+				</article>
+			</Container>
+		</>
+	);
 }
 
 export async function getStaticProps(context) {
