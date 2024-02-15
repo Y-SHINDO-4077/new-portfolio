@@ -5,25 +5,24 @@ $xl: 1023px;
 $l: 1400px;
 
 $breakpoints: (
-  's': 'screen and (max-width: #{$s})',
-  'ts': 'screen and (max-width: #{$ts})',
-  'm': 'screen and (max-width: #{$m})',
-  'xl': 'screen and (max-width: #{$xl})',
-  'l': 'screen and (max-width: #{$l})'
+	"s": "screen and (max-width: #{$s})",
+	"ts": "screen and (max-width: #{$ts})",
+	"m": "screen and (max-width: #{$m})",
+	"xl": "screen and (max-width: #{$xl})",
+	"l": "screen and (max-width: #{$l})",
 );
 
 @mixin mq($size) {
-  @media #{map-get($breakpoints, $size)} {
-    @content;
-  }
+	@media #{map-get($breakpoints, $size)} {
+		@content;
+	}
 }
 
-@mixin flex($justify:center,$align:center){
-  display:flex;
-  justify-content: $justify;
-  align-items: $align;
+@mixin flex($justify: center, $align: center) {
+	display: flex;
+	justify-content: $justify;
+	align-items: $align;
 }
-
 
 $spaceClass: true !default;
 $spacePadding: false !default;
@@ -37,10 +36,10 @@ $endValue: 120 !default;
 		.mb#{$i * 8} {
 			margin-bottom: 8px * $i !important;
 		}
-    .ml#{$i * 8} {
+		.ml#{$i * 8} {
 			margin-left: 8px * $i !important;
 		}
-    .mr#{$i * 8} {
+		.mr#{$i * 8} {
 			margin-right: 8px * $i !important;
 		}
 		@if $spacePadding {
@@ -50,7 +49,7 @@ $endValue: 120 !default;
 			.pb#{$i * 5} {
 				padding-bottom: 8px * $i !important;
 			}
-      .pl#{$i * 8} {
+			.pl#{$i * 8} {
 				padding-left: 8px * $i !important;
 			}
 			.pr#{$i * 5} {
@@ -68,18 +67,16 @@ $endValue: 120 !default;
 		.fs#{$i} {
 			font-size: 8px * $i !important;
 		}
-    @media screen and (max-width:640px){
-      .fs_sp#{$i} {
-        font-size: 8px * $i !important;
-      }
-    }
+		@media screen and (max-width: 640px) {
+			.fs_sp#{$i} {
+				font-size: 8px * $i !important;
+			}
+		}
 	}
 
-  @for $i from 0 through 9 {
+	@for $i from 0 through 9 {
 		.fw#{$i} {
 			font-weight: 100 * $i !important;
 		}
-  
-    
 	}
 }

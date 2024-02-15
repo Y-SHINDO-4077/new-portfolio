@@ -1,268 +1,271 @@
-
-@import '../scss/variables.module.scss';
+@import "../scss/variables.module.scss";
 /*** The new CSS reset - version 1.7.3 (last updated 7.8.2022) ***/
- 
-*:where(:not(html,iframe,canvas,img,svg,video,audio):not(svg*,symbol*)){all:unset;display:revert}*,*::before,*::after{box-sizing:border-box}
-a,button{cursor:revert}
-ol,ul,menu{list-style:none}
-img{max-width:100%}
-table{border-collapse:collapse}
-input,textarea{-webkit-user-select:auto}
-textarea{white-space:revert}
-meter{-webkit-appearance:revert;appearance:revert}::placeholder{color:unset}:where([hidden]){display:none}:where([contenteditable]:not([contenteditable="false"])){-moz-user-modify:read-write;-webkit-user-modify:read-write;overflow-wrap:break-word;-webkit-line-break:after-white-space;-webkit-user-select:auto}:where([draggable="true"]){-webkit-user-drag:element}
 
-@font-face {
-  font-family: 'Futura';
-  src: url(../font/Futura_Bold_font.ttf);
-  font-weight:700;
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg*, symbol*)) {
+	all: unset;
+	display: revert;
+}
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+a,
+button {
+	cursor: revert;
+}
+ol,
+ul,
+menu {
+	list-style: none;
+}
+img {
+	max-width: 100%;
+}
+table {
+	border-collapse: collapse;
+}
+input,
+textarea {
+	-webkit-user-select: auto;
+}
+textarea {
+	white-space: revert;
+}
+meter {
+	-webkit-appearance: revert;
+	appearance: revert;
+}
+::placeholder {
+	color: unset;
+}
+:where([hidden]) {
+	display: none;
+}
+:where([contenteditable]:not([contenteditable="false"])) {
+	-moz-user-modify: read-write;
+	-webkit-user-modify: read-write;
+	overflow-wrap: break-word;
+	-webkit-line-break: after-white-space;
+	-webkit-user-select: auto;
+}
+:where([draggable="true"]) {
+	-webkit-user-drag: element;
 }
 
+@font-face {
+	font-family: "Futura";
+	src: url(../font/Futura_Bold_font.ttf);
+	font-weight: 700;
+}
 
 @font-face {
-  font-family: 'Futura';
-  src: url(../font/futura_medium_bt.ttf);
-  font-weight:500;
+	font-family: "Futura";
+	src: url(../font/futura_medium_bt.ttf);
+	font-weight: 500;
 }
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: "Futura","Noto Sans JP", sans-serif;
-  overflow-x: hidden;
+	padding: 0;
+	margin: 0;
+	font-family: "Futura", "Noto Sans JP", sans-serif;
+	overflow-x: hidden;
 }
 
-.futura{
-  font-family: "Futura", sans-serif;
+.futura {
+	font-family: "Futura", sans-serif;
 }
 
-.noto{
-  font-family:  "Noto Sans JP", sans-serif;
+.noto {
+	font-family: "Noto Sans JP", sans-serif;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+	color: inherit;
+	text-decoration: none;
 }
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-
- 
 body {
-  color: var(--main-text);
-  background-color: var(--main-bg);
+	color: var(--main-text);
+	background-color: var(--main-bg);
 }
 
-  h1 {
-  font-size: var(--heading1);
-  }
-  h2 {
-    font-size: 120px;
-    @include mq(ts){
-      font-size:64px;
-    }
-  }
-  h3 {
-    font-size: 48px;
-    @include mq(ts){
-      font-size:32px;
-    }
-  }
+h1 {
+	font-size: var(--heading1);
+}
+h2 {
+	font-size: 120px;
+	@include mq(ts) {
+		font-size: 64px;
+	}
+}
+h3 {
+	font-size: 48px;
+	@include mq(ts) {
+		font-size: 32px;
+	}
+}
 
-  h4 {
-    font-size: 32px;
-    @extend .noto;
-    @include mq(ts){
-      font-size:24px;
-    }
-  }
+h4 {
+	font-size: 32px;
+	@extend .noto;
+	@include mq(ts) {
+		font-size: 24px;
+	}
+}
 
-  h4{
-    margin-block-start: 0;
-    margin-block-end: 0;
-  }
+h4 {
+	margin-block-start: 0;
+	margin-block-end: 0;
+}
 
-  h5 {
-    font-size: 24px;
-    margin-top:32px;
-    @extend .noto;
-    @include mq(ts){
-      font-size:16px;
-      margin-top:24px;
-    }
-  }
+h5 {
+	font-size: 24px;
+	margin-top: 32px;
+	@extend .noto;
+	@include mq(ts) {
+		font-size: 16px;
+		margin-top: 24px;
+	}
+}
 
-  p{
-    font-size:16px;
-    @include mq(ts){
-      font-size:14px;
-    }
-  }
+p {
+	font-size: 16px;
+	@include mq(ts) {
+		font-size: 14px;
+	}
+}
 
-  /* next/image */
-    span > img {
-  transition: 0.2s;
-  }
- 
-  /* リセット */
-body, h1, h2, h3, p, figure, ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  }
-  *, *::before, *::after {
-  box-sizing: border-box;
-  }
-  a {
-  color: inherit;
-  text-decoration: none;
-  }
+/* next/image */
+span > img {
+	transition: 0.2s;
+}
+
+/* リセット */
+body,
+h1,
+h2,
+h3,
+p,
+figure,
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
 
 a {
-  color: inherit;
-  text-decoration: none;
+	color: inherit;
+	text-decoration: none;
 }
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 :root {
-  --main-text: #333;
-  --main-bg: #fff;
+	--main-text: #333;
+	--main-bg: #fff;
 }
 
 [data-theme="dark"] {
-  --main-text: #fff;
-  --main-bg: #2c2c30;
+	--main-text: #fff;
+	--main-bg: #2c2c30;
 }
 
+:root {
+	--white: #ffffff;
+	--gray-10: #eeeeee;
+	--gray-25: #aaaaaa;
+	--gray-50: #707070;
+	--gray-75: #444444;
+	--black: #333333;
+	--accent: #0d87e0;
 
-:root{
-  --white: #ffffff;
-  --gray-10: #eeeeee;
-  --gray-25: #aaaaaa;
-  --gray-50: #707070;
-  --gray-75: #444444;
-  --black: #333333;
-  --accent: #0d87e0;
+	--body: clamp(1rem, 0.95rem + 0.2vw, 1.125rem); /* 16-18px */
+	--display: 96px; /* 72-160 */
+	--display: clamp(2rem, 0.857rem + 5.71vw, 6rem);
+	--heading1: clamp(2rem, 1.3rem + 3vw, 4rem); /* 32-64px */
+	--heading2: 120px;
+	--heading3: 48px;
+	--small-heading2: clamp(0.875rem, 4vw - 1rem, 1.6875rem); /* 14-27px */
+	--small-heading3: calc(var(--small-heading2) * 0.86); /* 12-23px */
 
-  --body: clamp(1rem, 0.95rem + 0.2vw, 1.125rem); /* 16-18px */
-  --display: 96px; /* 72-160 */
-  --display: clamp(2rem, 0.857rem + 5.71vw, 6rem);
-  --heading1: clamp(2rem, 1.3rem + 3vw, 4rem); /* 32-64px */
-  --heading2: 120px;
-  --heading3: 48px;
-  --small-heading2: clamp(0.875rem, 4vw - 1rem, 1.6875rem); /* 14-27px */
-  --small-heading3: calc(var(--small-heading2) * 0.86); /* 12-23px */
-
-  --space-xs: clamp(1.25rem, 1rem + 0.98vw, 1.875rem); /* 20-30px */
-  --space-sm: calc(var(--space-xs) * 1.5); /* 30-45px */
-  --space-md: calc(var(--space-xs) * 2); /* 40-60px */
-  --space-lg: calc(var(--space-xs) * 3); /* 60-90px */
-  --space-xl: calc(var(--space-xs) * 4); /* 80-120px */
-  --space-jump: clamp(1.25rem, 0.35rem + 3.8vw, 3.75rem); /* 20-60px */
+	--space-xs: clamp(1.25rem, 1rem + 0.98vw, 1.875rem); /* 20-30px */
+	--space-sm: calc(var(--space-xs) * 1.5); /* 30-45px */
+	--space-md: calc(var(--space-xs) * 2); /* 40-60px */
+	--space-lg: calc(var(--space-xs) * 3); /* 60-90px */
+	--space-xl: calc(var(--space-xs) * 4); /* 80-120px */
+	--space-jump: clamp(1.25rem, 0.35rem + 3.8vw, 3.75rem); /* 20-60px */
 }
-
-
-//mousestoker
-// #stalker {
-//   pointer-events: none;
-//   position: fixed;
-//   top: -8px;     
-//   left: -8px;  
-//   width: 20px;   
-//   height: 20px;
-//   background: rgba(0,0,0,0.9);
-//   border-radius: 50%;
-//   transform: translate(0,0);
-//   transition: transform 0.2s; 
-//   transition-timing-function: ease-out;
-//   z-index: 999;
-
-//   @include mq(m){
-//     display: none;
-//   }
-// }
-// #stalker.hov_{
-//     top: -32px;     
-//     left: -32px;    
-//     width: 64px;
-//     height: 64px;
-//     transition: .5s;
-//     background: rgba(0, 0, 0, 0.4);
-// }
 
 html,
 body,
 a:hover {
-  cursor: none; // もともとあるカーソルは見えなくなるようにする
+	cursor: none; // もともとあるカーソルは見えなくなるようにする
 
-  @include mq(m){
-    cursor: pointer;
-  }
+	@include mq(m) {
+		cursor: pointer;
+	}
 }
 
 #stalker {
-  border-radius: 50%;
-  position: absolute;
-  top: 0;
-  left: 0; 
-  pointer-events: none;
-  transform: translate(-50%,-50%);
+	border-radius: 50%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	pointer-events: none;
+	transform: translate(-50%, -50%);
 
-  @include mq(m){
-    display: none;
-  }
+	@include mq(m) {
+		display: none;
+	}
 }
 
 #stalker {
-  width: 20px;   
-  height: 20px;
-  background-color: #333;
-  z-index: 1001; // どの要素よりも一番上になるようにする。.followerより大きい値
+	width: 20px;
+	height: 20px;
+	background-color: #333;
+	z-index: 1001; // どの要素よりも一番上になるようにする。.followerより大きい値
 }
 
-// #follower {
-//   width: 40px;
-//   height: 40px;
-//   background-color: rgba(#333, .5);
-//   z-index: 1000; // どの要素よりも一番上になるようにする
-//   transition: transform linear .2s;
-// }
-
-[data-theme="dark"]{
-    #stalker,#follower {
-      background: rgba(255,255,255,0.9);
-    }
-    #stalker.hov_{
-      background: rgba(255, 255, 255, 0.4);
-    }   
+[data-theme="dark"] {
+	#stalker,
+	#follower {
+		background: rgba(255, 255, 255, 0.9);
+	}
+	#stalker.hov_ {
+		background: rgba(255, 255, 255, 0.4);
+	}
 }
 
-section{
-  padding:96px 0;
+section {
+	padding: 96px 0;
 
-  &:last-of-type{
-    // padding-bottom:120px;
+	&:last-of-type {
+		@include mq(ts) {
+			padding-bottom: 48px;
+		}
+	}
 
-    @include mq(ts){
-      padding-bottom:48px;
-    }
-  }
-
-  @include mq(ts){
-    padding:48px 0;
-  }
+	@include mq(ts) {
+		padding: 48px 0;
+	}
 }
 
-.t-center{
-  text-align: center;
+.t-center {
+	text-align: center;
 }
-
-
-
-
-

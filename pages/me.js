@@ -95,8 +95,6 @@ export default function ME() {
             <READMORE url="/work" />
           </Container>
         </section>
-        
-        {/* <DNUSetion linkOn/> */}
     </div>
       </>
   )
