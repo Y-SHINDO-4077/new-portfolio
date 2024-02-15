@@ -98,7 +98,7 @@ export default function Schedule({
 
 						<ConvertBody contentHTML={content02} />
 
-						{item03 && (
+						{items03 && (
 							<h3 className={styles.heading3}>
 								<ConvertBody contentHTML={items03} />
 							</h3>
