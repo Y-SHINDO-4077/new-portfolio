@@ -27,7 +27,7 @@
     "plaiceholder": "^2.5.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "sharp": "^0.33.2"
+    "sharp": "^0.32.6"
   },
   "devDependencies": {
     "eslint": "8.24.0",
