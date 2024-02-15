@@ -9,19 +9,6 @@ import { eyecatchLocal } from "lib/constants";
 import PostCategories from "components/post-categories";
 import styles from "../../styles/scss/posts.module.scss";
 
-export default function Work({ posts, categories }) {
-	return (
-		<Container>
-			<Meta pageTitle="WORKS" pageDesc="実績" />
-			<section className={styles.post__padding}>
-				<Hero title="WORKS" subtitle="" />
-				{/* <PostCategories categories={categories} /> */}
-				<Posts posts={posts} />
-			</section>
-		</Container>
-	);
-}
-
 export async function getStaticProps() {
 	const posts = await getAllPosts();
 	console.log(posts);
@@ -39,4 +26,17 @@ export async function getStaticProps() {
 			posts: posts,
 		},
 	};
+}
+
+export default function Work({ posts, categories }) {
+	return (
+		<Container>
+			<Meta pageTitle="WORKS" pageDesc="実績" />
+			<section className={styles.post__padding}>
+				<Hero title="WORKS" subtitle="" />
+				{/* <PostCategories categories={categories} /> */}
+				<Posts posts={posts} />
+			</section>
+		</Container>
+	);
 }

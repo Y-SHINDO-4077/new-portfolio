@@ -18,6 +18,8 @@ export default function Posts({ posts }) {
 										objectFit="cover"
 										sizes="(min-width: 1152px) 576px, 50vw"
 										placeholder="blur"
+										width="1152"
+										height="768"
 										blurDataURL={eyecatch.blurDataURL}
 									/>
 								</figure>
