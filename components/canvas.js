@@ -105,7 +105,7 @@ export default function CANVAS({}) {
 	});
 	return (
 		<>
-			<div id="fv" className="not:first-of-type:hidden"></div>
+			<div id="fv" className="[&>*:not(:first-of-type)]:hidden"></div>
 		</>
 	);
 }

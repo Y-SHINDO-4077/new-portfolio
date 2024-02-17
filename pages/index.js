@@ -108,7 +108,7 @@ export default function Home({ posts }) {
 					<div>
 						<MVSwiper />
 					</div>
-					<div className="absolute top-[15%] m-auto size-full sm:right-[15%] sm:top-[10%]">
+					<div className="absolute top-[15%] m-auto size-full sm:right-[15%] sm:top-[10%] ">
 						<CANVAS />
 					</div>
 				</section>
