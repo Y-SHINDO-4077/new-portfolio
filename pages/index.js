@@ -45,10 +45,10 @@ export default function Home({ posts }) {
 		<>
 			<Meta />
 			<Container large>
-				<section className="relative h-screen py-0 dark:mix-blend-difference dark:after:bg-black/50">
-					<div className="absolute left-1/4 top-1/3 z-10 mix-blend-hard-light md:left-8 md:top-64 lg:left-24">
+				<section className="dark:after:bg-black/50 relative h-screen py-0 dark:mix-blend-difference">
+					<div className="absolute left-1/4 top-1/3  z-10 md:left-8 md:top-64 lg:left-24">
 						<h1
-							className="max-w-full text-8xl font-bold leading-none  text-white  sm:max-w-[calc(100%_-_30%)] lg:text-9xl"
+							className="max-w-full text-8xl font-bold leading-none text-white  mix-blend-hard-light  sm:max-w-[calc(100%_-_30%)] lg:text-9xl"
 							ref={typewrite}
 						>
 							<span>Y</span>
@@ -68,7 +68,7 @@ export default function Home({ posts }) {
 						</h1>
 
 						<h4
-							className="mt-6 text-2xl font-bold tracking-wider text-white md:mt-8 md:text-3xl lg:text-5xl"
+							className="mt-6 text-2xl font-bold tracking-wider text-white mix-blend-hard-light md:mt-8 md:text-3xl lg:text-4xl"
 							ref={typewrite02}
 						>
 							<span>I</span>

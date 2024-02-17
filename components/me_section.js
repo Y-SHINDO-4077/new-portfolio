@@ -1,4 +1,3 @@
-import styles from "../styles/scss/mesection.module.scss";
 import Hero from "./hero";
 import Container from "./container";
 import READMORE from "./readmore";
@@ -41,16 +40,18 @@ export default function MeSetion({ linkOn = false }) {
 
 	return (
 		<>
-			<section className={styles.me__section}>
+			<section className="bg-beige py-24 dark:bg-darkBaige">
 				<Container>
 					<Hero title="ME" subtitle="" />
-					<div className={styles.flex__area}>
-						<p className={styles.textleftFade}>
+					<div className="items-center justify-between md:flex">
+						<p className="text-lg !leading-loose md:text-2xl">
 							進藤雄太朗です。
 							<br />
 							Webエンジニアをしています。
 							<br />
-							名古屋のベンチャー広告代理店にて、
+							名古屋のベンチャー広告代理店、
+							<br />
+							老舗Web制作会社で
 							<br />
 							大手企業のHPを多数実装してきました。
 							<br />
@@ -58,10 +59,10 @@ export default function MeSetion({ linkOn = false }) {
 							<br />
 							グラフィックデザインも勉強中。
 						</p>
-						<div className={styles.s_block}>
+						<div className="hidden md:block">
 							<Image src={dicon} alt="" priority />
 						</div>
-						<div className={styles.s_none}>
+						<div className="block md:hidden">
 							<Image
 								src={dicon}
 								alt=""
