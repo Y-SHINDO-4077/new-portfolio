@@ -9,7 +9,9 @@ module.exports = {
 			darkBaige: "#2c2c20",
 			lightOrange: "#B09D60",
 		},
-		extend: {},
+		extend: {
+			backgroundImage: (theme) => ({}),
+		},
 	},
 	plugins: [],
 	darkMode: "media",

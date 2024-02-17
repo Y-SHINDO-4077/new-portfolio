@@ -8,7 +8,7 @@ export default function READMORE({ url, none = false }) {
 	useEffect(() => {
 		gsap.registerPlugin(ScrollTrigger);
 		if (process.browser) {
-			gsap.utils.toArray(".readmore_readmore__Ri1pm").forEach(function (target) {
+			gsap.utils.toArray(".animation").forEach(function (target) {
 				gsap.fromTo(
 					target,
 					{
@@ -37,9 +37,12 @@ export default function READMORE({ url, none = false }) {
 	});
 
 	return (
-		<div className={styles.readmore}>
-			<Link href={url}>
-				<span>READ MORE</span>
+		<div className="animation ml-auto mt-6 flex w-fit justify-end">
+			<Link
+				href={url}
+				className="transition-color flex size-full overflow-hidden bg-gradient-to-l from-black bg-[length:200%_4px] bg-[bottom_0_left_-200%] bg-repeat-x duration-500 ease-linear hover:bg-[bottom_0_left_0]  dark:from-white/50"
+			>
+				<span className="text-3xl md:text-6xl">READ MORE</span>
 			</Link>
 		</div>
 	);
