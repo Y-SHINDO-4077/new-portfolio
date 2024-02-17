@@ -1,4 +1,7 @@
-import styles from "styles/scss/container.module.scss";
 export default function Container({ children, large = false }) {
-	return <div className={large ? styles.large : styles.default}>{children}</div>;
+	return (
+		<div className={`m-auto w-[92%] max-w-[75rem] ${large ? "!size-full !max-w-fit" : ""}`}>
+			{children}
+		</div>
+	);
 }
