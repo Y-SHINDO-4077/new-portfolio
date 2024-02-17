@@ -45,17 +45,20 @@ export default function Home({ posts }) {
 		<>
 			<Meta />
 			<Container large>
-				<section className={styles.fvArea}>
-					<div className={styles.topTitle}>
-						<h1 className={styles.hero_title} ref={typewrite}>
+				<section className="relative h-screen py-0 dark:mix-blend-difference dark:after:bg-black/50">
+					<div className="absolute left-1/4 top-1/3 z-10 mix-blend-hard-light md:left-8 md:top-64 lg:left-24">
+						<h1
+							className="max-w-full text-8xl font-bold leading-none  text-white  sm:max-w-[calc(100%_-_30%)] lg:text-9xl"
+							ref={typewrite}
+						>
 							<span>Y</span>
 							<span>U</span>
 							<span>T</span>
 							<span>A</span>
 							<span>R</span>
 							<span>O</span>
-							<span className={styles.s_block}>&nbsp;</span>
-							<br className={styles.s_none} />
+							<span>&nbsp;</span>
+							<br className="sm:hidden" />
 							<span>S</span>
 							<span>H</span>
 							<span>I</span>
@@ -64,7 +67,10 @@ export default function Home({ posts }) {
 							<span>O</span>
 						</h1>
 
-						<h4 className={styles.subtitles} ref={typewrite02}>
+						<h4
+							className="mt-6 text-2xl font-bold tracking-wider text-white md:mt-8 md:text-3xl lg:text-5xl"
+							ref={typewrite02}
+						>
 							<span>I</span>
 							<span>&rsquo;</span>
 							<span>m</span>
@@ -74,7 +80,7 @@ export default function Home({ posts }) {
 							<span>w</span>
 							<span>e</span>
 							<span>b</span>
-							<span>&nbsp;</span>
+							<span className="sm:hidden">&nbsp;</span>
 							<span>E</span>
 							<span>n</span>
 							<span>g</span>
@@ -84,7 +90,7 @@ export default function Home({ posts }) {
 							<span>e</span>
 							<span>r</span>
 							<span>,</span>
-							<br className={styles.s_none} />
+							<br className="sm:hidden" />
 							<span>&nbsp;</span>
 							<span>a</span>
 							<span>n</span>
@@ -102,7 +108,7 @@ export default function Home({ posts }) {
 					<div>
 						<MVSwiper />
 					</div>
-					<div className={styles.canvasPoition}>
+					<div className="absolute top-[15%] m-auto size-full sm:right-[15%] sm:top-[10%]">
 						<CANVAS />
 					</div>
 				</section>
@@ -110,7 +116,7 @@ export default function Home({ posts }) {
 
 			<MeSetion linkOn />
 
-			<section className={styles.padding}>
+			<section className="py-24">
 				<Container>
 					<Hero title="WORKS" subtitle="" />
 					<Image src={topwork} alt="" layout="responsive" priority />

@@ -15,7 +15,6 @@ export default function CANVAS({}) {
 			height = canvas.height = window.innerHeight;
 		});
 		let fv = document.getElementById("fv");
-		//document.body.appendChild(canvas);
 		fv.appendChild(canvas);
 
 		var circ = (4 * (Math.sqrt(2) - 1)) / 3;
@@ -106,7 +105,7 @@ export default function CANVAS({}) {
 	});
 	return (
 		<>
-			<div id="fv"></div>
+			<div id="fv" className="not:first-of-type:hidden"></div>
 		</>
 	);
 }

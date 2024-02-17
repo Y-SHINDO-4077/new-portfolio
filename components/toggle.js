@@ -27,9 +27,27 @@ export default function Toggle() {
 		const root = window.document.documentElement;
 		const initialColorValue = root.style.getPropertyValue("--initial-color-mode");
 		setDarkTheme(initialColorValue === "dark");
+		// On page load or when changing themes, best to add inline in `head` to avoid FOUC
+		if (
+			localStorage.theme === "dark" ||
+			(!("theme" in localStorage) && window.matchMedia("dark").matches)
+		) {
+			document.documentElement.classList.add("dark");
+		} else {
+			document.documentElement.classList.remove("dark");
+		}
+
+		// Whenever the user explicitly chooses light mode
+		localStorage.theme = "light";
+
+		// Whenever the user explicitly chooses dark mode
+		localStorage.theme = "dark";
+
+		// Whenever the user explicitly chooses to respect the OS preference
+		localStorage.removeItem("theme");
 	}, []);
 	return (
-        <div className={styles.toggle__flex}>
+		<div className={styles.toggle__flex}>
 			<figure>
 				<Image className="" src={light} alt="" width={25} height={25} />
 			</figure>
@@ -45,8 +63,8 @@ export default function Toggle() {
 				<label htmlFor="switch" className={styles.header_toggleLabel}></label>
 			</div>
 			<figure>
-				<Image className="" src={dark} alt="" width={23} height={23} />
+				<Image className="" src={dark} alt="" width={23} height={23} priority />
 			</figure>
 		</div>
-    );
+	);
 }
