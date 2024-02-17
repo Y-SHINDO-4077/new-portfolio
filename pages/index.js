@@ -45,7 +45,7 @@ export default function Home({ posts }) {
 		<>
 			<Meta />
 			<Container large>
-				<section className="dark:after:bg-black/50 relative h-screen py-0 dark:mix-blend-difference">
+				<section className="relative h-screen py-0 dark:mix-blend-difference dark:after:bg-darkBaige">
 					<div className="absolute left-1/4 top-1/3  z-10 md:left-8 md:top-64 lg:left-24">
 						<h1
 							className="max-w-full text-8xl font-bold leading-none text-white  mix-blend-hard-light  sm:max-w-[calc(100%_-_30%)] lg:text-9xl"
@@ -116,7 +116,7 @@ export default function Home({ posts }) {
 
 			<MeSetion linkOn />
 
-			<section className="py-24">
+			<section className="py-12 md:py-24">
 				<Container>
 					<Hero title="WORKS" subtitle="" />
 					<Image src={topwork} alt="" layout="responsive" priority />
