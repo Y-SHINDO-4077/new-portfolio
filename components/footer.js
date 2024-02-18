@@ -1,29 +1,34 @@
 import Link from "next/link";
 import Container from "components/container";
 import Logo from "components/logo";
-import styles from "../styles/scss/footer.module.scss";
 
 export default function Footer() {
 	return (
-		<footer className={styles.wrapper}>
+		<footer className="bg-black pb-[24px] pt-[16px]">
 			<Container>
-				<div className={styles.flexContainer}>
+				<div className="block items-center justify-between gap-8 text-center md:flex">
 					<Logo />
-					<ul className={styles.list}>
+					<ul className="mt-6 flex items-center gap-8 md:mt-0">
 						<li>
-							<Link href="/me/">ME</Link>
+							<Link href="/me/" className="text-white">
+								ME
+							</Link>
 						</li>
 						<li>
-							<Link href="/work/">WORKS</Link>
+							<Link href="/work/" className="text-white">
+								WORKS
+							</Link>
 						</li>
 						<li>
-							<Link href="/other/">OTHER</Link>
+							<Link href="/other/" className="text-white">
+								OTHER
+							</Link>
 						</li>
 					</ul>
 				</div>
 
-				<p className={styles.t_center}>
-					<small className={styles.copyright}>©️ YUTARO SHINDO</small>
+				<p className="mt-12 text-center">
+					<small className="text-sm text-white">©️ YUTARO SHINDO</small>
 				</p>
 			</Container>
 		</footer>
