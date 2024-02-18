@@ -40,7 +40,7 @@ export default function READMORE({ url, none = false }) {
 		<div className="animation ml-auto mt-6 flex w-fit justify-end">
 			<Link
 				href={url}
-				className="transition-color flex size-full overflow-hidden bg-gradient-to-l from-black bg-[length:200%_4px] bg-[bottom_0_left_-200%] bg-repeat-x duration-500 ease-linear hover:bg-[bottom_0_left_0]  dark:from-white/50"
+				className="flex size-full overflow-hidden bg-gradient-to-l from-black/50 from-50% to-0% bg-[length:200%_4px] bg-[bottom_0_left_200%] bg-repeat-x transition-all duration-300 ease-linear hover:bg-[bottom_0_left_100%]  dark:from-white/50"
 			>
 				<span className="text-3xl md:text-6xl">READ MORE</span>
 			</Link>
