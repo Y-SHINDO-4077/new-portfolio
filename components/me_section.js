@@ -42,7 +42,7 @@ export default function MeSetion({ linkOn = false }) {
 		<>
 			<section className="bg-beige py-24 dark:bg-darkBaige">
 				<Container>
-					<Hero title="ME" subtitle="" />
+					<Hero title="ME" subtitle="" className="text-center" />
 					<div className="items-center justify-between md:flex">
 						<p className="text-lg !leading-loose md:text-2xl">
 							進藤雄太朗です。

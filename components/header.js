@@ -2,7 +2,6 @@ import Logo from "components/logo";
 import Nav from "components/nav";
 import Toggle from "components/toggle";
 import React, { useState, useEffect } from "react";
-import styles from "../styles/scss/header.module.scss";
 
 export default function Header() {
 	const [isVisible, setIsVisible] = useState(false);
@@ -15,13 +14,11 @@ export default function Header() {
 		return () => window.removeEventListener("scroll", toggleVisibility);
 	}, []);
 	return (
-		<header className={isVisible ? styles.header__wrap : styles.header__wraps}>
-			<div className={styles.header__flex}>
+		<header className={`fixed z-30 h-[64px] w-full ${isVisible && "bg-black/10 dark:bg-black/25"}`}>
+			<div className="flex h-full items-center justify-between">
 				<Logo boxOn />
-				<div className={styles.header__flex__nav}>
-					<div className={styles.header__nav}>
-						<Nav />
-					</div>
+				<div className="flex flex-row-reverse items-center justify-start md:flex-row ">
+					<Nav />
 					<Toggle />
 				</div>
 			</div>

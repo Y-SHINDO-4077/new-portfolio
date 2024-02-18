@@ -25,8 +25,6 @@ export default function READMORE({ url, none = false }) {
 						scrollTrigger: {
 							trigger: target,
 							start: "bottom bottom",
-							// toggleActions: "restart none none none",
-							// markers: true,
 						},
 						opacity: 1,
 						xPercent: 0,

@@ -1,3 +1,5 @@
+const { th } = require("date-fns/locale");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	content: ["./pages/**/*.js", "./components/**/*.js"],
@@ -8,11 +10,16 @@ module.exports = {
 			beige: "#F0EFEB",
 			darkBaige: "#2c2c20",
 			lightOrange: "#B09D60",
+			inherit: "inherit",
 		},
 		extend: {
 			backgroundImage: (theme) => ({}),
+			backgroundColor: (theme) => ({
+				...theme("colors"),
+				darkBaige: "#2c2c20",
+			}),
 		},
+		plugins: [],
+		darkMode: "class",
 	},
-	plugins: [],
-	darkMode: "media",
 };

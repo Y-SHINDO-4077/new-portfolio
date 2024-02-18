@@ -1,9 +1,8 @@
-import styles from "../styles/scss/hero.module.scss";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useEffect } from "react";
 
-export default function Hero({ title, subtitle, imageOn = false }) {
+export default function Hero({ title, subtitle, className }) {
 	useEffect(() => {
 		gsap.registerPlugin(ScrollTrigger);
 		if (process.browser) {
@@ -36,9 +35,9 @@ export default function Hero({ title, subtitle, imageOn = false }) {
 	});
 
 	return (
-		<section className="flex flex-col text-center">
-			<h1 className={styles.title}>{title}</h1>
-			{subtitle && <h4 className={styles.subtitle}> {subtitle}</h4>}
+		<section className={`flex flex-col text-center ${className && className}`}>
+			<h1 className="text-6xl font-black tracking-widest md:text-8xl">{title}</h1>
+			{subtitle && <h4 className="text-sm md:text-3xl"> {subtitle}</h4>}
 		</section>
 	);
 }

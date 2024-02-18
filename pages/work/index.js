@@ -11,7 +11,6 @@ import styles from "../../styles/scss/posts.module.scss";
 
 export async function getStaticProps() {
 	const posts = await getAllPosts();
-	console.log(posts);
 
 	for (const post of posts) {
 		if (!post.hasOwnProperty("eyecatch")) {

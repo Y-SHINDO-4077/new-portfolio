@@ -6,7 +6,7 @@ import Image from "next/image";
 import dmask from "images/dnu_photo.webp";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { ReactElement, useEffect } from "react";
+import { useEffect } from "react";
 
 export default function DNUSetion({ linkOn = false }) {
 	useEffect(() => {
@@ -43,11 +43,10 @@ export default function DNUSetion({ linkOn = false }) {
 		<>
 			<section className="bg-lightOrange/30 py-12 md:py-24 dark:bg-darkBaige">
 				<Container>
-					<div className="text-center">
-						<Hero title="OTHER" subtitle="" />
-					</div>
+					<Hero title="OTHER" subtitle="" className="text-center" />
+
 					<div className="items-center justify-start md:flex ">
-						<p className="animation max-w-[650px] grow text-2xl leading-loose md:w-[46vw]">
+						<p className="animation max-w-[650px] grow text-lg !leading-loose md:w-[46vw] md:text-2xl ">
 							2017年の大学在籍時より、
 							<br />
 							大ナゴヤ大学に関わり続けています。
