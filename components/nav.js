@@ -30,7 +30,7 @@ export default function Nav() {
 				onClick={toggleNav}
 			>
 				<span className={styles.bar}></span>
-				<span className="hidden">MENU</span>
+				<span className="sr-only">MENU</span>
 			</button>
 			<ul className="fixed inset-[0_-100%] z-50 grid place-content-center gap-8 bg-black/80 text-center md:static md:flex md:gap-10 md:bg-inherit">
 				<li>

@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import Chart from "chart.js/auto";
-import styles from "../styles/scss/contentbody.module.scss";
 
 export default function CHART({}) {
 	const canvasEl = useRef(null);
@@ -44,14 +43,18 @@ export default function CHART({}) {
 		}
 
 		const weight = [
+			"4",
+			"4",
+			"3.5",
 			"3",
 			"3",
-			"2.5",
-			"2.5",
-			"2.5",
-			"2.5",
-			"2.5",
+			"3",
+			"3",
 			"2",
+			"0.8",
+			"0.8",
+			"0.4",
+			"0.4",
 			"0.3",
 			"0.3",
 			"0.3",
@@ -68,11 +71,16 @@ export default function CHART({}) {
 			"Javascript",
 			"jQuery",
 			"Shopify(liquid)",
+			"Astro",
+			"EJS",
+			"MicroCMS",
 			"Laravel",
 			"CakePHP",
+
+			"Pug",
 			"Next.js",
-			"MicroCMS",
 			"React",
+			"Tailwind CSS",
 		];
 		const data = {
 			labels: labels,
@@ -123,9 +131,17 @@ export default function CHART({}) {
 		gradient2.addColorStop(0.65, colors.black.quarter);
 		gradient2.addColorStop(1, colors.black.zero);
 
-		const weight2 = ["3", "3", "3", "0.3", "0.3", "0.3"];
+		const weight2 = ["4", "4", "4", "1", "0.5", "0.3", "0.3"];
 
-		const labels2 = ["XD", "Illustrator", "Photoshop", "InDesign", "After Effect", "Figma"];
+		const labels2 = [
+			"XD",
+			"Illustrator",
+			"Photoshop",
+			"Figma",
+			"InDesign",
+			"After Effect",
+			"Premire Pro",
+		];
 		const data2 = {
 			labels: labels2,
 			datasets: [
@@ -157,9 +173,9 @@ export default function CHART({}) {
 	});
 	return (
 		<>
-			<h4 className={styles.fadeinUp}>Program Languages </h4>
+			<h4 className="mb-4 mt-8 text-base md:text-2xl">Program Languages </h4>
 			<canvas id="myChart" ref={canvasEl} height="300" />
-			<h4 className={styles.fadeinUp}>Design Software</h4>
+			<h4 className="my-4 text-base md:text-2xl">Design Software</h4>
 			<canvas id="myChart2" ref={canvasEl2} height="200" />
 		</>
 	);

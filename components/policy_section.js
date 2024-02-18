@@ -1,4 +1,3 @@
-import styles from "../styles/scss/policy_section.module.scss";
 import Container from "./container";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -42,13 +41,10 @@ export default function PolicySetion({ title, en__content, ja__content }) {
 		<>
 			<section>
 				<Container>
-					<h2 className={styles.t__left}>{title}</h2>
-					<div className={styles.en__content}>
-						<h4>{en__content}</h4>
-					</div>
-					<div className={styles.ja__content}>
-						<h5>{ja__content}</h5>
-					</div>
+					<h2 className="text-4xl md:text-6xl">{title}</h2>
+					<p className="text-default ml-auto !leading-loose md:w-[60vw] md:text-2xl ">
+						{ja__content}
+					</p>
 				</Container>
 			</section>
 		</>

@@ -9,13 +9,8 @@ import CHART from "components/chart";
 import READMORE from "components/readmore";
 import styles from "../styles/scss/me.module.scss";
 
-import { ReactElement, useEffect } from "react";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { gsap, Power3 } from "gsap";
 import Image from "next/image";
 import topwork from "images/topwork.webp";
-
-import three from "images/me_figure1.svg";
 
 export default function ME() {
 	return (
@@ -52,18 +47,20 @@ export default function ME() {
 			<div className={styles.overflow}>
 				<section>
 					<Container>
-						<h2 className={styles.t__left}>Skills</h2>
+						<h2 className="text-4xl md:text-6xl">Skills</h2>
 						<CHART />
 					</Container>
 				</section>
 				<section>
 					<Container>
-						<h2 className={styles.heading_q}>Qualification</h2>
-						<ContentBody Year="" heading4="マイクロソフトオフィススペシャリスト" heading5="" />
-						<ContentBody Year="" heading4="ITパスポート" heading5="" />
-						<ContentBody Year="" heading4="色彩検定3級・2級" heading5="" />
-						<ContentBody Year="" heading4="HTML5 認定資格" heading5="" />
-						<ContentBody Year="" heading4="校正検定初級（日本エディタースクール）" heading5="" />
+						<h2 className="text-4xl md:text-6xl">Qualification</h2>
+						<ul class="mt-16 flex flex-col gap-4">
+							<ContentBody heading4="マイクロソフトオフィススペシャリスト" />
+							<ContentBody heading4="ITパスポート" />
+							<ContentBody heading4="色彩検定3級・2級" />
+							<ContentBody heading4="HTML5 認定資格" />
+							<ContentBody heading4="校正検定初級（日本エディタースクール）" />
+						</ul>
 					</Container>
 				</section>
 				<section>
