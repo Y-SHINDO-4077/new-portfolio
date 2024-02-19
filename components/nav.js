@@ -1,5 +1,4 @@
 import Link from "next/link";
-import styles from "../styles/scss/nav.module.scss";
 import { useState } from "react";
 
 export default function Nav() {
@@ -11,7 +10,13 @@ export default function Nav() {
 		setNavIsOpen(false);
 	};
 	return (
-		<nav className={navIsOpen ? styles.open : styles.close}>
+		<nav
+			className={
+				navIsOpen
+					? "[&_button>span]:scale-0 [&_button]:before:rotate-45 [&_button]:after:-rotate-45 [&_ul]:translate-x-0 [&_ul]:bg-black/80 "
+					: "[&_button]:before:translate-y-[-0.5rem] [&_button]:after:translate-y-[0.5rem] [&_ul]:translate-x-full [&_ul]:bg-black/0 md:[&_ul]:translate-x-0"
+			}
+		>
 			{navIsOpen && (
 				<style jsx global>
 					{`
@@ -26,13 +31,13 @@ export default function Nav() {
 				</style>
 			)}
 			<button
-				className="relative z-50 grid size-[42px] place-items-center before:absolute before:left-0 before:top-[-8px] before:z-50 before:h-[1px] before:w-[32px] after:absolute after:left-0 after:top-[-8px] after:z-50 after:h-[1px] after:w-[32px] md:hidden"
+				className="buttonClass bofore:content-[''] relative z-10 grid size-[40px] place-items-center before:absolute before:left-0 before:top-[20px] before:z-10 before:h-[2px] before:w-[32px] before:bg-white after:absolute after:left-0 after:top-[20px] after:z-10  after:h-[2px] after:w-[32px] after:bg-white after:content-[''] md:hidden"
 				onClick={toggleNav}
 			>
-				<span className="h-[1px] w-[32px] bg-white "></span>
+				<span className="absolute left-0 h-[2px] w-[32px] bg-white "></span>
 				<span className="sr-only">MENU</span>
 			</button>
-			<ul className="fixed inset-[0_-100%] z-50 grid place-content-center gap-8 bg-black/80 text-center md:static md:flex md:gap-10 md:bg-inherit">
+			<ul className="fixed inset-[0_-100%] z-[-1] grid  place-content-center  gap-8 text-center transition-transform duration-300 ease-out md:static md:flex md:gap-10 md:bg-inherit">
 				<li>
 					<Link
 						href="/me/"

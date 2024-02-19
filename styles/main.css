@@ -19,3 +19,25 @@
 		font-family: "Futura", "Noto Sans JP", sans-serif;
 	}
 }
+
+@layer components {
+	.buttonClass::before {
+		content: "";
+		@apply absolute;
+		@apply left-0;
+		@apply top-[-8px];
+		@apply z-10;
+		@apply h-[1px];
+		@apply w-[32px];
+	}
+
+	.buttonClass::after {
+		content: "";
+		@apply absolute;
+		@apply left-0;
+		@apply top-[-8px];
+		@apply z-10;
+		@apply h-[1px];
+		@apply w-[32px];
+	}
+}
