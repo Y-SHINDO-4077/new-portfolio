@@ -18,6 +18,10 @@ module.exports = {
 				...theme("colors"),
 				darkBaige: "#2c2c20",
 			}),
+			fontFamily: {
+				futura: ["Futura", "sans-serif"],
+				noto: ["Noto Sans JP", "serif"],
+			},
 		},
 		plugins: [],
 		darkMode: "class",

@@ -8,7 +8,7 @@ export default function Footer() {
 			<Container>
 				<div className="block items-center justify-between gap-8 text-center md:flex">
 					<Logo />
-					<ul className="mt-6 flex items-center gap-8 md:mt-0">
+					<ul className="mt-6 flex flex-col items-center justify-center gap-8 md:mt-0 md:flex-row">
 						<li>
 							<Link href="/me/" className="text-white">
 								ME

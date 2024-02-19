@@ -1,68 +1,68 @@
-@import '../scss/variables.module.scss';
-.dnu__section{
-  background:rgba(176,157,96,0.3);
-}
-.dnu__flex__area{
-  @include flex();
-  justify-content: flex-start;
-  align-items: center;
-  position:relative;
-  z-index: 1;
-  // margin-top:64px;
-  padding-top: 150px;
-  padding-bottom: 150px;
+@import "../scss/variables.module.scss";
+// .dnu__section{
+//   background:rgba(176,157,96,0.3);
+// }
+// .dnu__flex__area{
+//   @include flex();
+//   justify-content: flex-start;
+//   align-items: center;
+//   position:relative;
+//   z-index: 1;
+//   // margin-top:64px;
+//   padding-top: 150px;
+//   padding-bottom: 150px;
 
-  @include mq(ts){
-    display: block;
-    position:inherit;
-    padding-top: 48px;
-    padding-bottom: 48px;
-  }
+//   @include mq(ts){
+//     display: block;
+//     position:inherit;
+//     padding-top: 48px;
+//     padding-bottom: 48px;
+//   }
 
-  h4{
-    font-size:24px;
-    font-weight:500;
-    line-height:2;
+//   h4{
+//     font-size:24px;
+//     font-weight:500;
+//     line-height:2;
 
-    @include mq(ts){
-      font-size:18px;
-    }
-  }
+//     @include mq(ts){
+//       font-size:18px;
+//     }
+//   }
 
-  .flex__left{
-    max-width:650px;
-    width:46vw;
-    @include mq(ts){
-      max-width:inherit;
-      width:100%;
-      margin-bottom:24px;
-    }
-  }
-  .dnu_image{
-    position:absolute;
-    right:0;
-    max-width: 643px;
-    width: 53.5833vw;
-    z-index: -1;
-    @include mq(ts){
-      position:static;
-      max-width:inherit;
-      width:100%;
-    }
-  }
+//   .flex__left{
+//     max-width:650px;
+//     width:46vw;
+//     @include mq(ts){
+//       max-width:inherit;
+//       width:100%;
+//       margin-bottom:24px;
+//     }
+//   }
+//   .dnu_image{
+//     position:absolute;
+//     right:0;
+//     max-width: 643px;
+//     width: 53.5833vw;
+//     z-index: -1;
+//     @include mq(ts){
+//       position:static;
+//       max-width:inherit;
+//       width:100%;
+//     }
+//   }
 
-  .dnu_image_size{
-    width:100%;
-    
-  }
-}
+//   .dnu_image_size{
+//     width:100%;
 
-.textleftFade{
-  display: block;
-}
+//   }
+// }
+
+// .textleftFade{
+//   display: block;
+// }
 
 [data-theme="dark"] {
-  .dnu__section{
-    background:#2c2c20;
-  }
+	.dnu__section {
+		background: #2c2c20;
+	}
 }
