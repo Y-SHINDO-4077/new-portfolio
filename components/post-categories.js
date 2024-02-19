@@ -1,4 +1,3 @@
-import styles from "styles/scss/post-categories.module.scss";
 import Link from "next/link";
 
 export default function PostCategories({ categories }) {

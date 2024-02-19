@@ -29,7 +29,6 @@ export default function Schedule({
 	title,
 	publish,
 	en_title,
-	//content,
 	eyecatch,
 	eyecatch02,
 	categories,
@@ -86,20 +85,20 @@ export default function Schedule({
 					)}
 
 					<PostBody>
-						<h3 className={styles.heading3}>
+						<h3 className="font-futura text-5xl">
 							<ConvertBody contentHTML={items01} />
 						</h3>
 
 						<ConvertBody contentHTML={content01} />
 
-						<h3 className={styles.heading3}>
+						<h3 className="mt-8 font-futura text-5xl md:mt-16">
 							<ConvertBody contentHTML={items02} />
 						</h3>
 
 						<ConvertBody contentHTML={content02} />
 
 						{items03 && (
-							<h3 className={styles.heading3}>
+							<h3 className="mt-8 font-futura text-5xl md:mt-16">
 								<ConvertBody contentHTML={items03} />
 							</h3>
 						)}
@@ -107,7 +106,7 @@ export default function Schedule({
 						{content03 && <ConvertBody contentHTML={content03} />}
 
 						{items04 && (
-							<h3 className={styles.heading3}>
+							<h3 className="mt-8 font-futura text-5xl md:mt-16">
 								<ConvertBody contentHTML={items04} />
 							</h3>
 						)}

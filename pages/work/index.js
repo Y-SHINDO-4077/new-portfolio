@@ -31,7 +31,7 @@ export default function Work({ posts, categories }) {
 	return (
 		<Container>
 			<Meta pageTitle="WORKS" pageDesc="実績" />
-			<section className={styles.post__padding}>
+			<section className="relative">
 				<Hero title="WORKS" subtitle="" />
 				{/* <PostCategories categories={categories} /> */}
 				<Posts posts={posts} />
