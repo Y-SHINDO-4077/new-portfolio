@@ -8,7 +8,7 @@ export default function DNUTimeline(title) {
 
 			<section className="flex items-center justify-start">
 				<ul className="relative left-[1.5rem] top-0 border-l-2 border-solid border-black">
-					<li className="relative w-[calc(100%_-_40px)] py-[1.5rem] pl-[1.5rem] text-3xl font-bold before:absolute before:left-[-0.75rem] before:top-8 before:size-[20px] before:rounded-3xl before:bg-black md:left-[4rem] md:w-[calc(100%_-_60px)] md:w-full md:pl-[3rem] md:before:left-[-4.75rem]">
+					<li className="relative w-[calc(100%_-_40px)] py-[1.5rem] pl-[1.5rem] text-3xl font-bold before:absolute before:left-[-0.75rem] before:top-8 before:size-[20px] before:rounded-3xl before:bg-black md:left-[4rem] md:w-[calc(100%_-_60px)] md:pl-[3rem] md:before:left-[-4.75rem]">
 						<h4 class="font-futura">2017</h4>
 						<h3 className="mt-4 font-noto">インターンシップ生となる</h3>
 
@@ -28,14 +28,14 @@ export default function DNUTimeline(title) {
 							を課題として実施しました。反響がありました。
 						</p>
 					</li>
-					<li className="relative w-[calc(100%_-_40px)] py-[1.5rem] pl-[1.5rem] text-3xl font-bold before:absolute before:left-[-0.75rem] before:top-8 before:size-[20px] before:rounded-3xl before:bg-black md:left-[4rem] md:w-[calc(100%_-_60px)] md:w-full md:pl-[3rem] md:before:left-[-4.75rem]">
+					<li className="relative w-[calc(100%_-_40px)] py-[1.5rem] pl-[1.5rem] text-3xl font-bold before:absolute before:left-[-0.75rem] before:top-8 before:size-[20px] before:rounded-3xl before:bg-black md:left-[4rem] md:w-[calc(100%_-_60px)] md:pl-[3rem] md:before:left-[-4.75rem]">
 						<h4 className="font-futura">2018</h4>
 						<h3 className="mt-4 font-noto">総務メンバーとなる</h3>
 						<p className="mt-4 font-noto">
 							社会人になった後も、総務メンバーとして活動に参加。ボランティアスタッフ説明会を実施しました。
 						</p>
 					</li>
-					<li className="relative w-[calc(100%_-_40px)] py-[1.5rem] pl-[1.5rem] text-3xl font-bold before:absolute before:left-[-0.75rem] before:top-8 before:size-[20px] before:rounded-3xl before:bg-black md:left-[4rem] md:w-[calc(100%_-_60px)] md:w-full md:pl-[3rem] md:before:left-[-4.75rem]">
+					<li className="relative w-[calc(100%_-_40px)] py-[1.5rem] pl-[1.5rem] text-3xl font-bold before:absolute before:left-[-0.75rem] before:top-8 before:size-[20px] before:rounded-3xl before:bg-black md:left-[4rem] md:w-[calc(100%_-_60px)] md:pl-[3rem] md:before:left-[-4.75rem]">
 						<h4 className="font-futura">2019</h4>
 						<h3 className="mt-4 font-noto">授業コーディネーターとして企画する</h3>
 						<p className="mt-4 font-noto">
@@ -59,7 +59,7 @@ export default function DNUTimeline(title) {
 							を企画しました。
 						</p>
 					</li>
-					<li className="relative w-[calc(100%_-_40px)] py-[1.5rem] pl-[1.5rem] text-3xl font-bold before:absolute before:left-[-0.75rem] before:top-8 before:size-[20px] before:rounded-3xl before:bg-black md:left-[4rem] md:w-[calc(100%_-_60px)] md:w-full md:pl-[3rem] md:before:left-[-4.75rem]">
+					<li className="relative w-[calc(100%_-_40px)] py-[1.5rem] pl-[1.5rem] text-3xl font-bold before:absolute before:left-[-0.75rem] before:top-8 before:size-[20px] before:rounded-3xl before:bg-black md:left-[4rem] md:w-[calc(100%_-_60px)] md:pl-[3rem] md:before:left-[-4.75rem]">
 						<h4 className="font-futura">2020</h4>
 						<h3 className="mt-4 font-noto">noteチーム立ち上げ</h3>
 						<p className="mt-4 font-noto">
@@ -79,7 +79,7 @@ export default function DNUTimeline(title) {
 							校正係として現在も活動中です。
 						</p>
 					</li>
-					<li className="relative w-[calc(100%_-_40px)] py-[1.5rem] pl-[1.5rem] text-3xl font-bold before:absolute before:left-[-0.75rem] before:top-8 before:size-[20px] before:rounded-3xl before:bg-black md:left-[4rem] md:w-[calc(100%_-_60px)] md:w-full md:pl-[3rem] md:before:left-[-4.75rem]">
+					<li className="relative w-[calc(100%_-_40px)] py-[1.5rem] pl-[1.5rem] text-3xl font-bold before:absolute before:left-[-0.75rem] before:top-8 before:size-[20px] before:rounded-3xl before:bg-black md:left-[4rem] md:w-[calc(100%_-_60px)] md:pl-[3rem] md:before:left-[-4.75rem]">
 						<h4 className="font-futura">2021</h4>
 						<h3 className="mt-4 font-noto">やっとかめ文化祭まちあるきなごやで企画する</h3>
 						<p className="noto mt-4">
@@ -92,15 +92,17 @@ export default function DNUTimeline(title) {
 							>
 								やっとかめ文化祭
 							</Link>
-							。犬山城マイスターの方とまちあるき企画を実施しました。
+							。 <br />
+							犬山城マイスターの方とまちあるき企画を実施しました。
 						</p>
 					</li>
-					<li className="relative w-[calc(100%_-_40px)] py-[1.5rem] pl-[1.5rem] text-3xl font-bold before:absolute before:left-[-0.75rem] before:top-8 before:size-[20px] before:rounded-3xl before:bg-black md:left-[4rem] md:w-[calc(100%_-_60px)] md:w-full md:pl-[3rem] md:before:left-[-4.75rem]">
+					<li className="relative w-[calc(100%_-_40px)] py-[1.5rem] pl-[1.5rem] text-3xl font-bold before:absolute before:left-[-0.75rem] before:top-8 before:size-[20px] before:rounded-3xl before:bg-black md:left-[4rem] md:w-[calc(100%_-_60px)] md:pl-[3rem] md:before:left-[-4.75rem]">
 						<h4 className="font-futura">2022</h4>
 						<h3 className="mt-4 font-noto">まちシル立ち上げ</h3>
 
 						<p className="mt-4 font-noto">
-							「歩くまちには何がある？」をコンセプトに、まちを歩いて発見するプロジェクト
+							「歩くまちには何がある？」をコンセプトに、 <br />
+							まちを歩いて発見するプロジェクト
 							<Link
 								href="https://dai-nagoya.univnet.jp/relations/machishiru/"
 								target="_blank"
