@@ -82,7 +82,7 @@ export default function DNUTimeline(title) {
 					<li className="relative w-[calc(100%_-_40px)] py-[1.5rem] pl-[1.5rem] text-3xl font-bold before:absolute before:left-[-0.75rem] before:top-8 before:size-[20px] before:rounded-3xl before:bg-black md:left-[4rem] md:w-[calc(100%_-_60px)] md:pl-[3rem] md:before:left-[-4.75rem]">
 						<h4 className="font-futura">2021</h4>
 						<h3 className="mt-4 font-noto">やっとかめ文化祭まちあるきなごやで企画する</h3>
-						<p className="noto mt-4">
+						<p className="mt-4 font-noto">
 							2017年よりやっとかめ大使としてお手伝いしていた
 							<Link
 								href="https://yattokame.jp/"

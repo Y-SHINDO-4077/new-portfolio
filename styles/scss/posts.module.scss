@@ -1,104 +1,94 @@
-@import '../scss/variables.module.scss';
-.post__padding{
-  padding:116px 0 164px;
- 
+@import "../scss/variables.module.scss";
+.post__padding {
+	padding: 116px 0 164px;
 }
 
+.post {
+	position: relative;
+	//margin-bottom:96px;
 
-.post{
-  position: relative;
-  //margin-bottom:96px;
-  
-  a{
-    // position: relative;
+	a {
+		// position: relative;
 
-    .flexLayout{
-      @include flex();
-      column-gap: 4%;
+		.flexLayout {
+			@include flex();
+			column-gap: 4%;
 
-      @include mq(m){
-        display: block;
-      }
-      
-    }
+			@include mq(m) {
+				display: block;
+			}
+		}
 
-    h2{
-      font-size:64px;
-      width:100%;
-    }
-    h3{
-      font-size:24px;
-      width:100%;
-    }
+		h2 {
+			font-size: 64px;
+			width: 100%;
+		}
+		h3 {
+			font-size: 24px;
+			width: 100%;
+		}
 
-    h4{
-      font-size:16px;
-      font-weight:400;
-      margin-top:8px;
-    }
+		h4 {
+			font-size: 16px;
+			font-weight: 400;
+			margin-top: 8px;
+		}
 
-    figure{
-      display:none;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 48%;
-      height: auto;
-      aspect-ratio: 16/9;
+		figure {
+			display: none;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 48%;
+			height: auto;
+			aspect-ratio: 16/9;
 
-      @include mq(m){
-        width: 100%;
-        position: static;
-        display: block;
-      }
-     
-    }
+			@include mq(m) {
+				width: 100%;
+				position: static;
+				display: block;
+			}
+		}
 
-    &:hover{
-      figure{
-        display:block;
-      }
-    }
+		&:hover {
+			figure {
+				display: block;
+			}
+		}
 
-    @include mq(m){
-      figure{
-        display:block;
-      }
-    }
+		@include mq(m) {
+			figure {
+				display: block;
+			}
+		}
 
-    .left,.right{
-      width:48%;
-      @include mq(m){
-        width: 100%;
-        position:relative;
-      }
-    }
+		.left,
+		.right {
+			width: 48%;
+			@include mq(m) {
+				width: 100%;
+				position: relative;
+			}
+		}
 
-    .left{
-    
-      @include mq(m){
-         margin-top: 64px;
-        
-      }
-    }
-    .right{
-      padding:64px 0;
-      border-bottom:1px solid #000;
-
-    }
-   
-  }
-  
+		.left {
+			@include mq(m) {
+				margin-top: 64px;
+			}
+		}
+		.right {
+			padding: 64px 0;
+			border-bottom: 1px solid #000;
+		}
+	}
 }
 
-[data-theme="dark"]{
-
-  .post{
-    a{
-      .right{
-        border-color:#fff;
-      }
-    }
-  }
-   
- }
+[data-theme="dark"] {
+	.post {
+		a {
+			.right {
+				border-color: #fff;
+			}
+		}
+	}
+}
