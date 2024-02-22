@@ -1,9 +1,9 @@
 import Meta from "components/meta";
-
 import Container from "components/container";
 import React from "react";
 import { gsap } from "gsap";
-import { useRef, useEffect } from "react";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { useRef, useEffect, forwardRef } from "react";
 
 import styles from "../styles/scss/Home.module.scss";
 import Hero from "components/hero";
@@ -18,7 +18,8 @@ import topwork from "images/topwork.webp";
 export default function Home({ posts }) {
 	const typewrite = useRef();
 	const typewrite02 = useRef();
-	const jsDot = typewrite.current;
+	const imageWork = useRef();
+	gsap.registerPlugin(ScrollTrigger);
 	useEffect(() => {
 		let ctx = gsap.context(() => {
 			gsap.set([typewrite.current, typewrite02.current], {
@@ -38,7 +39,34 @@ export default function Home({ posts }) {
 			});
 		}, typewrite);
 
-		return () => ctx.revert();
+		if (imageWork.current) {
+			let imageFade = gsap.fromTo(
+				imageWork.current,
+				{
+					scrollTrigger: {
+						trigger: imageWork.current,
+						start: "bottom bottom",
+						toggleActions: "restart none none none",
+					},
+					opacity: 0,
+					yPercent: 100,
+				},
+				{
+					scrollTrigger: {
+						trigger: imageWork.current,
+						start: "bottom bottom",
+						toggleActions: "restart none none none",
+					},
+					opacity: 1,
+					yPercent: 0,
+				}
+			);
+		}
+
+		return () => {
+			ctx.revert();
+			imageFade.revert();
+		};
 	}, []);
 
 	return (
@@ -46,7 +74,7 @@ export default function Home({ posts }) {
 			<Meta />
 			<Container large>
 				<section className="relative h-screen py-0 dark:mix-blend-difference dark:after:bg-darkBaige">
-					<div className="absolute left-1/4 top-1/3  z-10 md:left-8 md:top-64 lg:left-24">
+					<div className="absolute left-1/4 top-1/3 z-10  sm:left-[10%] md:left-8 md:top-64 lg:left-24">
 						<h1
 							className="max-w-full text-8xl font-bold leading-none text-white  mix-blend-hard-light  sm:max-w-[calc(100%_-_30%)] lg:text-9xl"
 							ref={typewrite}
@@ -119,7 +147,7 @@ export default function Home({ posts }) {
 			<section className="py-12 md:py-24">
 				<Container>
 					<Hero title="WORKS" subtitle="" />
-					<Image src={topwork} alt="" layout="responsive" priority />
+					<Image src={topwork} alt="" layout="responsive" priority ref={imageWork} />
 					<READMORE url="/work" />
 				</Container>
 			</section>
