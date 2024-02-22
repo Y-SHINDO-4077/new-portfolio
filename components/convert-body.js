@@ -1,6 +1,6 @@
 import parse from "html-react-parser";
 import Image from "next/image";
-export default function ConvertBody({ contentHTML }) {
+export default function ConvertBody({ contentHTML, className }) {
 	const contentReact = parse(contentHTML, {
 		replace: (node) => {
 			if (node.name === "img") {
@@ -24,7 +24,7 @@ export default function ConvertBody({ contentHTML }) {
 	});
 	return (
 		<>
-			<div className="mt-8 text-2xl md:text-4xl">{contentReact}</div>
+			<div className={`mt-8 text-2xl md:text-4xl ${className && className}`}>{contentReact}</div>
 		</>
 	);
 }

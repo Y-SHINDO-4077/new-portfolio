@@ -39,7 +39,7 @@ export default function PolicySetion({ title, en__content, ja__content }) {
 
 	return (
 		<>
-			<section>
+			<section className="p-12 md:p-16">
 				<Container>
 					<h2 className="font-futura text-4xl md:text-6xl">{title}</h2>
 					<p className="ml-auto mt-8 text-base !leading-loose md:mt-12 md:w-[60vw] md:text-2xl ">

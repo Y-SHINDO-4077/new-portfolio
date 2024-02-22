@@ -5,6 +5,7 @@ import Link from "next/link";
 import Container from "components/container";
 import PostHeader from "components/post-header";
 import PostBody from "components/post-body";
+import READMORE from "components/readmore";
 
 import ConvertBody from "components/convert-body";
 
@@ -49,7 +50,7 @@ export default function Schedule({
 }) {
 	return (
 		<>
-			<figure className={styles.imagecontainer}>
+			<figure className="pt-16">
 				<Image
 					key={eyecatch.url}
 					src={eyecatch.url}
@@ -78,39 +79,76 @@ export default function Schedule({
 				<article>
 					<PostHeader title={title} en_title={en_title} />
 					{url && (
-						<div className={styles.content__url}>
+						<div className="mb-12 mt-8 text-right text-2xl">
 							<p className={styles.url_caution}>↓以下のURLを検索して詳細をご覧ください</p>
-							<div>{url}</div>
+							<p className="text-2xl md:text-3xl">{url}</p>
 						</div>
 					)}
 
 					<PostBody>
-						<h3 className="font-futura text-5xl">
-							<ConvertBody contentHTML={items01} />
-						</h3>
-
-						<ConvertBody contentHTML={content01} />
-
-						<h3 className="mt-8 font-futura text-5xl md:mt-16">
-							<ConvertBody contentHTML={items02} />
-						</h3>
-
-						<ConvertBody contentHTML={content02} />
-
-						{items03 && (
-							<h3 className="mt-8 font-futura text-5xl md:mt-16">
-								<ConvertBody contentHTML={items03} />
+						<section className="p-12 md:p-16">
+							<h3>
+								<ConvertBody
+									contentHTML={items01}
+									className="mt-8 font-futura !text-5xl md:mt-16"
+								/>
 							</h3>
+
+							<ConvertBody
+								contentHTML={content01}
+								className="mt-8 !leading-loose md:!text-3xl [&>*]:font-noto [&>*]:text-2xl [&>*]:md:mt-16"
+							/>
+						</section>
+
+						<section className="p-12 md:p-16">
+							<h3 className="mt-4">
+								<ConvertBody contentHTML={items02} className="font-futura !text-5xl" />
+							</h3>
+
+							<ConvertBody
+								contentHTML={content02}
+								className="!inset-14leading-loose mt-8 md:!text-3xl [&>*]:font-noto [&>*]:text-2xl [&>*]:md:mt-16 "
+							/>
+						</section>
+
+						{items03 && content03 && (
+							<section className="p-12 md:p-16">
+								{items03 && (
+									<h3 className="mt-4">
+										<ConvertBody
+											contentHTML={items03}
+											className="mt-8 font-futura !text-5xl md:mt-16"
+										/>
+									</h3>
+								)}
+
+								{content03 && (
+									<ConvertBody
+										contentHTML={content03}
+										className="mt-8 !leading-loose md:!text-3xl [&>*]:font-noto [&>*]:text-2xl [&>*]:md:mt-16 "
+									/>
+								)}
+							</section>
 						)}
 
-						{content03 && <ConvertBody contentHTML={content03} />}
-
-						{items04 && (
-							<h3 className="mt-8 font-futura text-5xl md:mt-16">
-								<ConvertBody contentHTML={items04} />
-							</h3>
+						{items04 && content04 && (
+							<section className="p-12 md:p-16">
+								{items04 && (
+									<h3 className="mt-4">
+										<ConvertBody
+											contentHTML={items04}
+											className="mt-8 font-futura !text-5xl md:mt-16"
+										/>
+									</h3>
+								)}
+								{content04 && (
+									<ConvertBody
+										contentHTML={content04}
+										className="mt-8 !leading-loose md:!text-3xl [&>*]:font-noto [&>*]:text-2xl [&>*]:md:mt-16 "
+									/>
+								)}
+							</section>
 						)}
-						{content04 && <ConvertBody contentHTML={content04} />}
 
 						<figure>
 							<Image
@@ -138,10 +176,8 @@ export default function Schedule({
             nextText={nextPost.title}
             nextUrl={`/work/${nextPost.slug}`}
             /> */}
-					<div className={styles.readmore}>
-						<Link href="../work">
-							<span>BACK</span>
-						</Link>
+					<div className="mb-8 mr-auto mt-6 flex w-fit items-center justify-start md:mb-16">
+						<READMORE url="/work" title="BACK" />
 					</div>
 				</article>
 			</Container>

@@ -4,7 +4,6 @@ import Container from "components/container";
 import DNUSetion from "components/dnu_section";
 import PolicySetion from "components/policy_section";
 import DNUTimeline from "components/dnu_timeline";
-import readstyles from "../styles/scss/readmore.module.scss";
 
 export default function OTHER({ posts }) {
 	return (

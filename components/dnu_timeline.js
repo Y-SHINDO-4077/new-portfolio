@@ -6,7 +6,7 @@ export default function DNUTimeline(title) {
 		<>
 			<h2 className="text-left font-futura text-4xl md:text-6xl">DNU TIMELINE</h2>
 
-			<section className="flex items-center justify-start">
+			<section className="flex items-center justify-start p-12 md:p-16">
 				<ul className="relative left-[1.5rem] top-0 border-l-2 border-solid border-black">
 					<li className="relative w-[calc(100%_-_40px)] py-[1.5rem] pl-[1.5rem] text-3xl font-bold before:absolute before:left-[-0.75rem] before:top-8 before:size-[20px] before:rounded-3xl before:bg-black md:left-[4rem] md:w-[calc(100%_-_60px)] md:pl-[3rem] md:before:left-[-4.75rem]">
 						<h4 class="font-futura">2017</h4>

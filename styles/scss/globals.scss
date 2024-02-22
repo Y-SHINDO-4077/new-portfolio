@@ -252,19 +252,19 @@ a:hover {
 	}
 }
 
-section {
-	padding: 96px 0;
+// section {
+// 	padding: 96px 0;
 
-	&:last-of-type {
-		@include mq(ts) {
-			padding-bottom: 48px;
-		}
-	}
+// 	&:last-of-type {
+// 		@include mq(ts) {
+// 			padding-bottom: 48px;
+// 		}
+// 	}
 
-	@include mq(ts) {
-		padding: 48px 0;
-	}
-}
+// 	@include mq(ts) {
+// 		padding: 48px 0;
+// 	}
+// }
 
 .t-center {
 	text-align: center;
