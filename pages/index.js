@@ -5,7 +5,6 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useRef, useEffect, forwardRef } from "react";
 
-import styles from "../styles/scss/Home.module.scss";
 import Hero from "components/hero";
 import MVSwiper from "components/swiper";
 import CANVAS from "components/canvas";
@@ -39,8 +38,10 @@ export default function Home({ posts }) {
 			});
 		}, typewrite);
 
+		let imageFade;
+
 		if (imageWork.current) {
-			let imageFade = gsap.fromTo(
+			imageFade = gsap.fromTo(
 				imageWork.current,
 				{
 					scrollTrigger: {
@@ -65,7 +66,9 @@ export default function Home({ posts }) {
 
 		return () => {
 			ctx.revert();
-			imageFade.revert();
+			if (imageFade) {
+				imageFade.revert();
+			}
 		};
 	}, []);
 

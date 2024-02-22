@@ -86,7 +86,7 @@ export default function MeSetion({ linkOn = false }) {
 						<div className="hidden md:block" ref={imgRightFade}>
 							<Image src={dicon} alt="" priority />
 						</div>
-						<div className="block md:hidden" ref={imgRightFade}>
+						<div className="block md:hidden">
 							<Image
 								src={dicon}
 								alt=""
