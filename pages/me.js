@@ -7,7 +7,6 @@ import ContentBody from "components/content__body";
 import Timeline from "components/timeline";
 import CHART from "components/chart";
 import READMORE from "components/readmore";
-import styles from "../styles/scss/me.module.scss";
 
 import Image from "next/image";
 import topwork from "images/topwork.webp";
@@ -16,9 +15,9 @@ export default function ME() {
 	return (
 		<>
 			<Meta pageTitle="ME" pageDesc="About ME | DO" />
-			<div className={styles.overflow}>
+			<div className="relative">
 				<MeSetion />
-				<section className={styles.bg}>
+				<section className="bg-[#0efeb]">
 					<PolicySetion
 						title="POLICY"
 						en__content=""
@@ -39,47 +38,46 @@ export default function ME() {
 					/>
 				</section>
 			</div>
-			<section>
+			<section className="py-12 md:py-24 ">
 				<Container>
 					<Timeline />
 				</Container>
 			</section>
-			<div className={styles.overflow}>
-				<section>
-					<Container>
-						<h2 className="text-4xl md:text-6xl">Skills</h2>
-						<CHART />
-					</Container>
-				</section>
-				<section>
-					<Container>
-						<h2 className="text-4xl md:text-6xl">Qualification</h2>
-						<ul class="mt-16 flex flex-col gap-4">
-							<ContentBody heading4="マイクロソフトオフィススペシャリスト" />
-							<ContentBody heading4="ITパスポート" />
-							<ContentBody heading4="色彩検定3級・2級" />
-							<ContentBody heading4="HTML5 認定資格" />
-							<ContentBody heading4="校正検定初級（日本エディタースクール）" />
-						</ul>
-					</Container>
-				</section>
-				<section>
-					<Container>
-						<Hero title="WORKS" subtitle="" />
-						<Image
-							src={topwork}
-							alt=""
-							priority
-							sizes="100vw"
-							style={{
-								width: "100%",
-								height: "auto",
-							}}
-						/>
-						<READMORE url="/work" />
-					</Container>
-				</section>
-			</div>
+
+			<section className="py-12 md:py-24 ">
+				<Container>
+					<h2 className="text-4xl md:text-6xl">Skills</h2>
+					<CHART />
+				</Container>
+			</section>
+			<section className="py-12 md:py-24 ">
+				<Container>
+					<h2 className="text-4xl md:text-6xl">Qualification</h2>
+					<ul className="mt-16 flex flex-col gap-4">
+						<ContentBody heading4="マイクロソフトオフィススペシャリスト" />
+						<ContentBody heading4="ITパスポート" />
+						<ContentBody heading4="色彩検定3級・2級" />
+						<ContentBody heading4="HTML5 認定資格" />
+						<ContentBody heading4="校正検定初級（日本エディタースクール）" />
+					</ul>
+				</Container>
+			</section>
+			<section className="py-12 md:py-24 ">
+				<Container>
+					<Hero title="WORKS" subtitle="" />
+					<Image
+						src={topwork}
+						alt=""
+						priority
+						sizes="100vw"
+						style={{
+							width: "100%",
+							height: "auto",
+						}}
+					/>
+					<READMORE url="/work" />
+				</Container>
+			</section>
 		</>
 	);
 }

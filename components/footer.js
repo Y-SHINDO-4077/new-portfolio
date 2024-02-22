@@ -7,7 +7,7 @@ export default function Footer() {
 		<footer className="bg-black pb-[24px] pt-[16px]">
 			<Container>
 				<div className="block items-center justify-between gap-8 text-center md:flex">
-					<Logo />
+					<Logo colorWhite />
 					<ul className="mt-6 flex flex-col items-center justify-center gap-8 md:mt-0 md:flex-row">
 						<li>
 							<Link href="/me/" className="text-white">
