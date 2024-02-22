@@ -22,6 +22,11 @@ module.exports = {
 				futura: ["Futura", "sans-serif"],
 				noto: ["Noto Sans JP", "serif"],
 			},
+			backgroundImage: {
+				swipe01: "url('../images/fv@2x.jpg')",
+				swipe02: "url('../images/fv2@2x.jpg')",
+				swipe03: "url('../images/fv03@2x.jpg')",
+			},
 		},
 		plugins: [],
 		darkMode: "class",

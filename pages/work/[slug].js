@@ -107,7 +107,7 @@ export default function Schedule({
 
 							<ConvertBody
 								contentHTML={content02}
-								className="!inset-14leading-loose mt-8 md:!text-3xl [&>*]:font-noto [&>*]:text-2xl [&>*]:md:mt-16 "
+								className="mt-8 !leading-loose md:!text-3xl [&>*]:font-noto [&>*]:text-2xl [&>*]:md:mt-16 "
 							/>
 						</section>
 
