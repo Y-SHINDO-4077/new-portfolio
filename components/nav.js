@@ -41,7 +41,7 @@ export default function Nav() {
 				<li>
 					<Link
 						href="/me/"
-						className="text-white hover:opacity-70 md:text-black"
+						className="text-white hover:opacity-70 dark:text-white md:text-black"
 						onClick={closeNav}
 					>
 						ME
@@ -50,7 +50,7 @@ export default function Nav() {
 				<li>
 					<Link
 						href="/work/"
-						className="text-white hover:opacity-70 md:text-black "
+						className="text-white hover:opacity-70 dark:text-white md:text-black"
 						onClick={closeNav}
 					>
 						WORKS
@@ -59,7 +59,7 @@ export default function Nav() {
 				<li>
 					<Link
 						href="/other/"
-						className="text-white hover:opacity-70 md:text-black "
+						className="text-white hover:opacity-70 dark:text-white md:text-black"
 						onClick={closeNav}
 					>
 						OTHER

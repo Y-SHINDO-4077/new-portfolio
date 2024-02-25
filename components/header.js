@@ -3,7 +3,7 @@ import Nav from "components/nav";
 import Toggle from "components/toggle";
 import React, { useState, useEffect } from "react";
 
-export default function Header() {
+export default function Header({ children }) {
 	const [isVisible, setIsVisible] = useState(false);
 
 	const toggleVisibility = () => {
@@ -19,7 +19,8 @@ export default function Header() {
 				<Logo boxOn />
 				<div className="flex flex-row-reverse items-center justify-start md:flex-row ">
 					<Nav />
-					<Toggle />
+					{/* <Toggle /> */}
+					{children}
 				</div>
 			</div>
 		</header>

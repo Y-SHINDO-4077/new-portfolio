@@ -15,7 +15,7 @@ export default function ME() {
 	return (
 		<>
 			<Meta pageTitle="ME" pageDesc="About ME | DO" />
-			<div className="relative">
+			<div className="relative dark:bg-darkBaige">
 				<MeSetion />
 				<section className="bg-[#0efeb]">
 					<PolicySetion
@@ -38,22 +38,22 @@ export default function ME() {
 					/>
 				</section>
 			</div>
-			<section className="py-12 md:py-24 ">
+			<section className="py-12 dark:bg-darkBaige md:py-24">
 				<Container>
 					<Timeline />
 				</Container>
 			</section>
 
-			<section className="py-12 md:py-24 ">
+			<section className="py-12 dark:bg-darkBaige md:py-24 ">
 				<Container>
-					<h2 className="text-4xl md:text-6xl">Skills</h2>
+					<h2 className="text-4xl dark:text-white md:text-6xl">Skills</h2>
 					<CHART />
 				</Container>
 			</section>
-			<section className="py-12 md:py-24 ">
+			<section className="py-12 dark:bg-darkBaige md:py-24 ">
 				<Container>
-					<h2 className="text-4xl md:text-6xl">Qualification</h2>
-					<ul className="mt-16 flex flex-col gap-4">
+					<h2 className="text-4xl dark:text-white md:text-6xl">Qualification</h2>
+					<ul className="mt-16 flex flex-col gap-4 dark:text-white">
 						<ContentBody heading4="マイクロソフトオフィススペシャリスト" />
 						<ContentBody heading4="ITパスポート" />
 						<ContentBody heading4="色彩検定3級・2級" />
@@ -62,7 +62,7 @@ export default function ME() {
 					</ul>
 				</Container>
 			</section>
-			<section className="py-12 md:py-24 ">
+			<section className="py-12 dark:bg-darkBaige md:py-24">
 				<Container>
 					<Hero title="WORKS" subtitle="" />
 					<Image

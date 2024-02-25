@@ -32,14 +32,12 @@ export default function CHART({}) {
 		gradient.addColorStop(0.65, colors.black.quarter);
 		gradient.addColorStop(1, colors.black.zero);
 
-		let dark = document.documentElement.getAttribute("data-theme");
-		console.log(dark);
+		let dark = document.getElementsByClassName("dark");
 		if (dark !== null) {
 			let gradient = ctx.createLinearGradient(255, 255, 255, 600);
 			gradient.addColorStop(0, colors.white.half);
 			gradient.addColorStop(0.65, colors.white.quarter);
 			gradient.addColorStop(1, colors.white.zero);
-			console.log(dark);
 		}
 
 		const weight = [
@@ -76,7 +74,6 @@ export default function CHART({}) {
 			"MicroCMS",
 			"Laravel",
 			"CakePHP",
-
 			"Pug",
 			"Next.js",
 			"React",

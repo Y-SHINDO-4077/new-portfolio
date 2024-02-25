@@ -34,10 +34,10 @@ export default function Hero({ title, subtitle, className }) {
 
 	return (
 		<section className={`flex flex-col text-center ${className && className}`} ref={heroTitle}>
-			<h1 className="text-6xl font-black tracking-widest md:text-8xl">{title}</h1>
+			<h1 className="text-6xl font-black tracking-widest dark:text-white  md:text-8xl">{title}</h1>
 			{subtitle && (
 				<section>
-					<h4 className="text-sm md:text-3xl"> {subtitle}</h4>
+					<h4 className="text-sm dark:text-white  md:text-3xl"> {subtitle}</h4>
 				</section>
 			)}
 		</section>

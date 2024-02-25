@@ -13,7 +13,6 @@ module.exports = {
 			inherit: "inherit",
 		},
 		extend: {
-			backgroundImage: (theme) => ({}),
 			backgroundColor: (theme) => ({
 				...theme("colors"),
 				darkBaige: "#2c2c20",
@@ -29,6 +28,6 @@ module.exports = {
 			},
 		},
 		plugins: [],
-		darkMode: "class",
 	},
+	darkMode: "class",
 };

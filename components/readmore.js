@@ -36,7 +36,7 @@ export default function READMORE({ url, none = false, title = "READ MORE" }) {
 				href={url}
 				className="flex size-full overflow-hidden bg-gradient-to-l from-black/50 from-50% to-0% bg-[length:200%_4px] bg-[bottom_0_left_200%] bg-repeat-x transition-all duration-300 ease-linear hover:bg-[bottom_0_left_100%]  dark:from-white/50"
 			>
-				<span className="text-3xl md:text-6xl">{title}</span>
+				<span className="text-3xl dark:text-white md:text-6xl">{title}</span>
 			</Link>
 		</div>
 	);

@@ -49,7 +49,7 @@ export default function Schedule({
 	description,
 }) {
 	return (
-		<>
+		<div className="dark:bg-darkBaige ">
 			<figure className="pt-16">
 				<Image
 					key={eyecatch.url}
@@ -79,7 +79,7 @@ export default function Schedule({
 				<article>
 					<PostHeader title={title} en_title={en_title} />
 					{url && (
-						<div className="mb-12 mt-8 text-right text-2xl">
+						<div className="mb-12 mt-8 text-right text-2xl dark:text-white">
 							<p className={styles.url_caution}>↓以下のURLを検索して詳細をご覧ください</p>
 							<p className="text-2xl md:text-3xl">{url}</p>
 						</div>
@@ -90,24 +90,27 @@ export default function Schedule({
 							<h3>
 								<ConvertBody
 									contentHTML={items01}
-									className="mt-8 font-futura !text-5xl md:mt-16"
+									className="mt-8 font-futura !text-5xl dark:text-white md:mt-16"
 								/>
 							</h3>
 
 							<ConvertBody
 								contentHTML={content01}
-								className="mt-8 !leading-loose md:!text-3xl [&>*]:font-noto [&>*]:text-2xl [&>*]:md:mt-16"
+								className="mt-8 !leading-loose dark:text-white md:!text-3xl [&>*]:font-noto [&>*]:text-2xl [&>*]:md:mt-16"
 							/>
 						</section>
 
 						<section className="p-12 md:p-16">
 							<h3 className="mt-4">
-								<ConvertBody contentHTML={items02} className="font-futura !text-5xl" />
+								<ConvertBody
+									contentHTML={items02}
+									className="font-futura !text-5xl dark:text-white"
+								/>
 							</h3>
 
 							<ConvertBody
 								contentHTML={content02}
-								className="mt-8 !leading-loose md:!text-3xl [&>*]:font-noto [&>*]:text-2xl [&>*]:md:mt-16 "
+								className="mt-8 !leading-loose dark:text-white md:!text-3xl [&>*]:font-noto [&>*]:text-2xl [&>*]:md:mt-16"
 							/>
 						</section>
 
@@ -117,7 +120,7 @@ export default function Schedule({
 									<h3 className="mt-4">
 										<ConvertBody
 											contentHTML={items03}
-											className="mt-8 font-futura !text-5xl md:mt-16"
+											className="mt-8 font-futura !text-5xl dark:text-white md:mt-16"
 										/>
 									</h3>
 								)}
@@ -125,7 +128,7 @@ export default function Schedule({
 								{content03 && (
 									<ConvertBody
 										contentHTML={content03}
-										className="mt-8 !leading-loose md:!text-3xl [&>*]:font-noto [&>*]:text-2xl [&>*]:md:mt-16 "
+										className="mt-8 !leading-loose dark:text-white md:!text-3xl [&>*]:font-noto [&>*]:text-2xl [&>*]:md:mt-16 "
 									/>
 								)}
 							</section>
@@ -137,14 +140,14 @@ export default function Schedule({
 									<h3 className="mt-4">
 										<ConvertBody
 											contentHTML={items04}
-											className="mt-8 font-futura !text-5xl md:mt-16"
+											className="mt-8 font-futura !text-5xl dark:text-white md:mt-16"
 										/>
 									</h3>
 								)}
 								{content04 && (
 									<ConvertBody
 										contentHTML={content04}
-										className="mt-8 !leading-loose md:!text-3xl [&>*]:font-noto [&>*]:text-2xl [&>*]:md:mt-16 "
+										className="mt-8 !leading-loose dark:text-white md:!text-3xl [&>*]:font-noto [&>*]:text-2xl [&>*]:md:mt-16 "
 									/>
 								)}
 							</section>
@@ -176,12 +179,12 @@ export default function Schedule({
             nextText={nextPost.title}
             nextUrl={`/work/${nextPost.slug}`}
             /> */}
-					<div className="mb-8 mr-auto mt-6 flex w-fit items-center justify-start md:mb-16">
+					<div className="mr-auto mt-6 flex w-fit items-center justify-start pb-16">
 						<READMORE url="/work" title="BACK" />
 					</div>
 				</article>
 			</Container>
-		</>
+		</div>
 	);
 }
 
@@ -201,7 +204,6 @@ export async function getStaticProps(context) {
 			title: post.title,
 			en_title: post.en_title,
 			publish: post.publishDate,
-			// content: post.content,
 			eyecatch: eyecatch,
 			eyecatch02: post.eyecatch02 ? post.eyecatch02 : "",
 			categories: post.categories,

@@ -48,7 +48,7 @@ export default function MVSwiper() {
 			<div className="relative bottom-[368px] right-[-95%] hidden h-[224px] w-[40px] flex-col flex-wrap [writing-mode:vertical-rl] before:absolute before:bottom-[-64%] before:left-2/4 before:z-10 before:m-auto before:h-[4.53846em] before:w-1 before:bg-white  before:content-[''] md:flex">
 				<div className="flex items-center justify-center font-medium leading-none text-white ">
 					<div className="flex items-center justify-center text-white">
-						<span className="absolute bottom-[-5%] left-2/4 ml-[-4px] size-[12px] after:bg-white">
+						<span className="absolute bottom-[-5%] left-2/4 ml-[-4px] size-[12px] after:bg-white dark:bg-white dark:text-white">
 							SCROLL
 						</span>
 					</div>

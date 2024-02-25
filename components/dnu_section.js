@@ -1,4 +1,3 @@
-import styles from "../styles/scss/dnusection.module.scss";
 import Hero from "./hero";
 import Container from "./container";
 import READMORE from "./readmore";
@@ -62,13 +61,13 @@ export default function DNUSetion({ linkOn = false }) {
 	});
 	return (
 		<>
-			<section className="bg-lightOrange/30 py-12 md:py-24 dark:bg-darkBaige">
+			<section className="bg-lightOrange/30 py-12 dark:bg-darkBaige md:py-24">
 				<Container>
-					<Hero title="OTHER" subtitle="" className="text-center" />
+					<Hero title="OTHER" subtitle="" className="text-center  dark:text-white" />
 
 					<div className="mt-6 items-center justify-start md:flex">
 						<p
-							className="max-w-[650px] grow text-lg !leading-loose md:w-[46vw] md:text-2xl"
+							className="max-w-[650px] grow text-lg !leading-loose dark:text-white md:w-[46vw] md:text-2xl"
 							ref={textLeftFade}
 						>
 							2017年の大学在籍時より、

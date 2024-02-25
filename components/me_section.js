@@ -68,7 +68,7 @@ export default function MeSetion({ linkOn = false }) {
 				<Container>
 					<Hero title="ME" className="text-center" />
 					<div className="items-center justify-between md:flex">
-						<p className="text-lg !leading-loose md:text-2xl" ref={textLeftFade}>
+						<p className="text-lg !leading-loose dark:text-white  md:text-2xl" ref={textLeftFade}>
 							進藤雄太朗です。
 							<br />
 							Webエンジニアをしています。

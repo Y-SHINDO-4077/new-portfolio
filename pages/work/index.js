@@ -29,13 +29,15 @@ export async function getStaticProps() {
 
 export default function Work({ posts, categories }) {
 	return (
-		<Container>
-			<Meta pageTitle="WORKS" pageDesc="実績" />
-			<section className="relative p-12 md:p-16">
-				<Hero title="WORKS" subtitle="" />
-				{/* <PostCategories categories={categories} /> */}
-				<Posts posts={posts} />
-			</section>
-		</Container>
+		<div className="dark:bg-darkBaige">
+			<Container>
+				<Meta pageTitle="WORKS" pageDesc="実績" />
+				<section className="relative p-12 dark:bg-darkBaige md:p-16">
+					<Hero title="WORKS" subtitle="" />
+					{/* <PostCategories categories={categories} /> */}
+					<Posts posts={posts} />
+				</section>
+			</Container>
+		</div>
 	);
 }
