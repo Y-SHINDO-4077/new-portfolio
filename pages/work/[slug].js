@@ -78,7 +78,7 @@ export default function Schedule({
 					<PostHeader title={title} en_title={en_title} />
 					{url && (
 						<div className="mb-12 mt-8 text-right text-2xl dark:text-white">
-							<p className={styles.url_caution}>↓以下のURLを検索して詳細をご覧ください</p>
+							<p className="text-base md:text-2xl">↓以下のURLを検索して詳細をご覧ください</p>
 							<p className="text-2xl md:text-3xl">{url}</p>
 						</div>
 					)}
