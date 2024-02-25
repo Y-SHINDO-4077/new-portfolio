@@ -45,7 +45,7 @@ export default function Toggle() {
 				<label htmlFor="switch" className={styles.header_toggleLabel}></label>
 			</div>
 			<figure>
-				<Image className="" src={dark} alt="" width={23} height={23} priority />
+				<Image className="h-auto w-full" src={dark} alt="" width={23} height={23} />
 			</figure>
 		</div>
 	);

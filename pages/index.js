@@ -150,7 +150,7 @@ export default function Home({ posts }) {
 			<section className="py-12 md:py-24">
 				<Container>
 					<Hero title="WORKS" />
-					<div ref={imageWork} class="mt-6">
+					<div ref={imageWork} className="mt-6">
 						<Image src={topwork} alt="" layout="responsive" priority />
 					</div>
 					<READMORE url="/work" />
