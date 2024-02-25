@@ -3,7 +3,7 @@ import Container from "components/container";
 import React from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { useRef, useEffect, forwardRef } from "react";
+import { useRef, useEffect } from "react";
 
 import Hero from "components/hero";
 import MVSwiper from "components/swiper";
@@ -46,16 +46,16 @@ export default function Home({ posts }) {
 				{
 					scrollTrigger: {
 						trigger: imageWork.current,
-						start: "bottom bottom",
+						start: "50% bottom",
 						toggleActions: "restart none none none",
 					},
 					opacity: 0,
-					yPercent: 100,
+					yPercent: 10,
 				},
 				{
 					scrollTrigger: {
 						trigger: imageWork.current,
-						start: "bottom bottom",
+						start: "50% bottom",
 						toggleActions: "restart none none none",
 					},
 					opacity: 1,
@@ -149,8 +149,10 @@ export default function Home({ posts }) {
 
 			<section className="py-12 md:py-24">
 				<Container>
-					<Hero title="WORKS" subtitle="" />
-					<Image src={topwork} alt="" layout="responsive" priority ref={imageWork} />
+					<Hero title="WORKS" />
+					<div ref={imageWork} class="mt-6">
+						<Image src={topwork} alt="" layout="responsive" priority />
+					</div>
 					<READMORE url="/work" />
 				</Container>
 			</section>

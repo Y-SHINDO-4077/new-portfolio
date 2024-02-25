@@ -66,7 +66,7 @@ export default function DNUSetion({ linkOn = false }) {
 				<Container>
 					<Hero title="OTHER" subtitle="" className="text-center" />
 
-					<div className="items-center justify-start md:flex ">
+					<div className="mt-6 items-center justify-start md:flex">
 						<p
 							className="max-w-[650px] grow text-lg !leading-loose md:w-[46vw] md:text-2xl"
 							ref={textLeftFade}
