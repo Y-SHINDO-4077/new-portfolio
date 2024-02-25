@@ -1,14 +1,4 @@
-import "../styles/scss/globals.scss";
 import "../styles/main.css";
-//import Layout from "components/layout";
-
-// function MyApp({ Component, pageProps }) {
-// 	return (
-// 		<Layout>
-// 			<Component {...pageProps} />
-// 		</Layout>
-// 	);
-// }
 
 import Header from "components/header";
 import Toggle from "components/toggle";
@@ -49,7 +39,10 @@ function MyApp({ Component, pageProps }) {
 			<Header>
 				<Toggle />
 			</Header>
-			<div id="stalker" style={{ pointerEvents: "none" }}></div>
+			<div
+				id="stalker"
+				className="pointer-events-none absolute left-0 top-0 z-[1000] hidden size-[20px]  cursor-none rounded-3xl bg-[#333] dark:bg-white/90 dark:hover:bg-white/40 md:block"
+			></div>
 			<main>
 				<Component {...pageProps} />
 			</main>

@@ -5,13 +5,12 @@ export default function DNUTimeline(title) {
 		<div className="dark:bg-darkBaige">
 			<h2 className="text-left font-futura text-4xl dark:text-white  md:text-6xl">DNU TIMELINE</h2>
 
-			<section className="flex items-center justify-start p-12  md:p-16">
+			<section className="flex items-center justify-start p-2  md:p-16">
 				<ul className="relative left-[1.5rem] top-0 border-l-2 border-solid border-black dark:border-white">
 					<li className="relative w-[calc(100%_-_40px)] py-[1.5rem] pl-[1.5rem] text-3xl font-bold before:absolute before:left-[-0.75rem] before:top-8 before:size-[20px] before:rounded-3xl before:bg-black dark:text-white dark:before:bg-white md:left-[4rem] md:w-[calc(100%_-_60px)] md:pl-[3rem] md:before:left-[-4.75rem]">
-						<h4 className="font-futura">2017</h4>
-						<h3 className="mt-4 font-noto">インターンシップ生となる</h3>
-
-						<p className="mt-6 font-noto">
+						<h4 className="font-futura text-2xl md:text-3xl">2017</h4>
+						<h3 className="mt-4 font-noto text-3xl md:text-4xl">インターンシップ生となる</h3>
+						<p className="mt-6 font-noto text-base">
 							大学進学で県外に出たのをきっかけに、「名古屋には何がある？」を知りたい、
 							<br />
 							そういう想いが強かった私は、インターンシップ生となりました。
@@ -28,16 +27,18 @@ export default function DNUTimeline(title) {
 						</p>
 					</li>
 					<li className="relative w-[calc(100%_-_40px)] py-[1.5rem] pl-[1.5rem] text-3xl font-bold before:absolute before:left-[-0.75rem] before:top-8 before:size-[20px] before:rounded-3xl before:bg-black dark:text-white dark:before:bg-white md:left-[4rem] md:w-[calc(100%_-_60px)] md:pl-[3rem] md:before:left-[-4.75rem] ">
-						<h4 className="font-futura">2018</h4>
-						<h3 className="mt-4 font-noto">総務メンバーとなる</h3>
-						<p className="mt-4 font-noto">
+						<h4 className="font-futura text-2xl md:text-3xl">2018</h4>
+						<h3 className="mt-4 font-noto text-3xl md:text-4xl">総務メンバーとなる</h3>
+						<p className="mt-4 font-noto text-base">
 							社会人になった後も、総務メンバーとして活動に参加。ボランティアスタッフ説明会を実施しました。
 						</p>
 					</li>
 					<li className="relative w-[calc(100%_-_40px)] py-[1.5rem] pl-[1.5rem] text-3xl font-bold before:absolute before:left-[-0.75rem] before:top-8 before:size-[20px] before:rounded-3xl before:bg-black dark:text-white dark:before:bg-white md:left-[4rem] md:w-[calc(100%_-_60px)] md:pl-[3rem] md:before:left-[-4.75rem] ">
-						<h4 className="font-futura">2019</h4>
-						<h3 className="mt-4 font-noto">授業コーディネーターとして企画する</h3>
-						<p className="mt-4 font-noto">
+						<h4 className="font-futura text-2xl md:text-3xl">2019</h4>
+						<h3 className="mt-4 font-noto text-3xl md:text-4xl">
+							授業コーディネーターとして企画する
+						</h3>
+						<p className="mt-4 font-noto text-base">
 							<Link
 								href="https://dai-nagoya.univnet.jp/subjects/detail/474"
 								target="_blank"
@@ -59,9 +60,9 @@ export default function DNUTimeline(title) {
 						</p>
 					</li>
 					<li className="relative w-[calc(100%_-_40px)] py-[1.5rem] pl-[1.5rem] text-3xl font-bold before:absolute before:left-[-0.75rem] before:top-8 before:size-[20px] before:rounded-3xl before:bg-black dark:text-white dark:before:bg-white md:left-[4rem] md:w-[calc(100%_-_60px)] md:pl-[3rem] md:before:left-[-4.75rem] ">
-						<h4 className="font-futura">2020</h4>
-						<h3 className="mt-4 font-noto">noteチーム立ち上げ</h3>
-						<p className="mt-4 font-noto">
+						<h4 className="font-futura text-2xl md:text-3xl">2020</h4>
+						<h3 className="mt-4 font-noto text-3xl md:text-4xl">noteチーム立ち上げ</h3>
+						<p className="mt-4 font-noto text-base">
 							ボランティアスタッフさんのことをもっと発信したいとの声があり、
 							<br />
 							スタッフさんのインタビューを載せた
@@ -79,9 +80,11 @@ export default function DNUTimeline(title) {
 						</p>
 					</li>
 					<li className="relative w-[calc(100%_-_40px)] py-[1.5rem] pl-[1.5rem] text-3xl font-bold before:absolute before:left-[-0.75rem] before:top-8 before:size-[20px] before:rounded-3xl before:bg-black dark:text-white dark:before:bg-white md:left-[4rem] md:w-[calc(100%_-_60px)] md:pl-[3rem] md:before:left-[-4.75rem] ">
-						<h4 className="font-futura">2021</h4>
-						<h3 className="mt-4 font-noto">やっとかめ文化祭まちあるきなごやで企画する</h3>
-						<p className="mt-4 font-noto">
+						<h4 className="font-futura text-2xl md:text-3xl">2021</h4>
+						<h3 className="mt-4 font-noto text-3xl md:text-4xl">
+							やっとかめ文化祭まちあるきなごやで企画する
+						</h3>
+						<p className="mt-4 font-noto text-base">
 							2017年よりやっとかめ大使としてお手伝いしていた
 							<Link
 								href="https://yattokame.jp/"
@@ -96,10 +99,10 @@ export default function DNUTimeline(title) {
 						</p>
 					</li>
 					<li className="relative w-[calc(100%_-_40px)] py-[1.5rem] pl-[1.5rem] text-3xl font-bold before:absolute before:left-[-0.75rem] before:top-8 before:size-[20px] before:rounded-3xl before:bg-black dark:text-white dark:before:bg-white md:left-[4rem] md:w-[calc(100%_-_60px)] md:pl-[3rem] md:before:left-[-4.75rem] ">
-						<h4 className="font-futura">2022</h4>
-						<h3 className="mt-4 font-noto">まちシル立ち上げ</h3>
+						<h4 className="font-futura text-2xl md:text-3xl">2022</h4>
+						<h3 className="mt-4 font-noto text-3xl md:text-4xl">まちシル立ち上げ</h3>
 
-						<p className="mt-4 font-noto">
+						<p className="mt-4 font-noto text-base">
 							「歩くまちには何がある？」をコンセプトに、 <br />
 							まちを歩いて発見するプロジェクト
 							<Link

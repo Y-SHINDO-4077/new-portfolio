@@ -16,8 +16,6 @@ import { prevNextPost } from "lib/prev-next-post";
 import Pagination from "components/pagination";
 import PostCategories from "components/post-categories";
 
-import styles from "../../styles/scss/work_single.module.scss";
-
 export async function getStaticPaths() {
 	const allSlugs = await getAllSlugs();
 	return {
