@@ -13,7 +13,7 @@ export default function Nav() {
 		<nav
 			className={
 				navIsOpen
-					? "[&_button>span]:scale-0 [&_button]:before:rotate-45 [&_button]:after:-rotate-45 [&_ul]:translate-x-0 [&_ul]:bg-black/80 "
+					? "[&_button>span]:scale-0 [&_button]:before:rotate-45 [&_button]:before:bg-white [&_button]:after:-rotate-45 [&_button]:after:bg-white [&_ul]:translate-x-0 [&_ul]:bg-black/80 "
 					: "[&_button]:before:translate-y-[-0.5rem] [&_button]:after:translate-y-[0.5rem] [&_ul]:translate-x-full [&_ul]:bg-black/0 md:[&_ul]:translate-x-0"
 			}
 		>
@@ -31,10 +31,10 @@ export default function Nav() {
 				</style>
 			)}
 			<button
-				className="buttonClass bofore:content-[''] relative z-10 grid size-[40px] place-items-center before:absolute before:left-0 before:top-[20px] before:z-10 before:h-[2px] before:w-[32px] before:bg-white after:absolute after:left-0 after:top-[20px] after:z-10  after:h-[2px] after:w-[32px] after:bg-white after:content-[''] md:hidden"
+				className="bofore:content-[''] relative z-10 grid size-[40px] place-items-center  before:absolute before:left-0 before:top-[20px] before:z-10 before:h-[2px] before:w-[32px] before:bg-black after:absolute after:left-0 after:top-[20px] after:z-10 after:h-[2px]  after:w-[32px] after:bg-black after:content-[''] dark:before:bg-white dark:after:bg-white md:hidden"
 				onClick={toggleNav}
 			>
-				<span className="absolute left-0 h-[2px] w-[32px] bg-white "></span>
+				<span className="absolute left-0 h-[2px] w-[32px] bg-black dark:bg-white"></span>
 				<span className="sr-only">MENU</span>
 			</button>
 			<ul className="fixed inset-[0_-100%] z-[-1] grid  place-content-center  gap-8 text-center transition-transform duration-300 ease-out md:static md:flex md:gap-10 md:bg-inherit">

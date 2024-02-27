@@ -31,7 +31,7 @@ export default function Work({ posts, categories }) {
 		<div className="dark:bg-darkBaige">
 			<Container>
 				<Meta pageTitle="WORKS" pageDesc="実績" />
-				<section className="relative p-12 dark:bg-darkBaige md:p-16">
+				<section className="relative py-20 dark:bg-darkBaige md:p-16 md:pt-6">
 					<Hero title="WORKS" subtitle="" />
 					{/* <PostCategories categories={categories} /> */}
 					<Posts posts={posts} />

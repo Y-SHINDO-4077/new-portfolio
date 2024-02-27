@@ -28,7 +28,7 @@ export default function Toggle() {
 		}
 	};
 	return (
-		<div className="ml-4 mr-8 flex items-center justify-center">
+		<div className="ml-4 mr-8 flex items-center justify-center gap-1">
 			<figure>
 				<Image src={light} alt="" width={25} height={25} />
 			</figure>

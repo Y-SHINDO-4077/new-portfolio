@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Posts({ posts }) {
 	return (
-		<div>
+		<>
 			{posts.map(({ title, slug, eyecatch, en_title, role }) => (
 				<article className="relative" key={slug}>
 					<Link href={`/work/${slug}`} className="group">
@@ -28,7 +28,9 @@ export default function Posts({ posts }) {
 								</figure>
 							</div>
 							<div className="relative w-full border-b border-solid border-black py-[4rem] dark:border-white md:static md:w-[48%]">
-								<h2 className="font-futura text-6xl dark:text-white">{en_title}</h2>
+								<h2 className="break-words font-futura text-4xl dark:text-white md:text-6xl">
+									{en_title}
+								</h2>
 								<h3 className="mt-4 font-noto text-2xl dark:text-white">{title}</h3>
 								<h4 className="mt-6 font-noto text-base dark:text-white">{role}</h4>
 							</div>
@@ -36,6 +38,6 @@ export default function Posts({ posts }) {
 					</Link>
 				</article>
 			))}
-		</div>
+		</>
 	);
 }

@@ -24,7 +24,7 @@ export async function getStaticPaths() {
 	};
 }
 
-export default function Schedule({
+export default function Posts({
 	title,
 	publish,
 	en_title,
@@ -66,91 +66,95 @@ export default function Schedule({
 					}}
 				/>
 			</figure>
-			<Container>
-				<Meta
-					pageTitle={title}
-					pageDesc={description}
-					pageImg={eyecatch.url}
-					pageImgW={eyecatch.width}
-					pageImgH={eyecatch.height}
-				/>
-				<article>
-					<PostHeader title={title} en_title={en_title} />
-					{url && (
-						<div className="mb-12 mt-8 text-right text-2xl dark:text-white">
-							<p className="text-base md:text-2xl">↓以下のURLを検索して詳細をご覧ください</p>
-							<p className="text-2xl md:text-3xl">{url}</p>
+
+			<Meta
+				pageTitle={title}
+				pageDesc={description}
+				pageImg={eyecatch.url}
+				pageImgW={eyecatch.width}
+				pageImgH={eyecatch.height}
+			/>
+			<article>
+				<PostHeader title={title} en_title={en_title} />
+
+				{url && (
+					<Container>
+						<div className="mb-12 mt-8 text-right dark:text-white">
+							<p className="text-sm md:text-2xl">↓以下のURLを検索して詳細をご覧ください</p>
+							<p className="text-base md:text-3xl">{url}</p>
 						</div>
+					</Container>
+				)}
+
+				<PostBody>
+					<section className="p-12 md:p-16">
+						<h3>
+							<ConvertBody
+								contentHTML={items01}
+								className="mt-8 break-words font-futura !text-5xl dark:text-white md:mt-16"
+							/>
+						</h3>
+
+						<ConvertBody
+							contentHTML={content01}
+							className="mt-8 break-words text-base !leading-loose dark:text-white md:!text-3xl [&>*]:font-noto [&>*]:text-2xl [&>*]:md:mt-16"
+						/>
+					</section>
+
+					<section className="p-12 md:p-16">
+						<h3 className="mt-4">
+							<ConvertBody
+								contentHTML={items02}
+								className="break-words font-futura !text-5xl dark:text-white"
+							/>
+						</h3>
+
+						<ConvertBody
+							contentHTML={content02}
+							className="mt-8 break-words text-base !leading-loose dark:text-white md:!text-3xl [&>*]:font-noto [&>*]:text-2xl [&>*]:md:mt-16"
+						/>
+					</section>
+
+					{items03 && content03 && (
+						<section className="p-12 md:p-16">
+							{items03 && (
+								<h3 className="mt-4">
+									<ConvertBody
+										contentHTML={items03}
+										className="mt-8 break-words font-futura !text-5xl dark:text-white md:mt-16"
+									/>
+								</h3>
+							)}
+
+							{content03 && (
+								<ConvertBody
+									contentHTML={content03}
+									className="mt-8 break-words text-base !leading-loose dark:text-white md:!text-3xl [&>*]:font-noto [&>*]:text-2xl [&>*]:md:mt-16"
+								/>
+							)}
+						</section>
 					)}
 
-					<PostBody>
+					{items04 && content04 && (
 						<section className="p-12 md:p-16">
-							<h3>
-								<ConvertBody
-									contentHTML={items01}
-									className="mt-8 font-futura !text-5xl dark:text-white md:mt-16"
-								/>
-							</h3>
-
-							<ConvertBody
-								contentHTML={content01}
-								className="mt-8 !leading-loose dark:text-white md:!text-3xl [&>*]:font-noto [&>*]:text-2xl [&>*]:md:mt-16"
-							/>
-						</section>
-
-						<section className="p-12 md:p-16">
-							<h3 className="mt-4">
-								<ConvertBody
-									contentHTML={items02}
-									className="font-futura !text-5xl dark:text-white"
-								/>
-							</h3>
-
-							<ConvertBody
-								contentHTML={content02}
-								className="mt-8 !leading-loose dark:text-white md:!text-3xl [&>*]:font-noto [&>*]:text-2xl [&>*]:md:mt-16"
-							/>
-						</section>
-
-						{items03 && content03 && (
-							<section className="p-12 md:p-16">
-								{items03 && (
-									<h3 className="mt-4">
-										<ConvertBody
-											contentHTML={items03}
-											className="mt-8 font-futura !text-5xl dark:text-white md:mt-16"
-										/>
-									</h3>
-								)}
-
-								{content03 && (
+							{items04 && (
+								<h3 className="mt-4">
 									<ConvertBody
-										contentHTML={content03}
-										className="mt-8 !leading-loose dark:text-white md:!text-3xl [&>*]:font-noto [&>*]:text-2xl [&>*]:md:mt-16 "
+										contentHTML={items04}
+										className="mt-8 break-words font-futura !text-5xl dark:text-white md:mt-16"
 									/>
-								)}
-							</section>
-						)}
+								</h3>
+							)}
+							{content04 && (
+								<ConvertBody
+									contentHTML={content04}
+									className="mt-8 break-words text-base !leading-loose dark:text-white md:!text-3xl [&>*]:font-noto [&>*]:text-2xl [&>*]:md:mt-16"
+								/>
+							)}
+						</section>
+					)}
 
-						{items04 && content04 && (
-							<section className="p-12 md:p-16">
-								{items04 && (
-									<h3 className="mt-4">
-										<ConvertBody
-											contentHTML={items04}
-											className="mt-8 font-futura !text-5xl dark:text-white md:mt-16"
-										/>
-									</h3>
-								)}
-								{content04 && (
-									<ConvertBody
-										contentHTML={content04}
-										className="mt-8 !leading-loose dark:text-white md:!text-3xl [&>*]:font-noto [&>*]:text-2xl [&>*]:md:mt-16 "
-									/>
-								)}
-							</section>
-						)}
-
+					{eyecatch02.url && (
 						<figure>
 							<Image
 								key={eyecatch02.url}
@@ -167,8 +171,9 @@ export default function Schedule({
 								}}
 							/>
 						</figure>
-					</PostBody>
-
+					)}
+				</PostBody>
+				<Container>
 					{/* <PostCategories categories={categories} /> */}
 
 					{/* <Pagination
@@ -180,8 +185,8 @@ export default function Schedule({
 					<div className="mr-auto mt-6 flex w-fit items-center justify-start pb-16">
 						<READMORE url="/work" title="BACK" />
 					</div>
-				</article>
-			</Container>
+				</Container>
+			</article>
 		</div>
 	);
 }
