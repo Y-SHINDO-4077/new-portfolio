@@ -77,7 +77,7 @@ export default function Posts({
 
 				{url_link ? (
 					<Container>
-						<READMORE url={url} title="VIEW SITE"></READMORE>
+						<READMORE url={url} title="VIEW SITE" target></READMORE>
 					</Container>
 				) : (
 					url && (
@@ -206,13 +206,10 @@ export default function Posts({
 export async function getStaticProps(context) {
 	const slug = context.params.slug;
 	const post = await getPostBySlug(slug);
-	//const description = extractText(post.content)
 	const eyecatch = post.eyecatch ?? eyecatchLocal;
 	const { base64 } = await getPlaiceholder(eyecatch.url);
 	eyecatch.blurDataURL = base64;
-
 	const allSlugs = await getAllSlugs();
-	const [prevPost, nextPost] = prevNextPost(allSlugs, slug);
 	const description = extractText(post.content01);
 	return {
 		props: {
@@ -228,14 +225,13 @@ export async function getStaticProps(context) {
 			content01: post.content01,
 			items02: post.items02,
 			content02: post.content02,
-			items03: post.items03,
-			content03: post.content03,
+			items03: post.items03 ? post.items03 : "",
+			content03: post.content03 ? post.content03 : "",
 			items04: post.items04 ? post.items04 : "",
 			content04: post.content04 ? post.content04 : "",
 			url: post.url ? post.url : "",
 			description: description,
-			prevPost: prevPost,
-			nextPost: nextPost,
+			url_link: post.url_link ? true : false,
 		},
 	};
 }

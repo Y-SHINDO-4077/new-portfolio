@@ -3,7 +3,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useEffect, useRef } from "react";
 
-export default function READMORE({ url, none = false, title = "READ MORE" }) {
+export default function READMORE({ url, target = false, title = "READ MORE" }) {
 	const linkAnimation = useRef();
 	useEffect(() => {
 		gsap.registerPlugin(ScrollTrigger);
@@ -35,6 +35,7 @@ export default function READMORE({ url, none = false, title = "READ MORE" }) {
 			<Link
 				href={url}
 				className="flex size-full overflow-hidden bg-gradient-to-l from-black/50 from-50% to-0% bg-[length:200%_4px] bg-[bottom_0_left_200%] bg-repeat-x transition-all duration-300 ease-linear hover:bg-[bottom_0_left_100%]  dark:from-white/50"
+				target={target ? "_blank" : ""}
 			>
 				<span className="text-3xl dark:text-white md:text-6xl">{title}</span>
 			</Link>
