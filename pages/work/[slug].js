@@ -13,7 +13,6 @@ import { eyecatchLocal } from "lib/constants";
 import Image from "next/image";
 import { getPlaiceholder } from "plaiceholder";
 import { prevNextPost } from "lib/prev-next-post";
-import Pagination from "components/pagination";
 import PostCategories from "components/post-categories";
 
 export async function getStaticPaths() {
@@ -42,9 +41,8 @@ export default function Posts({
 	items04,
 	content04,
 	url,
-	prevPost,
-	nextPost,
 	description,
+	url_link,
 }) {
 	return (
 		<div className="dark:bg-darkBaige ">
@@ -77,80 +75,94 @@ export default function Posts({
 			<article>
 				<PostHeader title={title} en_title={en_title} />
 
-				{url && (
+				{url_link ? (
 					<Container>
-						<div className="mb-12 mt-8 text-right dark:text-white">
-							<p className="text-sm md:text-2xl">↓以下のURLを検索して詳細をご覧ください</p>
-							<p className="text-base md:text-3xl">{url}</p>
-						</div>
+						<READMORE url={url} title="VIEW SITE"></READMORE>
 					</Container>
+				) : (
+					url && (
+						<Container>
+							<div className="mb-12 mt-8 text-right dark:text-white">
+								<p className="text-sm md:text-2xl">↓以下のURLを検索して詳細をご覧ください</p>
+								<p className="text-base md:text-3xl">{url}</p>
+							</div>
+						</Container>
+					)
 				)}
 
 				<PostBody>
-					<section className="p-12 md:p-16">
-						<h3>
-							<ConvertBody
-								contentHTML={items01}
-								className="mt-8 break-words font-futura !text-5xl dark:text-white md:mt-16"
-							/>
-						</h3>
+					<section className="py-12 md:py-16">
+						<Container>
+							<h3>
+								<ConvertBody
+									contentHTML={items01}
+									className="mt-8 break-words font-futura !text-5xl dark:text-white md:mt-16"
+								/>
+							</h3>
 
-						<ConvertBody
-							contentHTML={content01}
-							className="mt-8 break-words text-base !leading-loose dark:text-white md:!text-3xl [&>*]:font-noto [&>*]:text-2xl [&>*]:md:mt-16"
-						/>
+							<ConvertBody
+								contentHTML={content01}
+								className="mt-8 break-words text-base !leading-loose dark:text-white md:!text-3xl [&>*]:font-noto [&>*]:text-2xl [&>*]:md:mt-16"
+							/>
+						</Container>
 					</section>
 
-					<section className="p-12 md:p-16">
-						<h3 className="mt-4">
-							<ConvertBody
-								contentHTML={items02}
-								className="break-words font-futura !text-5xl dark:text-white"
-							/>
-						</h3>
+					<section className="py-12 md:py-16">
+						<Container>
+							<h3 className="mt-4">
+								<ConvertBody
+									contentHTML={items02}
+									className="break-words font-futura !text-5xl dark:text-white"
+								/>
+							</h3>
 
-						<ConvertBody
-							contentHTML={content02}
-							className="mt-8 break-words text-base !leading-loose dark:text-white md:!text-3xl [&>*]:font-noto [&>*]:text-2xl [&>*]:md:mt-16"
-						/>
+							<ConvertBody
+								contentHTML={content02}
+								className="mt-8 break-words text-base !leading-loose dark:text-white md:!text-3xl [&>*]:font-noto [&>*]:text-2xl [&>*]:md:mt-16"
+							/>
+						</Container>
 					</section>
 
 					{items03 && content03 && (
-						<section className="p-12 md:p-16">
-							{items03 && (
-								<h3 className="mt-4">
-									<ConvertBody
-										contentHTML={items03}
-										className="mt-8 break-words font-futura !text-5xl dark:text-white md:mt-16"
-									/>
-								</h3>
-							)}
+						<section className="py-12 md:py-16">
+							<Container>
+								{items03 && (
+									<h3 className="mt-4">
+										<ConvertBody
+											contentHTML={items03}
+											className="mt-8 break-words font-futura !text-5xl dark:text-white md:mt-16"
+										/>
+									</h3>
+								)}
 
-							{content03 && (
-								<ConvertBody
-									contentHTML={content03}
-									className="mt-8 break-words text-base !leading-loose dark:text-white md:!text-3xl [&>*]:font-noto [&>*]:text-2xl [&>*]:md:mt-16"
-								/>
-							)}
+								{content03 && (
+									<ConvertBody
+										contentHTML={content03}
+										className="mt-8 break-words text-base !leading-loose dark:text-white md:!text-3xl [&>*]:font-noto [&>*]:text-2xl [&>*]:md:mt-16"
+									/>
+								)}
+							</Container>
 						</section>
 					)}
 
 					{items04 && content04 && (
-						<section className="p-12 md:p-16">
-							{items04 && (
-								<h3 className="mt-4">
+						<section className="py-12 md:py-16">
+							<Container>
+								{items04 && (
+									<h3 className="mt-4">
+										<ConvertBody
+											contentHTML={items04}
+											className="mt-8 break-words font-futura !text-5xl dark:text-white md:mt-16"
+										/>
+									</h3>
+								)}
+								{content04 && (
 									<ConvertBody
-										contentHTML={items04}
-										className="mt-8 break-words font-futura !text-5xl dark:text-white md:mt-16"
+										contentHTML={content04}
+										className="mt-8 break-words text-base !leading-loose dark:text-white md:!text-3xl [&>*]:font-noto [&>*]:text-2xl [&>*]:md:mt-16"
 									/>
-								</h3>
-							)}
-							{content04 && (
-								<ConvertBody
-									contentHTML={content04}
-									className="mt-8 break-words text-base !leading-loose dark:text-white md:!text-3xl [&>*]:font-noto [&>*]:text-2xl [&>*]:md:mt-16"
-								/>
-							)}
+								)}
+							</Container>
 						</section>
 					)}
 
