@@ -14,7 +14,7 @@ import READMORE from "components/readmore";
 import Image from "next/legacy/image";
 import topwork from "images/topwork.webp";
 
-export default function Home({ posts }) {
+export default function Home() {
 	const typewrite = useRef();
 	const typewrite02 = useRef();
 	const imageWork = useRef();
