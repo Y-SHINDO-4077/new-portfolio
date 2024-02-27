@@ -15,7 +15,7 @@ export default function ME() {
 	return (
 		<>
 			<Meta pageTitle="ME" pageDesc="About ME | DO" />
-			<div className="relative dark:bg-darkBaige">
+			<div className="dark:bg-darkBaige">
 				<MeSetion />
 				<section className="bg-[#0efeb]">
 					<PolicySetion

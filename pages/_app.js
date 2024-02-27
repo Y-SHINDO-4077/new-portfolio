@@ -27,7 +27,6 @@ function MyApp({ Component, pageProps }) {
 		// レンダリングする
 		gsap.ticker.add(function () {
 			var dt = 1.0 - Math.pow(1.0 - speed, gsap.ticker.deltaRatio());
-
 			pos.x += (mouse.x - pos.x) * dt;
 			pos.y += (mouse.y - pos.y) * dt;
 			cursorSetX(pos.x);

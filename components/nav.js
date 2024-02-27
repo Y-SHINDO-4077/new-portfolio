@@ -31,7 +31,7 @@ export default function Nav() {
 				</style>
 			)}
 			<button
-				className="bofore:content-[''] relative z-10 grid size-[40px] place-items-center  before:absolute before:left-0 before:top-[20px] before:z-10 before:h-[2px] before:w-[32px] before:bg-black after:absolute after:left-0 after:top-[20px] after:z-10 after:h-[2px]  after:w-[32px] after:bg-black after:content-[''] dark:before:bg-white dark:after:bg-white md:hidden"
+				className="bofore:content-[''] relative z-10 grid h-[40px] w-[32px] place-items-center  before:absolute before:left-0 before:top-[18px] before:z-10 before:h-[2px] before:w-[32px] before:bg-black after:absolute after:left-0 after:top-[20px] after:z-10 after:h-[2px]  after:w-[32px] after:bg-black after:content-[''] dark:before:bg-white dark:after:bg-white md:hidden"
 				onClick={toggleNav}
 			>
 				<span className="absolute left-0 h-[2px] w-[32px] bg-black dark:bg-white"></span>

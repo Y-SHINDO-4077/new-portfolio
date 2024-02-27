@@ -13,12 +13,10 @@ export default function Header({ children }) {
 		return () => window.removeEventListener("scroll", toggleVisibility);
 	}, []);
 	return (
-		<header
-			className={`fixed left-0 top-0 z-30 h-[64px] w-full ${isVisible && "bg-black/10 dark:bg-black/25"}`}
-		>
+		<header className={`fixed z-30 h-[64px] w-full ${isVisible && "bg-black/10 dark:bg-black/25"}`}>
 			<div className="flex h-full items-center justify-between">
 				<Logo boxOn />
-				<div className="flex flex-row-reverse items-center justify-start md:flex-row ">
+				<div className="mr-4 flex flex-row-reverse items-center justify-start md:flex-row">
 					<Nav />
 
 					{children}
