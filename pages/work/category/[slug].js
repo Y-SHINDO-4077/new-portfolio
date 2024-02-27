@@ -1,16 +1,27 @@
 import Meta from "components/meta";
-import Link from "next/link";
 import Container from "components/container";
+import Link from "next/link";
 
 import Hero from "components/hero";
-import { getAllPosts, getAllCategories } from "lib/api";
+import { getAllCategories, getAllPostsByCategory } from "lib/api";
 import Posts from "components/posts";
 import { getPlaiceholder } from "plaiceholder";
 import { eyecatchLocal } from "lib/constants";
 
-export async function getStaticProps() {
-	const posts = await getAllPosts();
-	const categories = await getAllCategories();
+export async function getStaticPaths() {
+	const allCats = await getAllCategories();
+	return {
+		paths: allCats.map(({ slug }) => `/work/category/${slug}`),
+		fallback: false,
+	};
+}
+
+export async function getStaticProps(context) {
+	const catSlug = context.params.slug;
+	const allCats = await getAllCategories();
+	const cat = allCats.find(({ slug }) => slug === catSlug);
+
+	const posts = await getAllPostsByCategory(cat.id);
 
 	for (const post of posts) {
 		if (!post.hasOwnProperty("eyecatch")) {
@@ -20,21 +31,24 @@ export async function getStaticProps() {
 		post.eyecatch.blurDataURL = base64;
 	}
 
+	console.log(posts);
+
 	return {
 		props: {
 			posts: posts,
-			categories: categories,
+			categories: allCats,
+			name: cat.name,
 		},
 	};
 }
 
-export default function Work({ posts, categories }) {
+export default function Work({ name, posts, categories }) {
 	return (
 		<div className="dark:bg-darkBaige">
 			<Container>
-				<Meta pageTitle="WORKS" pageDesc="実績" />
+				<Meta pageTitle={`${name} 実績カテゴリ | WORKS | DO`} pageDesc={`実績カテゴリ${name}`} />
 				<section className="relative py-20 dark:bg-darkBaige md:pt-16 ">
-					<Hero title="WORKS" subtitle="ALL" />
+					<Hero title="WORKS" subtitle={`${name}`} />
 					<ul className="my-12 flex flex-col items-center justify-center gap-4 sm:flex-wrap md:gap-8">
 						<li>
 							<Link
@@ -48,14 +62,20 @@ export default function Work({ posts, categories }) {
 							<li key={categories.id}>
 								<Link
 									href={`/work/category/${categories.slug}`}
-									className="flex size-full overflow-hidden bg-gradient-to-l from-black/50 from-50% to-0% bg-[length:200%_4px] bg-[bottom_0_left_200%] bg-repeat-x font-futura text-2xl transition-all duration-300 ease-linear hover:bg-[bottom_0_left_100%] dark:from-white/50  md:text-3xl"
+									className="flex size-full overflow-hidden bg-gradient-to-l from-black/50 from-50% to-0% bg-[length:200%_4px] bg-[bottom_0_left_200%] bg-repeat-x font-futura text-2xl transition-all duration-300 ease-linear hover:bg-[bottom_0_left_100%]  dark:from-white/50  md:text-3xl"
 								>
 									{categories.name}{" "}
 								</Link>
 							</li>
 						))}
 					</ul>
-					<Posts posts={posts} />
+					{posts.length === 0 ? (
+						<div className="text-center">
+							<p>記事がありません。</p>
+						</div>
+					) : (
+						<Posts posts={posts} />
+					)}
 				</section>
 			</Container>
 		</div>
