@@ -1,7 +1,7 @@
 import Hero from "./hero";
 import Container from "./container";
 import READMORE from "./readmore";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import dmask from "images/dnu_photo.webp";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";

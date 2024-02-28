@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import light from "images/light_icon.svg";
 import dark from "images/dark_icon.svg";
 

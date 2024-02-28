@@ -2,7 +2,7 @@ import Hero from "./hero";
 import Container from "./container";
 import READMORE from "./readmore";
 
-import Image from "next/image";
+import Image from "next/legacy/image";
 import dicon from "images/dyuicon1.svg";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";

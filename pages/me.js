@@ -8,7 +8,7 @@ import Timeline from "components/timeline";
 import CHART from "components/chart";
 import READMORE from "components/readmore";
 
-import Image from "next/image";
+import Image from "next/legacy/image";
 import topwork from "images/topwork.webp";
 
 export default function ME() {

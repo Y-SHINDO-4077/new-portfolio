@@ -10,7 +10,7 @@ import READMORE from "components/readmore";
 import ConvertBody from "components/convert-body";
 
 import { eyecatchLocal } from "lib/constants";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { getPlaiceholder } from "plaiceholder";
 
 export async function getStaticPaths() {
