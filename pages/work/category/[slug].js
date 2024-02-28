@@ -31,24 +31,24 @@ export async function getStaticProps(context) {
 		post.eyecatch.blurDataURL = base64;
 	}
 
-	console.log(posts);
-
 	return {
 		props: {
 			posts: posts,
 			categories: allCats,
 			name: cat.name,
+			ja_name: cat.ja_name,
 		},
 	};
 }
 
-export default function Work({ name, posts, categories }) {
+export default function Work({ name, posts, categories, ja_name }) {
 	return (
 		<div className="dark:bg-darkBaige">
 			<Container>
 				<Meta pageTitle={`${name} 実績カテゴリ | WORKS | DO`} pageDesc={`実績カテゴリ${name}`} />
 				<section className="relative py-20 dark:bg-darkBaige md:pt-16 ">
 					<Hero title="WORKS" subtitle={`${name}`} />
+					<p className="mt-8 text-center text-sm md:text-base">{ja_name}</p>
 					<ul className="my-16 flex flex-col items-center justify-center gap-4 sm:flex-wrap md:flex-row md:gap-8">
 						<li>
 							<Link
