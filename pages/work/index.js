@@ -35,7 +35,7 @@ export default function Work({ posts, categories }) {
 				<Meta pageTitle="WORKS" pageDesc="実績" />
 				<section className="relative py-20 dark:bg-darkBaige md:pt-16 ">
 					<Hero title="WORKS" subtitle="ALL" />
-					<ul className="my-12 flex flex-col items-center justify-center gap-4 sm:flex-wrap md:gap-8">
+					<ul className="my-16 flex flex-col items-center justify-center gap-4 sm:flex-wrap md:flex-row md:gap-8">
 						<li>
 							<Link
 								href="/work/"

@@ -75,11 +75,11 @@ export default function Home() {
 	return (
 		<>
 			<Meta />
-			<Container large>
-				<section className="relative h-screen py-0 dark:mix-blend-difference dark:after:bg-black/30">
-					<div className="absolute left-1/4 top-1/3 z-10  sm:left-[10%] md:left-8 md:top-64 lg:left-24">
+			<section className="relative h-screen w-screen py-0 dark:mix-blend-difference dark:after:bg-black/30">
+				<Container large>
+					<div className="absolute left-[15%] top-1/3 z-10  sm:left-[10%] md:left-8 md:top-64 lg:left-24">
 						<h1
-							className="max-w-full text-8xl font-bold leading-none text-white  mix-blend-hard-light  dark:text-white sm:max-w-[calc(100%_-_30%)] lg:text-9xl"
+							className="w-fit max-w-full text-8xl font-bold leading-none  text-white  mix-blend-hard-light dark:text-white sm:max-w-[calc(100%_-_30%)] lg:text-9xl"
 							ref={typewrite}
 						>
 							<span>Y</span>
@@ -99,7 +99,7 @@ export default function Home() {
 						</h1>
 
 						<h4
-							className="mt-6 text-2xl font-bold tracking-wider text-white mix-blend-hard-light md:mt-8 md:text-3xl lg:text-4xl"
+							className="mt-6 w-fit text-2xl font-bold tracking-wider text-white mix-blend-hard-light md:mt-8 md:text-3xl lg:text-4xl"
 							ref={typewrite02}
 						>
 							<span>I</span>
@@ -139,11 +139,11 @@ export default function Home() {
 					<div>
 						<MVSwiper />
 					</div>
-					<div className="absolute top-[15%] m-auto h-svh w-full sm:right-[15%] sm:top-[10%] ">
-						<CANVAS />
-					</div>
-				</section>
-			</Container>
+				</Container>
+				<div className="absolute top-[15%] m-auto h-svh w-full sm:right-[15%] sm:top-[10%] ">
+					<CANVAS />
+				</div>
+			</section>
 
 			<MeSetion linkOn />
 
