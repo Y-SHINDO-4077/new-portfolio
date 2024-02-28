@@ -75,7 +75,7 @@ export default function Home() {
 	return (
 		<>
 			<Meta />
-			<section className="relative h-screen w-screen py-0 dark:mix-blend-difference dark:after:bg-black/30">
+			<section className="relative h-screen w-screen overflow-hidden py-0 dark:mix-blend-difference dark:after:bg-black/30">
 				<Container large>
 					<div className="absolute left-[15%] top-1/3 z-10  sm:left-[10%] md:left-8 md:top-64 lg:left-24">
 						<h1

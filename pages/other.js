@@ -10,7 +10,7 @@ export default function OTHER({ posts }) {
 		<>
 			<Meta pageTitle="OTHER" pageDesc="大ナゴヤ大学での活動について紹介します。" />
 			<DNUSetion />
-			<div className="dark:bg-darkBaige">
+			<div className="overflow-x-hidden dark:bg-darkBaige">
 				<PolicySetion
 					title="What’s DNU?"
 					ja__content="2009年に開校した、

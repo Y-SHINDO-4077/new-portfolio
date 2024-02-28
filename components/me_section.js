@@ -64,7 +64,7 @@ export default function MeSetion({ linkOn = false }) {
 
 	return (
 		<>
-			<section className="bg-beige py-24 dark:bg-darkBaige">
+			<section className="overflow-x-hidden bg-beige py-24 dark:bg-darkBaige">
 				<Container>
 					<Hero title="ME" className="text-center" />
 					<div className="items-center justify-between md:flex">

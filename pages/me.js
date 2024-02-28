@@ -15,7 +15,7 @@ export default function ME() {
 	return (
 		<>
 			<Meta pageTitle="ME" pageDesc="About ME | DO" />
-			<div className="dark:bg-darkBaige">
+			<div className="overflow-x-hidden dark:bg-darkBaige">
 				<MeSetion />
 				<section className="bg-[#0efeb]">
 					<PolicySetion
@@ -38,13 +38,13 @@ export default function ME() {
 					/>
 				</section>
 			</div>
-			<section className="py-12 dark:bg-darkBaige md:py-24">
+			<section className="overflow-x-hidden py-12 dark:bg-darkBaige md:py-24">
 				<Container>
 					<Timeline />
 				</Container>
 			</section>
 
-			<section className="py-12 dark:bg-darkBaige md:py-24 ">
+			<section className="overflow-x-hidden py-12 dark:bg-darkBaige md:py-24">
 				<Container>
 					<h2 className="text-4xl dark:text-white md:text-6xl">Skills</h2>
 					<CHART />
@@ -62,7 +62,7 @@ export default function ME() {
 					</ul>
 				</Container>
 			</section>
-			<section className="py-12 dark:bg-darkBaige md:py-24">
+			<section className="overflow-x-hidden py-12 dark:bg-darkBaige md:py-24">
 				<Container>
 					<Hero title="WORKS" subtitle="" />
 					<Image
