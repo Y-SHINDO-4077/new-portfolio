@@ -87,16 +87,7 @@ export default function MeSetion({ linkOn = false }) {
 							<Image src={dicon} alt="" priority />
 						</div>
 						<div className="block md:hidden">
-							<Image
-								src={dicon}
-								alt=""
-								priority
-								sizes="400px"
-								style={{
-									width: "100%",
-									height: "auto",
-								}}
-							/>
+							<Image src={dicon} alt="" priority sizes="400px" />
 						</div>
 					</div>
 

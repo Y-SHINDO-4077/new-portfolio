@@ -151,7 +151,7 @@ export default function Home() {
 				<Container>
 					<Hero title="WORKS" />
 					<div ref={imageWork} className="mt-6">
-						<Image src={topwork} alt="" layout="responsive" priority />
+						<Image src={topwork} alt="" layout="responsive" priority width={1200} height={795} />
 					</div>
 					<READMORE url="/work" />
 				</Container>

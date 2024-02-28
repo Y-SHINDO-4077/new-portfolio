@@ -9,21 +9,16 @@ export default function Posts({ posts }) {
 					<Link href={`/work/${slug}`} className="group">
 						<div className="block items-center justify-center gap-[4%] md:flex">
 							<div className="relative mx-auto mt-16 w-full md:static md:mt-0 md:w-[48%]">
-								<figure className="block size-fit md:hidden md:group-hover:block">
+								<figure className="relative block aspect-auto max-h-[300px] min-h-[250px] min-w-[48%] max-w-[600px] md:hidden md:group-hover:block ">
 									<Image
 										src={eyecatch.url}
 										alt=""
 										placeholder="blur"
 										blurDataURL={eyecatch.blurDataURL}
-										layout="intrinsic"
-										width={600}
-										height={300}
-										sizes="(min-width: 600px) 50vw, 600px"
-										style={{
-											maxHeight: "300px",
-											objectFit: "cover",
-											objectPosition: "center",
-										}}
+										layout="fill"
+										objectFit="cover"
+										objectPosition="center"
+										sizes="(min-width:1152px) 576px 48vw"
 									/>
 								</figure>
 							</div>

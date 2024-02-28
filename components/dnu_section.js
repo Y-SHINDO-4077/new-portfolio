@@ -78,16 +78,7 @@ export default function DNUSetion({ linkOn = false }) {
 						</p>
 						<div className="w-full md:w-[53.5833vw] md:max-w-[643px]" ref={imgRightFade}>
 							<figure className="w-full">
-								<Image
-									src={dmask}
-									alt=""
-									priority
-									sizes="(min-width: 1200px) 643px, 50vw"
-									style={{
-										width: "100%",
-										height: "auto",
-									}}
-								/>
+								<Image src={dmask} alt="" priority sizes="(min-width: 1200px) 643px, 50vw" />
 							</figure>
 						</div>
 					</div>
