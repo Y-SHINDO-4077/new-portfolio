@@ -12,8 +12,6 @@ import ConvertBody from "components/convert-body";
 import { eyecatchLocal } from "lib/constants";
 import Image from "next/image";
 import { getPlaiceholder } from "plaiceholder";
-import { prevNextPost } from "lib/prev-next-post";
-import PostCategories from "components/post-categories";
 
 export async function getStaticPaths() {
 	const allSlugs = await getAllSlugs();
