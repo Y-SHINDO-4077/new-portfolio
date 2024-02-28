@@ -1,9 +1,12 @@
 import React, { useEffect, useRef } from "react";
 import Chart from "chart.js/auto";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 export default function CHART({}) {
 	const canvasEl = useRef(null);
 	const canvasEl2 = useRef(null);
+	const textFade = useRef([]);
 
 	const colors = {
 		black: {
@@ -163,6 +166,32 @@ export default function CHART({}) {
 
 		const myLineChart2 = new Chart(ctx2, config2);
 
+		gsap.registerPlugin(ScrollTrigger);
+
+		textFade.current.forEach((ref) => {
+			gsap.fromTo(
+				ref,
+				{
+					scrollTrigger: {
+						trigger: ref,
+						start: "top 30%",
+						//toggleActions: "restart none none none",
+					},
+					opacity: 0,
+					yPercent: 50,
+				},
+				{
+					scrollTrigger: {
+						trigger: ref,
+						start: "top 30%",
+						//toggleActions: "restart none none none",
+					},
+					opacity: 1,
+					yPercent: 0,
+				}
+			);
+		});
+
 		return function cleanup() {
 			myLineChart.destroy();
 			myLineChart2.destroy();
@@ -170,10 +199,14 @@ export default function CHART({}) {
 	});
 	return (
 		<>
-			<h4 className="mb-4 mt-8 text-base md:text-2xl">Program Languages </h4>
-			<canvas id="myChart" ref={canvasEl} height="300" />
-			<h4 className="my-4 text-base md:text-2xl">Design Software</h4>
-			<canvas id="myChart2" ref={canvasEl2} height="200" />
+			<section ref={(el) => (textFade.current[0] = el)}>
+				<h4 className="mb-4 mt-8 text-base md:text-2xl">Program Languages </h4>
+				<canvas id="myChart" ref={canvasEl} height="300" />
+			</section>
+			<section ref={(el) => (textFade.current[1] = el)}>
+				<h4 className="my-4 text-base md:text-2xl">Design Software</h4>
+				<canvas id="myChart2" ref={canvasEl2} height="200" />
+			</section>
 		</>
 	);
 }
