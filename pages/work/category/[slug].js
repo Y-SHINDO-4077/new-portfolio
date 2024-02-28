@@ -7,6 +7,7 @@ import { getAllCategories, getAllPostsByCategory } from "lib/api";
 import Posts from "components/posts";
 import { getPlaiceholder } from "plaiceholder";
 import { eyecatchLocal } from "lib/constants";
+import { useRef } from "react";
 
 export async function getStaticPaths() {
 	const allCats = await getAllCategories();
@@ -42,6 +43,14 @@ export async function getStaticProps(context) {
 }
 
 export default function Work({ name, posts, categories, ja_name }) {
+	const dialog = useRef();
+	const openHandler = () => {
+		dialog.current.showModal();
+	};
+	const closeHandler = () => {
+		dialog.current.close();
+	};
+
 	return (
 		<div className="dark:bg-darkBaige">
 			<Container>
@@ -49,11 +58,68 @@ export default function Work({ name, posts, categories, ja_name }) {
 				<section className="relative py-20 dark:bg-darkBaige md:pt-16 ">
 					<Hero title="WORKS" subtitle={`${name}`} />
 					<p className="mt-8 text-center text-sm md:text-base">{ja_name}</p>
-					<ul className="my-16 flex flex-col items-center justify-center gap-4 sm:flex-wrap md:flex-row md:gap-8">
+					<button
+						id="showModal"
+						className="fixed bottom-0 left-0 z-10 inline-flex h-8 w-screen items-center justify-center bg-beige py-8 text-2xl font-bold underline dark:bg-black dark:text-white md:hidden"
+						onClick={openHandler}
+						aria-labelledby="modal-title"
+						aria-describedby="modal-description"
+					>
+						カテゴリで絞り込む
+					</button>
+					<dialog
+						id="modal"
+						className="relative px-12 text-center text-sm dark:bg-black md:hidden"
+						ref={dialog}
+						onClick={closeHandler}
+					>
+						<button
+							className="absolute right-4 top-4 text-3xl font-bold dark:text-white"
+							onClick={closeHandler}
+						>
+							<span>×</span>
+						</button>
+						<div
+							onClick={(e) => {
+								e.stopPropagation();
+							}}
+						>
+							<span
+								className="block pt-14 text-3xl font-bold dark:text-white"
+								id="modal-modal-title"
+							>
+								カテゴリで絞り込む
+							</span>
+							<ul
+								className="my-12 flex flex-col items-center justify-center gap-4 sm:flex-wrap md:flex-row md:gap-8"
+								id="modal-description"
+							>
+								<li>
+									<Link
+										href="/work/"
+										className="flex size-full overflow-hidden bg-gradient-to-l from-black/50 from-50% to-0% bg-[length:200%_4px] bg-[bottom_0_left_200%] bg-repeat-x font-futura text-2xl transition-all duration-300 ease-linear hover:bg-[bottom_0_left_100%] dark:from-white/50  dark:text-white md:text-3xl"
+									>
+										ALL
+									</Link>
+								</li>
+								{categories.map((categories) => (
+									<li key={categories.id}>
+										<Link
+											href={`/work/category/${categories.slug}`}
+											className="flex size-full overflow-hidden bg-gradient-to-l from-black/50 from-50% to-0% bg-[length:200%_4px] bg-[bottom_0_left_200%] bg-repeat-x font-futura text-2xl transition-all duration-300 ease-linear hover:bg-[bottom_0_left_100%] dark:from-white/50  dark:text-white md:text-3xl"
+										>
+											{categories.name}{" "}
+										</Link>
+									</li>
+								))}
+							</ul>
+						</div>
+					</dialog>
+					<ul className="my-16  hidden items-center justify-center gap-4 sm:flex-wrap md:flex md:flex-row md:gap-8">
 						<li>
 							<Link
 								href="/work/"
-								className="flex size-full overflow-hidden bg-gradient-to-l from-black/50 from-50% to-0% bg-[length:200%_4px] bg-[bottom_0_left_200%] bg-repeat-x font-futura text-2xl transition-all duration-300 ease-linear hover:bg-[bottom_0_left_100%] dark:from-white/50  md:text-3xl"
+								className="flex size-full overflow-hidden bg-gradient-to-l from-black/50 from-50% to-0% bg-[length:200%_4px] bg-[bottom_0_left_200%] bg-repeat-x font-futura text-2xl transition-all duration-300 ease-linear hover:bg-[bottom_0_left_100%] dark:from-white/50  dark:text-white md:text-3xl"
 							>
 								ALL
 							</Link>
@@ -62,7 +128,7 @@ export default function Work({ name, posts, categories, ja_name }) {
 							<li key={categories.id}>
 								<Link
 									href={`/work/category/${categories.slug}`}
-									className="flex size-full overflow-hidden bg-gradient-to-l from-black/50 from-50% to-0% bg-[length:200%_4px] bg-[bottom_0_left_200%] bg-repeat-x font-futura text-2xl transition-all duration-300 ease-linear hover:bg-[bottom_0_left_100%]  dark:from-white/50  md:text-3xl"
+									className="flex size-full overflow-hidden bg-gradient-to-l from-black/50 from-50% to-0% bg-[length:200%_4px] bg-[bottom_0_left_200%] bg-repeat-x font-futura text-2xl transition-all duration-300 ease-linear hover:bg-[bottom_0_left_100%] dark:from-white/50  dark:text-white md:text-3xl"
 								>
 									{categories.name}{" "}
 								</Link>
