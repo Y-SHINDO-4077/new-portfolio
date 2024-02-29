@@ -10,8 +10,33 @@ import READMORE from "components/readmore";
 
 import Image from "next/legacy/image";
 import topwork from "images/topwork.webp";
+import { useRef, useEffect } from "react";
 
 export default function ME() {
+	const textFade = useRef();
+	if (textFade.current) {
+		texteFade = gsap.fromTo(
+			textFade.current,
+			{
+				scrollTrigger: {
+					trigger: textFade.current,
+					start: "50% bottom",
+					toggleActions: "restart none none none",
+				},
+				opacity: 0,
+				yPercent: 10,
+			},
+			{
+				scrollTrigger: {
+					trigger: imageWork.current,
+					start: "50% bottom",
+					toggleActions: "restart none none none",
+				},
+				opacity: 1,
+				yPercent: 0,
+			}
+		);
+	}
 	return (
 		<>
 			<Meta pageTitle="ME" pageDesc="About ME | DO" />
@@ -50,7 +75,7 @@ export default function ME() {
 					<CHART />
 				</Container>
 			</section>
-			<section className="py-12 dark:bg-darkBaige md:py-24 ">
+			<section className="overflow-x-hidden  py-12 dark:bg-darkBaige md:py-24 " ref={textFade}>
 				<Container>
 					<h2 className="text-4xl dark:text-white md:text-6xl">Qualification</h2>
 					<ul className="mt-16 flex flex-col gap-4 dark:text-white">

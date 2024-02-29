@@ -174,8 +174,8 @@ export default function CHART({}) {
 				{
 					scrollTrigger: {
 						trigger: ref,
-						start: "top 30%",
-						//toggleActions: "restart none none none",
+						start: "top top",
+						toggleActions: "restart none none none",
 					},
 					opacity: 0,
 					yPercent: 50,
@@ -183,8 +183,8 @@ export default function CHART({}) {
 				{
 					scrollTrigger: {
 						trigger: ref,
-						start: "top 30%",
-						//toggleActions: "restart none none none",
+						start: "top top",
+						toggleActions: "restart none none none",
 					},
 					opacity: 1,
 					yPercent: 0,
@@ -199,11 +199,11 @@ export default function CHART({}) {
 	});
 	return (
 		<>
-			<section ref={(el) => (textFade.current[0] = el)}>
+			<section className="w-full overflow-x-hidden" ref={(el) => (textFade.current[0] = el)}>
 				<h4 className="mb-4 mt-8 text-base md:text-2xl">Program Languages </h4>
 				<canvas id="myChart" ref={canvasEl} height="300" />
 			</section>
-			<section ref={(el) => (textFade.current[1] = el)}>
+			<section className="w-full overflow-x-hidden" ref={(el) => (textFade.current[1] = el)}>
 				<h4 className="my-4 text-base md:text-2xl">Design Software</h4>
 				<canvas id="myChart2" ref={canvasEl2} height="200" />
 			</section>
