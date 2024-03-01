@@ -122,7 +122,7 @@ export default function Home() {
 							<span>r</span>
 							<span>,</span>
 							<br className="sm:hidden" />
-							<span>&nbsp;</span>
+							<span className="sm:hidden">&nbsp;</span>
 							<span>a</span>
 							<span>n</span>
 							<span>d</span>
