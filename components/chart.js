@@ -174,16 +174,16 @@ export default function CHART({}) {
 				{
 					scrollTrigger: {
 						trigger: ref,
-						start: "top top",
+						start: "bottom center",
 						toggleActions: "restart none none none",
 					},
 					opacity: 0,
-					yPercent: 50,
+					yPercent: 10,
 				},
 				{
 					scrollTrigger: {
 						trigger: ref,
-						start: "top top",
+						start: "bottom center",
 						toggleActions: "restart none none none",
 					},
 					opacity: 1,
