@@ -110,7 +110,7 @@ export default function Work({ name, posts, categories, ja_name }) {
 					<Meta pageTitle={`${name} 実績カテゴリ | WORKS | DO`} pageDesc={`実績カテゴリ${name}`} />
 					<section className="relative py-20 dark:bg-darkBaige md:pt-16 ">
 						<Hero title="WORKS" subtitle={`${name}`} />
-						<p className="mt-8 text-center text-sm md:text-base">{ja_name}</p>
+						<p className="mt-8 text-center text-sm dark:text-white md:text-base">{ja_name}</p>
 
 						<dialog
 							id="modal"
