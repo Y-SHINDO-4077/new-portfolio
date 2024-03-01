@@ -18,7 +18,7 @@ export default function Header({ children }) {
 		>
 			<div className="flex h-full items-center justify-between">
 				<Logo boxOn />
-				<div className="mr-4 flex flex-row-reverse items-center justify-start md:flex-row">
+				<div className="mr-4 flex flex-row-reverse items-center justify-start md:mr-8 md:flex-row">
 					<Nav />
 
 					{children}

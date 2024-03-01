@@ -199,12 +199,22 @@ export default function CHART({}) {
 	});
 	return (
 		<>
-			<section className="w-full overflow-x-hidden" ref={(el) => (textFade.current[0] = el)}>
-				<h4 className="mb-4 mt-8 text-base md:text-2xl">Program Languages </h4>
+			<section className="w-full overflow-x-hidden">
+				<h4
+					className="mb-4 mt-8 text-base dark:text-white md:text-2xl"
+					ref={(el) => (textFade.current[0] = el)}
+				>
+					Program Languages{" "}
+				</h4>
 				<canvas id="myChart" ref={canvasEl} height="300" />
 			</section>
-			<section className="w-full overflow-x-hidden" ref={(el) => (textFade.current[1] = el)}>
-				<h4 className="my-4 text-base md:text-2xl">Design Software</h4>
+			<section className="w-full overflow-x-hidden">
+				<h4
+					className="my-4 text-base dark:text-white md:text-2xl"
+					ref={(el) => (textFade.current[1] = el)}
+				>
+					Design Software
+				</h4>
 				<canvas id="myChart2" ref={canvasEl2} height="200" />
 			</section>
 		</>

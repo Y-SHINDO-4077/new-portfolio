@@ -12,11 +12,15 @@ export default function PostHeader({ title, en_title, productYear, role }) {
 				)}
 
 				{productYear && (
-					<p className="mr-6 text-base font-bold dark:text-white md:text-2xl">
+					<p className="mr-6 mt-16 text-right font-futura text-2xl font-bold dark:text-white md:text-3xl">
 						{productYear.slice(0, 4)}
 					</p>
 				)}
-				{role && <p className="text-base font-bold dark:text-white md:text-2xl">{role}</p>}
+				{role && (
+					<p className="mt-2 text-right text-base font-bold tracking-widest dark:text-white  md:mt-8 md:text-2xl">
+						{role}
+					</p>
+				)}
 			</Container>
 		</section>
 	);

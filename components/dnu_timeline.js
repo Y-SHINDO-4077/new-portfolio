@@ -33,7 +33,7 @@ export default function DNUTimeline() {
 	}, []);
 
 	return (
-		<div className="overflow-x-hidden dark:bg-darkBaige">
+		<div className="overflow-x-hidden ">
 			<h2 className="text-left font-futura text-4xl dark:text-white  md:text-6xl">DNU TIMELINE</h2>
 
 			<section className="flex items-center justify-start p-2  md:p-16">

@@ -11,6 +11,8 @@ import READMORE from "components/readmore";
 import Image from "next/legacy/image";
 import topwork from "images/topwork.webp";
 import { useRef, useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 export default function ME() {
 	const textFade = useRef();
@@ -63,19 +65,19 @@ export default function ME() {
 					/>
 				</section>
 			</div>
-			<section className="overflow-x-hidden py-12 dark:bg-darkBaige md:py-24">
+			<section className="overflow-x-hidden py-12 dark:bg-[#2C2C30] md:py-24">
 				<Container>
 					<Timeline />
 				</Container>
 			</section>
 
-			<section className="overflow-x-hidden py-12 dark:bg-darkBaige md:py-24">
+			<section className="overflow-x-hidden py-12 dark:bg-[#2C2C30] md:py-24">
 				<Container>
 					<h2 className="text-4xl dark:text-white md:text-6xl">Skills</h2>
 					<CHART />
 				</Container>
 			</section>
-			<section className="overflow-x-hidden  py-12 dark:bg-darkBaige md:py-24 " ref={textFade}>
+			<section className="overflow-x-hidden  py-12 dark:bg-[#2C2C30] md:py-24 " ref={textFade}>
 				<Container>
 					<h2 className="text-4xl dark:text-white md:text-6xl">Qualification</h2>
 					<ul className="mt-16 flex flex-col gap-4 dark:text-white">
@@ -87,7 +89,7 @@ export default function ME() {
 					</ul>
 				</Container>
 			</section>
-			<section className="overflow-x-hidden py-12 dark:bg-darkBaige md:py-24">
+			<section className="overflow-x-hidden py-12 dark:bg-[#2C2C30] md:py-24">
 				<Container>
 					<Hero title="WORKS" subtitle="" />
 					<Image

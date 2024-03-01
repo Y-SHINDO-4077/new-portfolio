@@ -75,9 +75,9 @@ export default function Home() {
 	return (
 		<>
 			<Meta />
-			<section className="relative h-screen w-screen overflow-hidden py-0 dark:bg-black/50 dark:mix-blend-difference dark:content-[''] dark:after:absolute dark:after:left-0 dark:after:top-0 dark:after:size-full dark:after:bg-black/30">
+			<section className="relative h-screen w-screen overflow-hidden py-0 dark:bg-black/50 dark:content-[''] dark:after:absolute dark:after:left-0 dark:after:top-0 dark:after:size-full dark:after:bg-black/30">
 				<Container large>
-					<div className="absolute left-[15%] top-1/3 z-10  sm:left-[10%] md:left-8 md:top-64 lg:left-24 ">
+					<div className="absolute left-[15%] top-1/3 z-10  dark:mix-blend-difference sm:left-[10%] md:left-8 md:top-64 lg:left-24  ">
 						<h1
 							className="w-fit max-w-full text-8xl font-bold leading-none  text-white  mix-blend-hard-light dark:text-white sm:max-w-[calc(100%_-_30%)] lg:text-9xl"
 							ref={typewrite}

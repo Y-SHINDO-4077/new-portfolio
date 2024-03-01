@@ -43,7 +43,7 @@ export default function Posts({
 	url_link,
 }) {
 	return (
-		<div className="dark:bg-darkBaige ">
+		<div className="dark:bg-[#2C2C30]">
 			<figure className="pt-16">
 				<Image
 					key={eyecatch.url}
@@ -71,7 +71,7 @@ export default function Posts({
 				pageImgH={eyecatch.height}
 			/>
 			<article>
-				<PostHeader title={title} en_title={en_title} />
+				<PostHeader title={title} en_title={en_title} productYear={productYear} role={role} />
 
 				{url_link ? (
 					<Container>
@@ -165,33 +165,27 @@ export default function Posts({
 					)}
 
 					{eyecatch02.url && (
-						<figure>
-							<Image
-								key={eyecatch02.url}
-								src={eyecatch02.url}
-								alt=""
-								width={eyecatch02.width}
-								height={eyecatch02.height}
-								priority
-								sizes="100%"
-								style={{
-									width: "100%",
-									height: "auto",
-									objectFit: "cover",
-								}}
-							/>
-						</figure>
+						<Container>
+							<figure>
+								<Image
+									key={eyecatch02.url}
+									src={eyecatch02.url}
+									alt=""
+									width={eyecatch02.width}
+									height={eyecatch02.height}
+									priority
+									sizes="100%"
+									style={{
+										width: "100%",
+										height: "auto",
+										objectFit: "cover",
+									}}
+								/>
+							</figure>
+						</Container>
 					)}
 				</PostBody>
 				<Container>
-					{/* <PostCategories categories={categories} /> */}
-
-					{/* <Pagination
-            prevText={prevPost.title}
-            prevUrl={`/work/${prevPost.slug}`}
-            nextText={nextPost.title}
-            nextUrl={`/work/${nextPost.slug}`}
-            /> */}
 					<div className="mr-auto mt-6 flex w-fit items-center justify-start pb-16">
 						<READMORE url="/work" title="BACK" />
 					</div>

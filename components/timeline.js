@@ -31,7 +31,7 @@ export default function Timeline() {
 		});
 	}, []);
 	return (
-		<div className="dark:bg-darkBaige">
+		<>
 			<h2 className="mb-12 text-left text-4xl dark:text-white md:text-6xl">TIMELINE</h2>
 			<section className="flex items-center justify-start">
 				<ul className="relative left-[1.5rem] top-0 border-l-2 border-solid border-black dark:border-white">
@@ -95,6 +95,6 @@ export default function Timeline() {
 					</li>
 				</ul>
 			</section>
-		</div>
+		</>
 	);
 }
