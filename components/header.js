@@ -14,7 +14,7 @@ export default function Header({ children }) {
 	}, []);
 	return (
 		<header
-			className={`fixed z-30 h-[64px] w-screen ${isVisible && "bg-black/10 dark:bg-black/25"}`}
+			className={`fixed z-30 h-[64px] w-screen bg-white/25  ${isVisible && " dark:bg-black/25"}`}
 		>
 			<div className="flex h-full items-center justify-between">
 				<Logo boxOn />

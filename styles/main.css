@@ -1,21 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap");
+
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-@font-face {
-	font-family: "Futura";
-	src: url(font/Futura_Bold_font.ttf);
-	font-weight: 700;
-}
-
-@font-face {
-	font-family: "Futura";
-	src: url(font/futura_medium_bt.ttf);
-	font-weight: 500;
-}
-
 @layer base {
+	@font-face {
+		font-family: "Futura";
+		src: url(./font/Futura_Bold_font.ttf);
+		font-weight: 700;
+	}
+
+	@font-face {
+		font-family: "Futura";
+		src: url(./font/futura_medium_bt.ttf);
+		font-weight: 500;
+	}
 	html {
 		font-family: "Futura", "Noto Sans JP", sans-serif;
 	}
