@@ -3,7 +3,7 @@ import Container from "./container";
 import READMORE from "./readmore";
 
 import Image from "next/legacy/image";
-import dicon from "images/dyuicon1.svg";
+import dicon from "images/dyuicon.svg";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useEffect, useRef } from "react";
