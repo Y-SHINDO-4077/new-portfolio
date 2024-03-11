@@ -113,6 +113,10 @@ export default function Work({ name, posts, categories, ja_name }) {
 
 		return () => {
 			window.removeEventListener("resize", handleResize);
+			window.addEventListener("load", () => {
+				document.body.style.overflowY = "auto";
+				document.body.style.position = "auto";
+			});
 		};
 	}, []);
 
