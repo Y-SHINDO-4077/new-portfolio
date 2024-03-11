@@ -106,13 +106,19 @@ export default function Work({ posts, categories }) {
 							ref={dialog}
 							onClick={closeHandler}
 						>
+							<button
+								className="absolute right-4 top-4 text-3xl font-bold dark:text-white"
+								onClick={closeHandler}
+							>
+								<span>×</span>
+							</button>
 							<div
 								onClick={(e) => {
 									e.stopPropagation();
 								}}
 							>
 								<span
-									className="block pt-14 text-3xl font-bold dark:text-white"
+									className="block pt-14 text-2xl font-bold dark:text-white md:text-3xl"
 									id="modal-modal-title"
 								>
 									カテゴリで絞り込む
