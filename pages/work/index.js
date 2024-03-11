@@ -35,21 +35,21 @@ export async function getStaticProps() {
 export default function Work({ posts, categories }) {
 	const dialog = useRef();
 	const openHandler = () => {
-		dialog.current.showModal();
 		dialog.current.overScrollBehavor = "contain";
 		document.body.style.top = `${window.scrollY * -1}px`;
 		document.body.style.overflowY = "hidden";
 		document.body.style.position = "fixed";
 		document.body.style.width = "100%";
 		document.body.style.height = "auto";
+		dialog.current.showModal();
 	};
 	const closeHandler = () => {
-		dialog.current.close();
 		document.body.style.overflowY = "auto";
 		document.body.style.position = "";
 		document.body.style.top = "";
 		document.body.style.height = "";
 		window.scrollTo(0, parseInt(window.scrollY || "0", 10) * -1);
+		dialog.current.close();
 	};
 
 	const filterButton = useRef();
