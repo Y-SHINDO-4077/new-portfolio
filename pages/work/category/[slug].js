@@ -57,12 +57,10 @@ export default function Work({ name, posts, categories, ja_name }) {
 	};
 	const closeHandler = () => {
 		dialog.current.close();
-		const { top } = document.body.style;
 		document.body.style.overflowY = "auto";
 		document.body.style.position = "";
 		document.body.style.top = "";
 		document.body.style.height = "";
-
 		window.scrollTo(0, parseInt(window.scrollY || "0", 10) * -1);
 	};
 	const filterButton = useRef();
