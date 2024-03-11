@@ -62,7 +62,8 @@ export default function Work({ name, posts, categories, ja_name }) {
 		document.body.style.position = "";
 		document.body.style.top = "";
 		document.body.style.height = "";
-		window.scrollTo(0, parseInt(top || "0", 10) * -1);
+
+		window.scrollTo(0, parseInt(window.scrollY || "0", 10) * -1);
 	};
 	const filterButton = useRef();
 	const workArea = useRef();
