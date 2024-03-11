@@ -116,7 +116,7 @@ export default function Posts({
 
 							<ConvertBody
 								contentHTML={content02}
-								className="mt-8 break-words text-base !leading-loose dark:text-white md:!text-3xl [&>*]:font-noto [&>*]:text-2xl [&>*]:md:mt-16"
+								className="mt-8 break-words text-base !leading-loose dark:!text-white md:!text-3xl [&>*]:font-noto [&>*]:text-2xl [&>*]:md:mt-16"
 							/>
 						</Container>
 					</section>
@@ -136,7 +136,7 @@ export default function Posts({
 								{content03 && (
 									<ConvertBody
 										contentHTML={content03}
-										className="mt-8 break-words text-base !leading-loose dark:text-white md:!text-3xl [&>*]:font-noto [&>*]:text-2xl [&>*]:md:mt-16"
+										className="mt-8 break-words text-base !leading-loose dark:!text-white md:!text-3xl [&>*]:font-noto [&>*]:text-2xl [&>*]:md:mt-16"
 									/>
 								)}
 							</Container>
@@ -150,7 +150,7 @@ export default function Posts({
 									<h3 className="mt-4">
 										<ConvertBody
 											contentHTML={items04}
-											className="mt-8 break-words font-futura !text-5xl dark:text-white md:mt-16"
+											className="mt-8 break-words font-futura !text-5xl dark:!text-white md:mt-16"
 										/>
 									</h3>
 								)}
