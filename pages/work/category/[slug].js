@@ -130,7 +130,7 @@ export default function Work({ name, posts, categories, ja_name }) {
 								}}
 							>
 								<span
-									className="block pt-14 text-3xl  font-bold  dark:text-white md:text-2xl"
+									className="block pt-14 text-2xl font-bold  dark:text-white md:text-3xl"
 									id="modal-modal-title"
 								>
 									カテゴリで絞り込む
