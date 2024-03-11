@@ -37,7 +37,7 @@ export default function Nav() {
 				<span className="absolute left-0 h-[2px] w-[32px] bg-black dark:bg-white"></span>
 				<span className="sr-only">MENU</span>
 			</button>
-			<ul className="fixed inset-[0_-100%] z-[-1] grid  place-content-center  gap-8 text-center transition-transform duration-300 ease-out md:static md:mr-8 md:flex md:gap-10  md:bg-inherit">
+			<ul className="fixed inset-[0_-100%] z-[-1] grid  place-content-center  gap-8 bg-black/60 text-center transition-transform duration-300 ease-out dark:bg-black md:static md:mr-8 md:flex  md:gap-10 md:bg-inherit">
 				<li>
 					<Link
 						href="/me/"
