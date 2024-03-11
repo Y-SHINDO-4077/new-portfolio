@@ -96,6 +96,14 @@ export default function Work({ posts, categories }) {
 			document.body.style.position = "auto";
 			dialog.current.close();
 		});
+
+		document.querySelectorAll("#modal-description > ul > li").forEach((a) => {
+			a.childNodes.addEventListener("click", () => {
+				document.body.style.overflowY = "auto";
+				document.body.style.position = "auto";
+				dialog.close();
+			});
+		});
 		handleResize();
 
 		return () => {
