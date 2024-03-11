@@ -46,10 +46,10 @@ export async function getStaticProps(context) {
 
 export default function Work({ name, posts, categories, ja_name }) {
 	const dialog = useRef();
+
 	const openHandler = () => {
-		const scrollY = window.scrollY;
 		dialog.current.overScrollBehavor = "contain";
-		document.body.style.top = `${scrollY * -1}px`;
+		document.body.style.top = `${window.scrollY * -1}px`;
 		document.body.style.overflowY = "hidden";
 		document.body.style.position = "fixed";
 		document.body.style.width = "100%";
@@ -57,14 +57,17 @@ export default function Work({ name, posts, categories, ja_name }) {
 		dialog.current.showModal();
 	};
 	const closeHandler = () => {
+		const body = document.body;
+		const scrollY = body.style.top;
 		dialog.current.overScrollBehavor = "none";
 		document.body.style.overflowY = "auto";
 		document.body.style.position = "";
 		document.body.style.top = "";
 		document.body.style.height = "";
+		window.scrollTo(0, parseInt(scrollY || "0") * -1);
 		dialog.current.close();
-		window.scrollTo(0, scrollY);
 	};
+
 	const filterButton = useRef();
 	const workArea = useRef();
 	gsap.registerPlugin(ScrollTrigger);
@@ -93,12 +96,19 @@ export default function Work({ name, posts, categories, ja_name }) {
 						},
 					},
 				});
+				document.body.style.overflowY = "auto";
+				document.body.style.position = "auto";
 			} else {
 				ScrollTrigger.refresh();
 			}
 		};
 
 		window.addEventListener("resize", handleResize);
+		window.addEventListener("load", () => {
+			document.body.style.overflowY = "auto";
+			document.body.style.position = "auto";
+			dialog.current.close();
+		});
 		handleResize();
 
 		return () => {
