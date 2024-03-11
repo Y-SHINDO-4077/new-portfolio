@@ -36,9 +36,21 @@ export default function Work({ posts, categories }) {
 	const dialog = useRef();
 	const openHandler = () => {
 		dialog.current.showModal();
+		dialog.current.overScrollBehavor = "contain";
+		document.body.style.top = `${window.scrollY * -1}px`;
+		document.body.style.overflowY = "hidden";
+		document.body.style.position = "fixed";
+		document.body.style.width = "100%";
+		document.body.style.height = "auto";
 	};
 	const closeHandler = () => {
 		dialog.current.close();
+		const { top } = document.body.style;
+		document.body.style.overflowY = "auto";
+		document.body.style.position = "";
+		document.body.style.top = "";
+		document.body.style.height = "";
+		window.scrollTo(0, parseInt(top || "0", 10) * -1);
 	};
 
 	const filterButton = useRef();
