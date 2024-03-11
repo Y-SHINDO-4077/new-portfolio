@@ -61,7 +61,7 @@ export default function DNUSetion({ linkOn = false }) {
 	});
 	return (
 		<>
-			<section className="overflow-x-hidden bg-lightOrange/30 py-12 dark:bg-darkBaige md:py-24">
+			<section className="overflow-x-hidden bg-lightOrange/30 py-16 dark:bg-darkBaige md:py-24">
 				<Container>
 					<Hero title="OTHER" subtitle="" className="text-center  dark:text-white" />
 
