@@ -10,12 +10,13 @@ import { eyecatchLocal } from "lib/constants";
 import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { useRouter } from "next/router";
 
 export async function getStaticPaths() {
 	const allCats = await getAllCategories();
 	return {
 		paths: allCats.map(({ slug }) => `/work/category/${slug}`),
-		fallback: false,
+		fallback: "blocking",
 	};
 }
 
@@ -68,10 +69,26 @@ export default function Work({ name, posts, categories, ja_name }) {
 		dialog.current.close();
 	};
 
+	const router = useRouter();
+
 	const filterButton = useRef();
 	const workArea = useRef();
 	gsap.registerPlugin(ScrollTrigger);
+
 	useEffect(() => {
+		const handleRouteChange = () => {
+			dialog.current.overScrollBehavor = "none";
+			document.body.style.overflowY = "auto";
+			document.body.style.position = "";
+			document.body.style.top = "";
+			document.body.style.height = "";
+			if (dialog.current) {
+				dialog.current.close();
+			}
+		};
+
+		router.events.on("routeChangeStart", handleRouteChange);
+
 		const mq = window.matchMedia("(max-width: 768px)");
 
 		const handleResize = () => {
@@ -104,29 +121,14 @@ export default function Work({ name, posts, categories, ja_name }) {
 		};
 
 		window.addEventListener("resize", handleResize);
-		window.addEventListener("load", () => {
-			document.body.style.overflowY = "auto";
-			document.body.style.position = "auto";
-			dialog.current.close();
-		});
-		document.querySelectorAll("#modal-description > ul > li").forEach((a) => {
-			a.childNodes.addEventListener("click", () => {
-				document.body.style.overflowY = "auto";
-				document.body.style.position = "auto";
-				dialog.close();
-			});
-		});
 
 		handleResize();
 
 		return () => {
+			router.events.off("routeChangeStart", handleRouteChange);
 			window.removeEventListener("resize", handleResize);
-			window.addEventListener("load", () => {
-				document.body.style.overflowY = "auto";
-				document.body.style.position = "auto";
-			});
 		};
-	}, []);
+	}, [router.events]);
 
 	return (
 		<>
