@@ -159,7 +159,7 @@ export default function Work({ name, posts, categories, ja_name }) {
 								className="absolute right-4 top-4 text-3xl font-bold dark:text-white"
 								onClick={closeHandler}
 							>
-								<span>×</span>
+								<span area-label="閉じる">×</span>
 							</button>
 							<div
 								onClick={(e) => {
