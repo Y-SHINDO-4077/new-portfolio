@@ -40,7 +40,7 @@ function MyApp({ Component, pageProps }) {
 			</Header>
 			<div
 				id="stalker"
-				className="pointer-events-none absolute left-0 top-0 z-[1000] hidden size-[20px]  rounded-3xl bg-[#333] dark:bg-white/90 dark:hover:bg-white/40 md:block md:cursor-none"
+				className="pointer-events-auto absolute left-0 top-0 z-[1000] hidden size-[20px] rounded-3xl  bg-[#333] dark:bg-white/90 dark:hover:bg-white/40 md:pointer-events-none md:block md:cursor-none"
 			></div>
 			<main>
 				<Component {...pageProps} />
