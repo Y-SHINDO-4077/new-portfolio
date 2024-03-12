@@ -3,6 +3,7 @@ import "../styles/main.css";
 import Header from "components/header";
 import Toggle from "components/toggle";
 import Footer from "components/footer";
+
 import { gsap } from "gsap";
 import { useEffect } from "react";
 
