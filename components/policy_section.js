@@ -1,7 +1,8 @@
 import Container from "./container";
+import React from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { useEffect, useRef } from "react";
+import { Fragment, useEffect, useRef } from "react";
 
 export default function PolicySetion({ title, ja__content }) {
 	const textLeftFade = useRef();
@@ -14,7 +15,7 @@ export default function PolicySetion({ title, ja__content }) {
 				{
 					scrollTrigger: {
 						trigger: textLeftFade.current,
-						start: "bottom 50%",
+						start: "bottom 0%",
 						toggleActions: "restart none none none",
 					},
 					opacity: 0,
@@ -64,10 +65,15 @@ export default function PolicySetion({ title, ja__content }) {
 						{title}
 					</h2>
 					<p
-						className="ml-auto mt-8 text-base !leading-loose dark:text-white md:mt-12  md:w-[60vw] md:text-2xl "
+						className="ml-auto mt-8 text-sm !leading-loose dark:text-white md:mt-12  md:w-[60vw] md:text-2xl "
 						ref={textRightFade}
 					>
-						{ja__content}
+						{ja__content.split("\n").map((line, i) => (
+							<React.Fragment key={i}>
+								{line}
+								<br />
+							</React.Fragment>
+						))}
 					</p>
 				</Container>
 			</section>

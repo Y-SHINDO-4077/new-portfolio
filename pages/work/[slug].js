@@ -81,8 +81,8 @@ export default function Posts({
 					url && (
 						<Container>
 							<div className="mb-12 mt-8 text-right dark:text-white">
-								<p className="text-sm md:text-2xl">↓以下のURLを検索して詳細をご覧ください</p>
-								<p className="text-base md:text-3xl">{url}</p>
+								<p className="text-xs md:text-2xl">↓以下のURLを検索して詳細をご覧ください</p>
+								<p className="text-sm md:text-3xl">{url}</p>
 							</div>
 						</Container>
 					)
@@ -100,7 +100,7 @@ export default function Posts({
 
 							<ConvertBody
 								contentHTML={content01}
-								className="mt-8 break-words text-base !leading-loose dark:text-white md:!text-3xl [&>*]:font-noto [&>*]:text-2xl [&>*]:md:mt-16"
+								className="mt-8 break-words text-sm !leading-loose dark:text-white md:!text-3xl [&>*]:font-noto [&>*]:text-2xl [&>*]:md:mt-16"
 							/>
 						</Container>
 					</section>
@@ -116,7 +116,7 @@ export default function Posts({
 
 							<ConvertBody
 								contentHTML={content02}
-								className="mt-8 break-words text-base !leading-loose dark:!text-white md:!text-3xl [&>*]:font-noto [&>*]:text-2xl [&>*]:md:mt-16"
+								className="mt-8 break-words text-sm !leading-loose dark:!text-white md:!text-3xl [&>*]:font-noto [&>*]:text-2xl [&>*]:md:mt-16"
 							/>
 						</Container>
 					</section>
@@ -136,7 +136,7 @@ export default function Posts({
 								{content03 && (
 									<ConvertBody
 										contentHTML={content03}
-										className="mt-8 break-words text-base !leading-loose dark:!text-white md:!text-3xl [&>*]:font-noto [&>*]:text-2xl [&>*]:md:mt-16"
+										className="mt-8 break-words text-sm !leading-loose dark:!text-white md:!text-3xl [&>*]:font-noto [&>*]:text-2xl [&>*]:md:mt-16"
 									/>
 								)}
 							</Container>
@@ -157,7 +157,7 @@ export default function Posts({
 								{content04 && (
 									<ConvertBody
 										contentHTML={content04}
-										className="mt-8 break-words text-base !leading-loose dark:text-white md:!text-3xl [&>*]:font-noto [&>*]:text-2xl [&>*]:md:mt-16"
+										className="mt-8 break-words text-sm !leading-loose dark:text-white md:!text-3xl [&>*]:font-noto [&>*]:text-2xl [&>*]:md:mt-16"
 									/>
 								)}
 							</Container>
